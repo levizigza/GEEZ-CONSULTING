@@ -1,11 +1,15 @@
 /**
- * Optional Ethiopian/Tigrinya cultural ambience — default OFF.
- * Prefers muted-until-gesture; persists mute preference in localStorage (UX only).
+ * Ethiopian/Tigrinya cultural ambience — default ON (with mute control).
+ * Attempts autoplay; if blocked by browser policy, keeps “on” intent in the UI
+ * and starts on the first user gesture. Persists mute preference in localStorage.
  * Pauses when the tab is hidden (Page Visibility API).
  */
 (function () {
-  var STORAGE_KEY = 'geez-ambient-unmuted';
+  var MUTED_KEY = 'geez-ambient-muted';
+  var LEGACY_UNMUTED_KEY = 'geez-ambient-unmuted';
+  var CUE_KEY = 'geez-audio-cue-dismissed';
   var VOLUME = 0.28;
+  var CUE_MS = 6500;
 
   function basePath() {
     var meta = document.querySelector('meta[name="geez-base-path"]');
@@ -18,20 +22,42 @@
     return basePath() + '/media/audio/ethiopian-azmari-krar-ambient.mp3';
   }
 
-  function wantsUnmuted() {
+  function readMutedPreference() {
     try {
-      return localStorage.getItem(STORAGE_KEY) === '1';
+      if (localStorage.getItem(MUTED_KEY) === '1') return true;
+      return false;
     } catch (_) {
       return false;
     }
   }
 
-  function setWantUnmuted(on) {
+  function writeMutedPreference(muted) {
     try {
-      if (on) localStorage.setItem(STORAGE_KEY, '1');
-      else localStorage.removeItem(STORAGE_KEY);
+      if (muted) {
+        localStorage.setItem(MUTED_KEY, '1');
+        localStorage.removeItem(LEGACY_UNMUTED_KEY);
+      } else {
+        localStorage.removeItem(MUTED_KEY);
+        localStorage.setItem(LEGACY_UNMUTED_KEY, '1');
+      }
     } catch (_) {
       /* ignore quota / private mode */
+    }
+  }
+
+  function cueWasDismissed() {
+    try {
+      return localStorage.getItem(CUE_KEY) === '1';
+    } catch (_) {
+      return false;
+    }
+  }
+
+  function markCueDismissed() {
+    try {
+      localStorage.setItem(CUE_KEY, '1');
+    } catch (_) {
+      /* ignore */
     }
   }
 
@@ -52,48 +78,84 @@
     );
   }
 
-  function ensureDock() {
+  function cueMarkup() {
+    return (
+      '<p class="geez-audio-cue" id="geez-audio-cue" role="status">' +
+      '<span class="geez-audio-cue__pointer" aria-hidden="true">' +
+      '<svg viewBox="0 0 48 24" width="48" height="24" focusable="false">' +
+      '<path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M2 12h34M28 4l12 8-12 8"/>' +
+      '</svg>' +
+      '</span>' +
+      '<span class="geez-audio-cue__text">You can turn this off</span>' +
+      '</p>'
+    );
+  }
+
+  function ensureDock(showCue) {
     var existing = document.getElementById('geez-audio-dock');
     if (existing) return existing;
     var dock = document.createElement('div');
     dock.id = 'geez-audio-dock';
-    dock.className = 'geez-audio-dock';
+    dock.className = 'geez-audio-dock' + (showCue ? ' geez-audio-dock--cue' : '');
     dock.innerHTML =
-      '<button type="button" class="geez-audio-toggle" id="geez-audio-toggle" aria-pressed="false" aria-label="Play ambient music">' +
-      iconMuted() +
-      '<span class="geez-audio-toggle__label">Sound</span>' +
+      (showCue ? cueMarkup() : '') +
+      '<button type="button" class="geez-audio-toggle" id="geez-audio-toggle" aria-pressed="true" aria-label="Mute ambient music"' +
+      (showCue ? ' aria-describedby="geez-audio-cue"' : '') +
+      '>' +
+      iconPlaying() +
+      '<span class="geez-audio-toggle__label">Mute</span>' +
       '</button>';
     document.body.appendChild(dock);
     return dock;
   }
 
   function init() {
-    var dock = ensureDock();
+    var userWantsSound = !readMutedPreference();
+    var showCue = userWantsSound && !cueWasDismissed();
+    var dock = ensureDock(showCue);
     var btn = document.getElementById('geez-audio-toggle');
     if (!btn) return;
 
     var audio = new Audio(audioSrc());
     audio.loop = true;
-    audio.preload = 'none';
+    audio.preload = 'auto';
     audio.volume = VOLUME;
 
     var playing = false;
-    var userWantsSound = wantsUnmuted();
+    var gestureBound = false;
+    var cueTimer = null;
 
     function syncUi() {
-      btn.setAttribute('aria-pressed', playing ? 'true' : 'false');
+      var on = userWantsSound;
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
       btn.setAttribute(
         'aria-label',
-        playing ? 'Mute ambient music' : 'Play ambient music',
+        on ? 'Mute ambient music' : 'Play ambient music',
       );
+      btn.classList.toggle('geez-audio-toggle--intent-on', on);
+      btn.classList.toggle('geez-audio-toggle--playing', playing);
       btn.innerHTML =
-        (playing ? iconPlaying() : iconMuted()) +
+        (on ? iconPlaying() : iconMuted()) +
         '<span class="geez-audio-toggle__label">' +
-        (playing ? 'Mute' : 'Sound') +
+        (on ? 'Mute' : 'Sound') +
         '</span>';
     }
 
-    function pauseAmbient() {
+    function dismissCue() {
+      if (!dock.classList.contains('geez-audio-dock--cue')) return;
+      dock.classList.remove('geez-audio-dock--cue');
+      dock.classList.add('geez-audio-dock--cue-done');
+      btn.removeAttribute('aria-describedby');
+      var cue = document.getElementById('geez-audio-cue');
+      if (cue) cue.remove();
+      markCueDismissed();
+      if (cueTimer) {
+        clearTimeout(cueTimer);
+        cueTimer = null;
+      }
+    }
+
+    function pausePlayback() {
       audio.pause();
       playing = false;
       syncUi();
@@ -105,51 +167,88 @@
         .then(function () {
           playing = true;
           syncUi();
+          return true;
         })
         .catch(function () {
           playing = false;
           syncUi();
+          return false;
         });
+    }
+
+    function bindGestureResume() {
+      if (gestureBound) return;
+      gestureBound = true;
+      var resumeOnce = function () {
+        document.removeEventListener('pointerdown', resumeOnce, true);
+        document.removeEventListener('keydown', resumeOnce, true);
+        document.removeEventListener('touchstart', resumeOnce, true);
+        gestureBound = false;
+        if (!userWantsSound) return;
+        if (document.visibilityState === 'hidden') return;
+        playAmbient();
+      };
+      document.addEventListener('pointerdown', resumeOnce, { capture: true, once: true });
+      document.addEventListener('keydown', resumeOnce, { capture: true, once: true });
+      document.addEventListener('touchstart', resumeOnce, { capture: true, once: true });
     }
 
     function setUnmuted(on) {
       userWantsSound = on;
-      setWantUnmuted(on);
+      writeMutedPreference(!on);
       if (on) {
         if (document.visibilityState === 'hidden') {
-          pauseAmbient();
+          pausePlayback();
+          bindGestureResume();
           return;
         }
-        playAmbient();
+        playAmbient().then(function (ok) {
+          if (!ok) bindGestureResume();
+        });
       } else {
-        pauseAmbient();
+        pausePlayback();
       }
     }
 
     btn.addEventListener('click', function () {
-      setUnmuted(!userWantsSound || !playing);
+      dismissCue();
+      setUnmuted(!userWantsSound);
+    });
+
+    dock.addEventListener('pointerdown', function () {
+      dismissCue();
     });
 
     document.addEventListener('visibilitychange', function () {
       if (document.visibilityState === 'hidden') {
-        if (playing) audio.pause();
+        if (playing) {
+          audio.pause();
+          playing = false;
+          syncUi();
+        }
         return;
       }
-      if (userWantsSound) playAmbient();
+      if (userWantsSound) {
+        playAmbient().then(function (ok) {
+          if (!ok) bindGestureResume();
+        });
+      }
     });
 
     syncUi();
 
-    // Never autoplay with sound on load. If the visitor previously opted in,
-    // wait for a gesture (or try muted resume after gesture-less play fails).
+    if (showCue) {
+      cueTimer = setTimeout(dismissCue, CUE_MS);
+    }
+
     if (userWantsSound) {
-      var resumeOnce = function () {
-        document.removeEventListener('pointerdown', resumeOnce);
-        document.removeEventListener('keydown', resumeOnce);
-        setUnmuted(true);
-      };
-      document.addEventListener('pointerdown', resumeOnce, { once: true });
-      document.addEventListener('keydown', resumeOnce, { once: true });
+      if (document.visibilityState === 'hidden') {
+        bindGestureResume();
+      } else {
+        playAmbient().then(function (ok) {
+          if (!ok) bindGestureResume();
+        });
+      }
     }
   }
 

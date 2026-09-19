@@ -5,7 +5,9 @@
   --geez-pattern-geometry: url("../media/patterns/sacred-geometry.svg");
   --geez-pattern-tibeb: url("../media/patterns/tibeb-lattice.svg");
   --geez-pattern-star: url("../media/patterns/meskel-star.svg");
+  --geez-pattern-vine: url("../media/patterns/gold-vine.svg");
   --geez-atmosphere-opacity: 0.045;
+  --geez-vine-opacity: 0.2;
 }
 
 /* Body canvas — multicultural Calgary: warm surface + quiet geometry + textile weave */
@@ -175,6 +177,8 @@ body.geez-home {
 }
 
 .geez-page-band__inner {
+  position: relative;
+  z-index: 1;
   width: min(100% - 2rem, var(--geez-container-wide));
   margin-inline: auto;
   padding-block: var(--geez-space-6) var(--geez-space-7);
@@ -226,6 +230,96 @@ body.geez-home {
   opacity: 0.55;
 }
 
+/* ---- Gold vine ornaments on burgundy / brown bands ---- */
+.geez-page-band::before,
+.geez-page-band::after,
+.geez-footer::before,
+.geez-footer::after,
+.geez-header::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  background-image: var(--geez-pattern-vine);
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: var(--geez-vine-opacity);
+}
+
+.geez-page-band::before {
+  left: -0.5rem;
+  bottom: 0.35rem;
+  width: min(42vw, 17rem);
+  height: min(24vw, 9.5rem);
+  background-position: left bottom;
+}
+
+.geez-page-band::after {
+  right: -0.35rem;
+  top: 0.5rem;
+  width: min(36vw, 14rem);
+  height: min(20vw, 8rem);
+  background-position: right top;
+  transform: scaleX(-1) rotate(8deg);
+  opacity: calc(var(--geez-vine-opacity) * 0.85);
+}
+
+.geez-page-band__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.geez-page-band--quiet::before,
+.geez-page-band--quiet::after {
+  opacity: calc(var(--geez-vine-opacity) * 0.65);
+}
+
+.geez-header {
+  position: relative;
+  overflow: clip;
+}
+
+.geez-header::after {
+  right: 0.25rem;
+  top: 50%;
+  width: min(28vw, 11rem);
+  height: 2.75rem;
+  background-position: right center;
+  transform: translateY(-50%);
+  opacity: 0.16;
+}
+
+.geez-header__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.geez-footer {
+  position: relative;
+  overflow: clip;
+  isolation: isolate;
+}
+
+.geez-footer::before {
+  left: -0.75rem;
+  bottom: 0.25rem;
+  width: min(48vw, 18rem);
+  height: min(26vw, 10rem);
+  background-position: left bottom;
+  z-index: -1;
+}
+
+.geez-footer::after {
+  right: -0.5rem;
+  top: 0.75rem;
+  width: min(38vw, 15rem);
+  height: min(22vw, 8.5rem);
+  background-position: right top;
+  transform: scaleX(-1) rotate(6deg);
+  opacity: calc(var(--geez-vine-opacity) * 0.75);
+  z-index: -1;
+}
+
 /* ---- Ambient audio control (footer-adjacent floating, clears CTAs) ---- */
 .geez-audio-dock {
   position: fixed;
@@ -233,8 +327,45 @@ body.geez-home {
   bottom: max(0.75rem, env(safe-area-inset-bottom));
   z-index: 45;
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.45rem;
+}
+
+.geez-audio-cue {
+  display: none;
+  margin: 0;
+  max-width: 11.5rem;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 45%, transparent);
+  background: color-mix(in srgb, var(--geez-color-burgundy-strong) 94%, #000);
+  color: var(--geez-color-on-brand);
+  font-size: var(--geez-text-xs);
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+  box-shadow: 0 10px 28px rgba(26, 7, 12, 0.35);
+}
+
+.geez-audio-dock--cue .geez-audio-cue {
+  display: flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.4rem;
+}
+
+.geez-audio-cue__pointer {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: var(--geez-color-gold-accent);
+}
+
+.geez-audio-cue__pointer svg {
+  display: block;
+  width: 2.25rem;
+  height: 1.1rem;
+}
+
+.geez-audio-cue__text {
+  text-wrap: balance;
 }
 
 .geez-audio-toggle {
@@ -263,7 +394,8 @@ body.geez-home {
   color: var(--geez-color-gold-accent);
 }
 
-.geez-audio-toggle[aria-pressed="true"] {
+.geez-audio-toggle[aria-pressed="true"],
+.geez-audio-toggle--intent-on {
   border-color: var(--geez-color-gold-accent);
   color: var(--geez-color-gold-accent);
 }
@@ -284,9 +416,18 @@ body.geez-home {
   }
 }
 
-/* Soft pulse when unmuted — decorative only */
-.geez-audio-toggle[aria-pressed="true"] .geez-audio-toggle__icon {
+/* Soft pulse while sound intent is on */
+.geez-audio-toggle--intent-on .geez-audio-toggle__icon {
   animation: geez-audio-pulse 2.4s ease-in-out infinite;
+}
+
+/* Stronger attention pulse + ring while the first-visit cue is visible */
+.geez-audio-dock--cue .geez-audio-toggle {
+  animation: geez-audio-attention 1.6s ease-in-out infinite;
+}
+
+.geez-audio-dock--cue .geez-audio-cue__pointer {
+  animation: geez-audio-pointer 1.8s ease-in-out infinite;
 }
 
 @keyframes geez-audio-pulse {
@@ -299,9 +440,48 @@ body.geez-home {
   }
 }
 
+@keyframes geez-audio-attention {
+  0%,
+  100% {
+    box-shadow:
+      0 10px 28px rgba(26, 7, 12, 0.35),
+      0 0 0 0 color-mix(in srgb, var(--geez-color-gold-accent) 0%, transparent);
+  }
+  50% {
+    box-shadow:
+      0 10px 28px rgba(26, 7, 12, 0.35),
+      0 0 0 6px color-mix(in srgb, var(--geez-color-gold-accent) 28%, transparent);
+    border-color: var(--geez-color-gold-accent);
+  }
+}
+
+@keyframes geez-audio-pointer {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateX(0.35rem);
+    opacity: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .geez-audio-toggle[aria-pressed="true"] .geez-audio-toggle__icon {
+  .geez-audio-toggle--intent-on .geez-audio-toggle__icon,
+  .geez-audio-dock--cue .geez-audio-toggle,
+  .geez-audio-dock--cue .geez-audio-cue__pointer {
     animation: none;
+  }
+
+  .geez-audio-dock--cue .geez-audio-toggle {
+    box-shadow:
+      0 10px 28px rgba(26, 7, 12, 0.35),
+      0 0 0 3px color-mix(in srgb, var(--geez-color-gold-accent) 35%, transparent);
+  }
+
+  .geez-audio-dock--cue .geez-audio-cue__pointer {
+    opacity: 1;
   }
 }
 

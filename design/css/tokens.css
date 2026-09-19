@@ -90,6 +90,7 @@
   --geez-pattern-geometry: url("../media/patterns/sacred-geometry.svg");
   --geez-pattern-tibeb: url("../media/patterns/tibeb-lattice.svg");
   --geez-pattern-star: url("../media/patterns/meskel-star.svg");
+  --geez-pattern-vine: url("../media/patterns/gold-vine.svg");
 }
 
 @media (prefers-reduced-motion: reduce) {

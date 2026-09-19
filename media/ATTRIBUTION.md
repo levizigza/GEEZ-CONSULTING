@@ -37,13 +37,14 @@ Decorative CSS/SVG atmosphere only — geometric abstraction inspired by histori
 - media/patterns/sacred-geometry.svg — Overlapping-circle lattice (abstract geometry).
 - media/patterns/tibeb-lattice.svg — Textile-inspired diamond lattice (tibeb-adjacent).
 - media/patterns/meskel-star.svg — Abstract multipoint star lattice (ornamental geometry).
+- media/patterns/gold-vine.svg — Restrained gold vine scroll for burgundy/brown bands (decorative only).
 
 ## Ambient audio (CC0 — web use clear)
 - **File:** `media/audio/ethiopian-azmari-krar-ambient.mp3`
 - **Source recording:** “ethipian azmari songs around fire.wav” by **bruno.auzet** on FreeSound  
   https://freesound.org/people/bruno.auzet/sounds/527689/
 - **License:** [CC0 1.0 Universal (Public Domain Dedication)](https://creativecommons.org/publicdomain/zero/1.0/) — no attribution required; we credit the artist in good faith.
-- **Content note:** Ethiopian azmari field recording tagged with **krar** (lyre). Includes ambient performance elements from the source; trimmed (~75s), faded, and volume-normalized for optional site ambience.
-- **Site behaviour:** Default **off**. Visitor must unmute via accessible control (`aria-pressed`). Preference stored in `localStorage` key `geez-ambient-unmuted` (UX only, not analytics). Pauses when the tab is hidden. Modest volume (~0.28).
+- **Content note:** Ethiopian azmari field recording tagged with **krar** (lyre). Includes ambient performance elements from the source; trimmed (~75s), faded, and volume-normalized for site ambience.
+- **Site behaviour:** Default **on**. Attempts autoplay; if the browser blocks it, UI stays in “on” intent and playback starts on the first gesture. Visitor can mute via accessible control (`aria-pressed`, cue with `aria-describedby`). Mute preference stored in `localStorage` key `geez-ambient-muted` (UX only, not analytics). Cue dismissal stored in `geez-audio-cue-dismissed`. Pauses when the tab is hidden. Modest volume (~0.28).
 
 Do not invent client outcomes from stock photography captions or audio descriptions.

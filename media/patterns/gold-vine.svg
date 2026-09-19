@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="200" viewBox="0 0 360 200" role="img" aria-hidden="true">
+  <!-- Ornamental gold vine - abstract botanical scroll inspired by Ethiopian craft geometry; decorative only. -->
+  <g fill="none" stroke="#c9a227" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    <path stroke-width="1.35" d="M18 182 C48 158, 62 128, 88 118 C118 106, 138 132, 168 124 C198 116, 208 84, 242 76 C274 68, 298 88, 328 52 C340 38, 348 28, 354 18"/>
+    <path stroke-width="1" d="M88 118 C78 98, 92 78, 108 86 C120 92, 118 108, 108 112"/>
+    <path stroke-width="1" d="M168 124 C162 104, 178 90, 190 98 C200 104, 196 118, 186 122"/>
+    <path stroke-width="1" d="M242 76 C236 58, 252 44, 264 52 C274 58, 270 70, 260 74"/>
+    <path stroke-width="1" d="M298 78 C312 70, 322 78, 318 90 C314 98, 304 96, 300 88"/>
+    <path stroke-width="0.9" d="M48 168 C58 160, 64 168, 58 176 C52 182, 46 176, 48 168Z"/>
+    <path stroke-width="0.9" d="M128 108 C138 100, 146 108, 140 116 C134 122, 126 116, 128 108Z"/>
+    <path stroke-width="0.9" d="M210 100 C220 92, 228 100, 222 108 C216 114, 208 108, 210 100Z"/>
+    <path stroke-width="0.9" d="M278 62 C288 54, 296 62, 290 70 C284 76, 276 70, 278 62Z"/>
+  </g>
+  <g fill="#c9a227" opacity="0.55">
+    <circle cx="88" cy="118" r="1.8"/>
+    <circle cx="168" cy="124" r="1.6"/>
+    <circle cx="242" cy="76" r="1.6"/>
+    <circle cx="328" cy="52" r="1.4"/>
+  </g>
+</svg>

@@ -37,18 +37,40 @@
     linear-gradient(160deg, #2a0a12 0%, var(--geez-color-burgundy-strong) 45%, #1a070c 100%);
   color: var(--geez-color-on-brand);
   transition: opacity 380ms ease, visibility 380ms ease;
+  overflow: clip;
+}
+
+.geez-intro::before {
+  left: -1rem;
+  bottom: 8%;
+  width: min(48vw, 20rem);
+  height: min(26vw, 11rem);
+  background-position: left bottom;
+  opacity: 0.18;
+}
+
+.geez-intro::after {
+  right: -1rem;
+  top: 10%;
+  width: min(40vw, 16rem);
+  height: min(22vw, 9rem);
+  background-position: right top;
+  transform: scaleX(-1) rotate(12deg);
+  opacity: 0.14;
+}
+
+.geez-intro__panel {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: var(--geez-space-6);
+  animation: geez-intro-rise 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .geez-intro--done {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-}
-
-.geez-intro__panel {
-  text-align: center;
-  padding: var(--geez-space-6);
-  animation: geez-intro-rise 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .geez-intro__mark {
@@ -314,9 +336,48 @@
   background-blend-mode: normal, soft-light, normal, normal;
   padding: 0;
   border-bottom: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 35%, transparent);
+  overflow: clip;
+}
+
+.geez-home-hero::before,
+.geez-home-hero::after,
+.geez-home-founder::before,
+.geez-home-founder::after,
+.geez-home-final::before,
+.geez-home-final::after,
+.geez-intro::before,
+.geez-intro::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  background-image: var(--geez-pattern-vine, url("../media/patterns/gold-vine.svg"));
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: var(--geez-vine-opacity, 0.2);
+}
+
+.geez-home-hero::before {
+  left: -0.75rem;
+  bottom: 1rem;
+  width: min(44vw, 18rem);
+  height: min(24vw, 10rem);
+  background-position: left bottom;
+}
+
+.geez-home-hero::after {
+  right: -0.5rem;
+  top: 12%;
+  width: min(34vw, 14rem);
+  height: min(18vw, 8rem);
+  background-position: right top;
+  transform: scaleX(-1) rotate(10deg);
+  opacity: calc(var(--geez-vine-opacity, 0.2) * 0.75);
 }
 
 .geez-home-hero__grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: var(--geez-space-6);
   align-items: end;
@@ -875,6 +936,7 @@
 .geez-home-founder {
   position: relative;
   isolation: isolate;
+  overflow: clip;
   background:
     linear-gradient(135deg, rgba(47, 12, 22, 0.92), rgba(74, 21, 32, 0.88) 55%, rgba(58, 15, 24, 0.9)),
     var(--geez-pattern-tibeb),
@@ -882,6 +944,34 @@
   background-blend-mode: normal, soft-light, normal;
   color: var(--geez-color-on-brand);
   border-block: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 35%, transparent);
+}
+
+.geez-home-founder::before {
+  left: -0.5rem;
+  bottom: 0.5rem;
+  width: min(40vw, 16rem);
+  height: min(22vw, 9rem);
+  background-position: left bottom;
+  z-index: 0;
+}
+
+.geez-home-founder::after {
+  right: -0.35rem;
+  top: 0.75rem;
+  width: min(32vw, 13rem);
+  height: min(18vw, 7.5rem);
+  background-position: right top;
+  transform: scaleX(-1) rotate(8deg);
+  opacity: calc(var(--geez-vine-opacity, 0.2) * 0.8);
+  z-index: 0;
+}
+
+.geez-home-founder__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: var(--geez-space-6);
+  align-items: center;
 }
 
 .geez-home-founder h2,
@@ -892,12 +982,6 @@
 
 .geez-home-founder a:hover {
   color: var(--geez-color-gold-accent);
-}
-
-.geez-home-founder__grid {
-  display: grid;
-  gap: var(--geez-space-6);
-  align-items: center;
 }
 
 @media (min-width: 48rem) {
@@ -969,12 +1053,40 @@
 /* Final CTA */
 .geez-home-final {
   position: relative;
+  overflow: clip;
   background:
     linear-gradient(125deg, #1a070c, var(--geez-color-burgundy-strong) 50%, #5a1c18),
     var(--geez-motif);
   color: var(--geez-color-on-brand);
   text-align: center;
   border-top: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 40%, transparent);
+}
+
+.geez-home-final::before {
+  left: -0.5rem;
+  top: 0.5rem;
+  width: min(42vw, 17rem);
+  height: min(22vw, 9rem);
+  background-position: left top;
+  transform: scaleY(-1);
+  z-index: 0;
+}
+
+.geez-home-final::after {
+  right: -0.5rem;
+  bottom: 0.35rem;
+  width: min(36vw, 14rem);
+  height: min(20vw, 8rem);
+  background-position: right bottom;
+  transform: scaleX(-1);
+  opacity: calc(var(--geez-vine-opacity, 0.2) * 0.85);
+  z-index: 0;
+}
+
+.geez-home-final .geez-container,
+.geez-home-final .geez-container--narrow {
+  position: relative;
+  z-index: 1;
 }
 
 .geez-home-final__slogan {
