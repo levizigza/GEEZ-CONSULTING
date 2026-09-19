@@ -46,7 +46,7 @@
   width: min(48vw, 20rem);
   height: min(26vw, 11rem);
   background-position: left bottom;
-  opacity: 0.18;
+  opacity: var(--geez-vine-opacity, 0.62);
 }
 
 .geez-intro::after {
@@ -56,7 +56,7 @@
   height: min(22vw, 9rem);
   background-position: right top;
   transform: scaleX(-1) rotate(12deg);
-  opacity: 0.14;
+  opacity: calc(var(--geez-vine-opacity, 0.62) * 0.9);
 }
 
 .geez-intro__panel {
@@ -354,7 +354,8 @@
   background-image: var(--geez-pattern-vine, url("../media/patterns/gold-vine.svg"));
   background-repeat: no-repeat;
   background-size: contain;
-  opacity: var(--geez-vine-opacity, 0.2);
+  opacity: var(--geez-vine-opacity, 0.62);
+  filter: drop-shadow(0 0 0.55px color-mix(in srgb, var(--geez-color-gold-accent, #c9a227) 70%, #e8c547));
 }
 
 .geez-home-hero::before {
@@ -372,7 +373,7 @@
   height: min(18vw, 8rem);
   background-position: right top;
   transform: scaleX(-1) rotate(10deg);
-  opacity: calc(var(--geez-vine-opacity, 0.2) * 0.75);
+  opacity: calc(var(--geez-vine-opacity, 0.62) * 0.9);
 }
 
 .geez-home-hero__grid {
@@ -962,7 +963,7 @@
   height: min(18vw, 7.5rem);
   background-position: right top;
   transform: scaleX(-1) rotate(8deg);
-  opacity: calc(var(--geez-vine-opacity, 0.2) * 0.8);
+  opacity: calc(var(--geez-vine-opacity, 0.62) * 0.9);
   z-index: 0;
 }
 
@@ -1079,7 +1080,7 @@
   height: min(20vw, 8rem);
   background-position: right bottom;
   transform: scaleX(-1);
-  opacity: calc(var(--geez-vine-opacity, 0.2) * 0.85);
+  opacity: calc(var(--geez-vine-opacity, 0.62) * 0.9);
   z-index: 0;
 }
 

@@ -91,6 +91,7 @@
   --geez-pattern-tibeb: url("../media/patterns/tibeb-lattice.svg");
   --geez-pattern-star: url("../media/patterns/meskel-star.svg");
   --geez-pattern-vine: url("../media/patterns/gold-vine.svg");
+  --geez-vine-opacity: 0.62;
 }
 
 @media (prefers-reduced-motion: reduce) {

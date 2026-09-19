@@ -7,7 +7,8 @@
   --geez-pattern-star: url("../media/patterns/meskel-star.svg");
   --geez-pattern-vine: url("../media/patterns/gold-vine.svg");
   --geez-atmosphere-opacity: 0.045;
-  --geez-vine-opacity: 0.2;
+  /* Gold vines must read as mustard (#C9A227) on burgundy — 0.2 looked same-tone brown */
+  --geez-vine-opacity: 0.62;
 }
 
 /* Body canvas — multicultural Calgary: warm surface + quiet geometry + textile weave */
@@ -244,6 +245,8 @@ body.geez-home {
   background-repeat: no-repeat;
   background-size: contain;
   opacity: var(--geez-vine-opacity);
+  /* Soft gold edge gleam — keeps strokes metallic without covering copy */
+  filter: drop-shadow(0 0 0.55px color-mix(in srgb, var(--geez-color-gold-accent) 70%, #e8c547));
 }
 
 .geez-page-band::before {
@@ -261,7 +264,7 @@ body.geez-home {
   height: min(20vw, 8rem);
   background-position: right top;
   transform: scaleX(-1) rotate(8deg);
-  opacity: calc(var(--geez-vine-opacity) * 0.85);
+  opacity: calc(var(--geez-vine-opacity) * 0.9);
 }
 
 .geez-page-band__inner {
@@ -271,7 +274,7 @@ body.geez-home {
 
 .geez-page-band--quiet::before,
 .geez-page-band--quiet::after {
-  opacity: calc(var(--geez-vine-opacity) * 0.65);
+  opacity: calc(var(--geez-vine-opacity) * 0.72);
 }
 
 .geez-header {
@@ -280,13 +283,13 @@ body.geez-home {
 }
 
 .geez-header::after {
-  right: 0.25rem;
+  right: 0.15rem;
   top: 50%;
-  width: min(28vw, 11rem);
-  height: 2.75rem;
+  width: min(30vw, 12rem);
+  height: 3rem;
   background-position: right center;
   transform: translateY(-50%);
-  opacity: 0.16;
+  opacity: calc(var(--geez-vine-opacity) * 0.88);
 }
 
 .geez-header__inner {
@@ -306,7 +309,8 @@ body.geez-home {
   width: min(48vw, 18rem);
   height: min(26vw, 10rem);
   background-position: left bottom;
-  z-index: -1;
+  /* Above footer fill, below link columns — edge motif only */
+  z-index: 0;
 }
 
 .geez-footer::after {
@@ -316,8 +320,13 @@ body.geez-home {
   height: min(22vw, 8.5rem);
   background-position: right top;
   transform: scaleX(-1) rotate(6deg);
-  opacity: calc(var(--geez-vine-opacity) * 0.75);
-  z-index: -1;
+  opacity: calc(var(--geez-vine-opacity) * 0.88);
+  z-index: 0;
+}
+
+.geez-footer > .geez-container {
+  position: relative;
+  z-index: 1;
 }
 
 /* ---- Ambient audio control (footer-adjacent floating, clears CTAs) ---- */
