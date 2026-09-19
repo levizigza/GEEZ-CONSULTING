@@ -42,7 +42,7 @@ test('EN homepage has exactly one H1 and required landmarks', async () => {
   // First-party deferred scripts + JSON-LD only — no third-party trackers.
   assert.doesNotMatch(
     html,
-    /<script(?![^>]*(?:application\/ld\+json|consent\.js|locale-preference\.js|web-vitals-rum\.js|analytics\.js|intro\.js|geez-measure-config))/i,
+    /<script(?![^>]*(?:application\/ld\+json|consent\.js|locale-preference\.js|web-vitals-rum\.js|analytics\.js|intro\.js|ambient\.js|geez-measure-config))/i,
   );
   assert.match(html, /defer/);
   assert.doesNotMatch(html, /googletagmanager|google-analytics|gtag\(|facebook\.net|hotjar|plausible/i);
@@ -107,6 +107,7 @@ test('live-site reviews + portrait + logo + socials ship; case studies stay gate
   assert.match(html, /\/media\/founder\/saba-teklu\.jpg/);
   assert.match(html, /geez-header__logo/);
   assert.match(html, /geez-intro/);
+  assert.match(html, /geez-intro__vine/);
   assert.match(html, /linkedin\.com\/company\/geez-consulting/);
   assert.match(html, /instagram\.com\/geez\.consulting/);
   assert.match(html, /geez-home-audience/);

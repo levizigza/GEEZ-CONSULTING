@@ -40,23 +40,103 @@
   overflow: clip;
 }
 
-.geez-intro::before {
-  left: -1rem;
-  bottom: 8%;
+/* Animated gold vines — stroke-draw grow (luxury, not cartoon) */
+.geez-intro__vine {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
   width: min(48vw, 20rem);
-  height: min(26vw, 11rem);
-  background-position: left bottom;
-  opacity: var(--geez-vine-opacity, 0.62);
+  height: auto;
+  aspect-ratio: 360 / 200;
+  overflow: visible;
+  filter: drop-shadow(0 0 1px color-mix(in srgb, #c9a227 55%, #e8c547));
 }
 
-.geez-intro::after {
-  right: -1rem;
-  top: 10%;
-  width: min(40vw, 16rem);
-  height: min(22vw, 9rem);
-  background-position: right top;
-  transform: scaleX(-1) rotate(12deg);
-  opacity: calc(var(--geez-vine-opacity, 0.62) * 0.9);
+.geez-intro__vine--left {
+  left: max(-1.25rem, env(safe-area-inset-left, 0px) - 0.5rem);
+  bottom: 6%;
+}
+
+.geez-intro__vine--right {
+  right: max(-1.25rem, env(safe-area-inset-right, 0px) - 0.5rem);
+  top: 8%;
+  transform: scaleX(-1) rotate(10deg);
+}
+
+.geez-intro__vine-glow {
+  stroke: #e8c547;
+  opacity: 0.4;
+}
+
+.geez-intro__vine-stem,
+.geez-intro__vine-tendril,
+.geez-intro__vine-leaf {
+  stroke: #c9a227;
+}
+
+.geez-intro__vine-stem {
+  opacity: 1;
+}
+
+.geez-intro__vine-tendril {
+  opacity: 0.92;
+}
+
+.geez-intro__vine-leaf {
+  opacity: 0.88;
+}
+
+.geez-intro__vine-nodes {
+  opacity: 0;
+}
+
+.geez-intro--animate .geez-intro__vine-glow,
+.geez-intro--animate .geez-intro__vine-stem,
+.geez-intro--animate .geez-intro__vine-tendril,
+.geez-intro--animate .geez-intro__vine-leaf {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: geez-intro-vine-draw 1.65s cubic-bezier(0.33, 0.1, 0.2, 1) both;
+}
+
+.geez-intro--animate .geez-intro__vine--right .geez-intro__vine-glow,
+.geez-intro--animate .geez-intro__vine--right .geez-intro__vine-stem {
+  animation-delay: 120ms;
+}
+
+.geez-intro--animate .geez-intro__vine-tendril {
+  animation-duration: 1.35s;
+  animation-delay: 280ms;
+}
+
+.geez-intro--animate .geez-intro__vine--right .geez-intro__vine-tendril {
+  animation-delay: 380ms;
+}
+
+.geez-intro--animate .geez-intro__vine-leaf {
+  animation-duration: 1.1s;
+  animation-delay: 520ms;
+}
+
+.geez-intro--animate .geez-intro__vine--right .geez-intro__vine-leaf {
+  animation-delay: 600ms;
+}
+
+.geez-intro--animate .geez-intro__vine-nodes {
+  animation: geez-intro-vine-nodes 700ms cubic-bezier(0.22, 1, 0.36, 1) 900ms both;
+}
+
+/* Static vines for reduced-motion: fully drawn, no grow */
+.geez-intro--static .geez-intro__vine-glow,
+.geez-intro--static .geez-intro__vine-stem,
+.geez-intro--static .geez-intro__vine-tendril,
+.geez-intro--static .geez-intro__vine-leaf {
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+}
+
+.geez-intro--static .geez-intro__vine-nodes {
+  opacity: 0.95;
 }
 
 .geez-intro__panel {
@@ -130,11 +210,46 @@
   }
 }
 
+@keyframes geez-intro-vine-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes geez-intro-vine-nodes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.95;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .geez-intro,
-  .geez-intro__panel {
+  .geez-intro__panel,
+  .geez-intro__vine-glow,
+  .geez-intro__vine-stem,
+  .geez-intro__vine-tendril,
+  .geez-intro__vine-leaf,
+  .geez-intro__vine-nodes {
     animation: none !important;
     transition: none !important;
+  }
+
+  .geez-intro__vine-glow,
+  .geez-intro__vine-stem,
+  .geez-intro__vine-tendril,
+  .geez-intro__vine-leaf {
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+  }
+
+  .geez-intro__vine-nodes {
+    opacity: 0.95;
   }
 }
 
@@ -344,9 +459,7 @@
 .geez-home-founder::before,
 .geez-home-founder::after,
 .geez-home-final::before,
-.geez-home-final::after,
-.geez-intro::before,
-.geez-intro::after {
+.geez-home-final::after {
   content: "";
   position: absolute;
   pointer-events: none;
