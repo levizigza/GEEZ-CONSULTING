@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "id": "faq-who-we-help",
+      "category": "audience",
+      "question": {
+        "value": "Who do you work with?",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-020"
+      },
+      "answer": {
+        "value": "We focus on entrepreneurs in Calgary and Alberta, including newcomers and Black business owners launching or growing a small business.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-020"
+      }
+    },
+    {
+      "id": "faq-funding",
+      "category": "scope",
+      "question": {
+        "value": "Can you guarantee a loan or grant?",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-015"
+      },
+      "answer": {
+        "value": "No. We help with planning and funding readiness. Lenders and programs make their own decisions.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-015"
+      }
+    },
+    {
+      "id": "faq-legal-tax",
+      "category": "scope",
+      "question": {
+        "value": "Do you provide legal, tax, or immigration advice?",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-015"
+      },
+      "answer": {
+        "value": "No. We provide business advisory support and will encourage you to consult qualified professionals for legal, tax, or immigration matters.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-015"
+      }
+    },
+    {
+      "id": "faq-languages",
+      "category": "access",
+      "question": {
+        "value": "What languages do you support on the website?",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-020"
+      },
+      "answer": {
+        "value": "English, Amharic, and Tigrinya — each as a full journey, not a partial translation.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-020"
+      }
+    }
+  ]
+}

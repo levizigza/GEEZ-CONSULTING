@@ -1,0 +1,94 @@
+/* Ge'ez Consulting design tokens — child-theme compatible CSS variables.
+   Map into Blocksy/Elementor kit later. Do not use gold-accent as text on light surfaces. */
+
+:root {
+  --geez-color-burgundy: #4c1420;
+  --geez-color-burgundy-strong: #3a0f18;
+  --geez-color-gold-accent: #c9a227;
+  --geez-color-gold-ink: #8a5a0a;
+  --geez-color-ochre: #b7791f;
+  --geez-color-ochre-deep: #8f5a12;
+  --geez-color-charcoal: #1c1917;
+  --geez-color-ink-muted: #524a45;
+  --geez-color-surface: #f3ebe0;
+  --geez-color-surface-raised: #fffcf7;
+  --geez-color-surface-sunken: #e8dccb;
+  --geez-color-on-brand: #fff8f4;
+  --geez-color-border: #d4c6b4;
+  --geez-color-focus: #175cd3;
+  --geez-color-success: #067647;
+  --geez-color-success-bg: #ecfdf3;
+  --geez-color-warning: #854d0e;
+  --geez-color-warning-bg: #fef6e7;
+  --geez-color-danger: #b42318;
+  --geez-color-danger-bg: #fef3f2;
+  --geez-color-info: #175cd3;
+  --geez-color-info-bg: #eff8ff;
+
+  --geez-font-display: "Fraunces", "Noto Serif Ethiopic", "Noto Sans", Georgia, serif;
+  --geez-font-sans: "Noto Sans", "Noto Sans Ethiopic", system-ui, sans-serif;
+  --geez-font-weight-regular: 400;
+  --geez-font-weight-bold: 700;
+
+  --geez-text-xs: clamp(0.8125rem, 0.78rem + 0.15vw, 0.875rem);
+  --geez-text-sm: clamp(0.875rem, 0.84rem + 0.18vw, 0.9375rem);
+  --geez-text-md: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --geez-text-lg: clamp(1.125rem, 1.04rem + 0.4vw, 1.375rem);
+  --geez-text-xl: clamp(1.5rem, 1.25rem + 0.9vw, 2rem);
+  --geez-text-display: clamp(2.15rem, 1.55rem + 2.2vw, 3.35rem);
+  --geez-leading-body: 1.65;
+  --geez-leading-heading: 1.15;
+
+  --geez-space-1: 0.25rem;
+  --geez-space-2: 0.5rem;
+  --geez-space-3: 0.75rem;
+  --geez-space-4: 1rem;
+  --geez-space-5: 1.5rem;
+  --geez-space-6: 2rem;
+  --geez-space-7: 3.25rem;
+  --geez-space-8: 5rem;
+
+  --geez-radius-sm: 0.2rem;
+  --geez-radius-md: 0.4rem;
+  --geez-radius-lg: 0.65rem;
+  --geez-radius-full: 999px;
+
+  --geez-shadow-sm: 0 1px 2px rgba(28, 25, 23, 0.08);
+  --geez-shadow-md: 0 18px 40px rgba(58, 15, 24, 0.14);
+
+  --geez-container-narrow: 40rem;
+  --geez-container-content: 45rem;
+  --geez-container-wide: 72rem;
+
+  --geez-bp-sm: 32rem;
+  --geez-bp-md: 48rem;
+  --geez-bp-lg: 64rem;
+
+  --geez-motion: 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  --geez-touch: 2.75rem;
+  --geez-focus-width: 2px;
+  --geez-focus-offset: 2px;
+
+  /* Subtle woven mesh — cultural warmth without sacred symbols */
+  --geez-motif:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 11px,
+      rgba(201, 162, 39, 0.07) 11px,
+      rgba(201, 162, 39, 0.07) 12px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 11px,
+      rgba(76, 20, 32, 0.05) 11px,
+      rgba(76, 20, 32, 0.05) 12px
+    );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --geez-motion: 0.01ms linear;
+  }
+}

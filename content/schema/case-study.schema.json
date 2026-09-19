@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://geezconsulting.com/schemas/case-study.json",
+  "title": "CaseStudy",
+  "description": "Client Results case study. Unapproved records must not appear in production HTML or JSON-LD.",
+  "type": "object",
+  "required": [
+    "id",
+    "slug",
+    "locale",
+    "recordStatus",
+    "title",
+    "summary",
+    "clientName",
+    "clientSector",
+    "anonymizedLabel",
+    "permissionStatus",
+    "businessStage",
+    "situation",
+    "constraint",
+    "goal",
+    "workPerformed",
+    "deliverables",
+    "timeline",
+    "outcomes",
+    "quote",
+    "quoteApproverName",
+    "quoteApproverRole",
+    "scopeCaveat",
+    "relatedServiceId",
+    "cta"
+  ],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "locale": { "type": "string", "enum": ["en", "am", "ti"] },
+    "recordStatus": {
+      "type": "string",
+      "enum": ["draft", "pending_review", "approved", "rejected", "remove"]
+    },
+    "migratedFrom": { "type": "string" },
+    "title": { "$ref": "claim-field.json" },
+    "summary": { "$ref": "claim-field.json" },
+    "clientName": { "$ref": "claim-field.json" },
+    "clientSector": { "$ref": "claim-field.json" },
+    "anonymizedLabel": { "$ref": "claim-field.json" },
+    "permissionStatus": { "$ref": "claim-field.json" },
+    "businessStage": { "$ref": "claim-field.json" },
+    "situation": { "$ref": "claim-field.json" },
+    "constraint": { "$ref": "claim-field.json" },
+    "goal": { "$ref": "claim-field.json" },
+    "workPerformed": { "$ref": "claim-field.json" },
+    "deliverables": { "$ref": "claim-field.json" },
+    "timeline": { "$ref": "claim-field.json" },
+    "outcomes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/outcome" }
+    },
+    "quote": { "$ref": "claim-field.json" },
+    "quoteApproverName": { "$ref": "claim-field.json" },
+    "quoteApproverRole": { "$ref": "claim-field.json" },
+    "scopeCaveat": { "$ref": "claim-field.json" },
+    "relatedServiceId": {
+      "type": "string",
+      "enum": [
+        "start-strong",
+        "plan-funding-readiness",
+        "books-payroll",
+        "grow-with-a-system"
+      ]
+    },
+    "cta": {
+      "type": "object",
+      "required": ["label", "href"],
+      "additionalProperties": false,
+      "properties": {
+        "label": { "type": "string", "minLength": 1 },
+        "href": { "type": "string", "pattern": "^/" }
+      }
+    },
+    "image": {
+      "type": ["object", "null"],
+      "required": ["src", "alt"],
+      "properties": {
+        "src": { "$ref": "claim-field.json" },
+        "alt": { "$ref": "claim-field.json" }
+      }
+    }
+  },
+  "$defs": {
+    "outcome": {
+      "type": "object",
+      "required": [
+        "kind",
+        "statement",
+        "metricDefinition",
+        "baseline",
+        "resultValue",
+        "window",
+        "metricSource"
+      ],
+      "properties": {
+        "kind": { "type": "string", "enum": ["qualitative", "quantitative"] },
+        "statement": { "$ref": "claim-field.json" },
+        "metricDefinition": { "$ref": "claim-field.json" },
+        "baseline": { "$ref": "claim-field.json" },
+        "resultValue": { "$ref": "claim-field.json" },
+        "window": { "$ref": "claim-field.json" },
+        "metricSource": { "$ref": "claim-field.json" }
+      }
+    }
+  }
+}

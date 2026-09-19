@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://geezconsulting.com/schemas/site-content-bundle.json",
+  "title": "GeezSiteContentBundle",
+  "description": "Locale-ready redesign content bundle. Maps later to WordPress + Polylang entities.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "meta",
+    "business",
+    "languages",
+    "serviceArea",
+    "ctas",
+    "services",
+    "technologyPartner",
+    "process",
+    "founder",
+    "testimonials",
+    "caseStudies",
+    "faqs",
+    "articles",
+    "disclaimers",
+    "seo"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["schemaVersion", "locale", "productionSafe"],
+      "properties": {
+        "schemaVersion": { "type": "string" },
+        "locale": { "type": "string", "enum": ["en", "am", "ti"] },
+        "productionSafe": {
+          "type": "boolean",
+          "description": "false for sample/demo bundles; production loaders must reject false"
+        },
+        "generatedAt": { "type": "string" }
+      }
+    },
+    "business": { "type": "object" },
+    "languages": { "type": "object" },
+    "serviceArea": { "type": "object" },
+    "ctas": { "type": "object" },
+    "services": { "type": "array" },
+    "technologyPartner": { "type": "object" },
+    "process": { "type": "object" },
+    "founder": { "type": "object" },
+    "testimonials": { "type": "array" },
+    "caseStudies": { "type": "array" },
+    "faqs": { "type": "array" },
+    "articles": { "type": "array" },
+    "disclaimers": { "type": "object" },
+    "seo": { "type": "object" }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "locale": "en",
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "resources": "Resources",
+    "about": "About Saba",
+    "contact": "Book a Fit Call"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send message",
+    "sending": "Sending…",
+    "success": "Thanks — we received your message.",
+    "error": "Something went wrong. Please email us directly.",
+    "privacyHint": "Do not include SIN, passwords, or other sensitive IDs."
+  },
+  "sections": {
+    "services": "Services",
+    "process": "How we work",
+    "about": "About Saba",
+    "faq": "FAQ",
+    "contact": "Book a Fit Call",
+    "resources": "Resources",
+    "clientResults": "Client Results"
+  }
+}

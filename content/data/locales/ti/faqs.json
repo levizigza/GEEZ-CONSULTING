@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "id": "faq-who-we-help",
+      "category": "audience",
+      "question": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-020"
+      },
+      "answer": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-020"
+      }
+    },
+    {
+      "id": "faq-funding",
+      "category": "scope",
+      "question": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-015"
+      },
+      "answer": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-015"
+      }
+    },
+    {
+      "id": "faq-legal-tax",
+      "category": "scope",
+      "question": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-015"
+      },
+      "answer": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-015"
+      }
+    },
+    {
+      "id": "faq-languages",
+      "category": "access",
+      "question": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-020"
+      },
+      "answer": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-020"
+      }
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "schemaVersion": "1.0.0",
+  "defaultStatusCode": 301,
+  "notes": "Explicit legacy → redesign redirects. Implement in Hostinger/WordPress (e.g. Redirection plugin) without silently dropping inbound links. Do not 404 legacy URLs listed here.",
+  "redirects": [
+    {
+      "id": "blog-to-resources",
+      "from": "/blog/",
+      "to": "/resources/",
+      "locales": ["en"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Blog renamed to Resources"
+    },
+    {
+      "id": "blog-to-resources-noslash",
+      "from": "/blog",
+      "to": "/resources/",
+      "locales": ["en"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Canonicalize blog path"
+    },
+    {
+      "id": "am-blog-fallback-to-am-resources",
+      "from": "/am/blog/",
+      "to": "/am/resources/",
+      "locales": ["am"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Today /am/blog/ redirects to EN blog; redesign must keep AM users in AM"
+    },
+    {
+      "id": "ti-blog-fallback-to-ti-resources",
+      "from": "/ti/blog/",
+      "to": "/ti/resources/",
+      "locales": ["ti"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Keep TI users in TI"
+    },
+    {
+      "id": "article-name-en",
+      "from": "/how-to-name-your-business/",
+      "to": "/resources/how-to-name-your-business/",
+      "locales": ["en"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Move articles under /resources/"
+    },
+    {
+      "id": "article-credit-en",
+      "from": "/steps-to-improve-your-credit-and-financial-situation/",
+      "to": "/resources/steps-to-improve-your-credit-and-financial-situation/",
+      "locales": ["en"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Move articles under /resources/"
+    },
+    {
+      "id": "article-partnerships-en",
+      "from": "/unlocking-the-power-of-partnerships-for-your-small-business/",
+      "to": "/resources/unlocking-the-power-of-partnerships-for-your-small-business/",
+      "locales": ["en"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Move articles under /resources/"
+    },
+    {
+      "id": "article-name-am",
+      "from": "/am/how-to-name-your-business-2/",
+      "to": "/am/resources/how-to-name-your-business/",
+      "locales": ["am"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Normalize AM slug; publish only when AM content approved (else keep noindex on target)"
+    },
+    {
+      "id": "article-credit-am",
+      "from": "/am/steps-to-improve-your-credit-and-financial-situation-2/",
+      "to": "/am/resources/steps-to-improve-your-credit-and-financial-situation/",
+      "locales": ["am"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Normalize AM slug"
+    },
+    {
+      "id": "article-partnerships-am",
+      "from": "/am/unlocking-the-power-of-partnerships-for-your-small-business-2/",
+      "to": "/am/resources/unlocking-the-power-of-partnerships-for-your-small-business/",
+      "locales": ["am"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Normalize AM slug"
+    },
+    {
+      "id": "article-name-ti",
+      "from": "/ti/how-to-name-your-business-3/",
+      "to": "/ti/resources/how-to-name-your-business/",
+      "locales": ["ti"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Normalize TI slug"
+    },
+    {
+      "id": "article-credit-ti",
+      "from": "/ti/steps-to-improve-your-credit-and-financial-situation-3/",
+      "to": "/ti/resources/steps-to-improve-your-credit-and-financial-situation/",
+      "locales": ["ti"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Normalize TI slug"
+    },
+    {
+      "id": "article-partnerships-ti",
+      "from": "/ti/unlocking-the-power-of-partnerships-for-your-small-business-3/",
+      "to": "/ti/resources/unlocking-the-power-of-partnerships-for-your-small-business/",
+      "locales": ["ti"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Normalize TI slug"
+    },
+    {
+      "id": "privacy-policy-legacy",
+      "from": "/privacy-policy/",
+      "to": "/privacy/",
+      "locales": ["en"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Legacy 404 path → canonical privacy URL once content approved"
+    },
+    {
+      "id": "contact-alias",
+      "from": "/contact/",
+      "to": "/book-a-fit-call/",
+      "locales": ["en", "am", "ti"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Contact alias for Book a Fit Call",
+      "localeAware": true
+    },
+    {
+      "id": "home-hash-services",
+      "from": "/#services",
+      "to": "/services/",
+      "locales": ["en"],
+      "statusCode": 301,
+      "preserveQuery": false,
+      "reason": "Legacy single-page anchor → services overview",
+      "implementationNotes": "Hash redirects often require JS or edge rules; keep /#services working until cutover."
+    },
+    {
+      "id": "home-hash-about",
+      "from": "/#about",
+      "to": "/about-saba/",
+      "locales": ["en"],
+      "statusCode": 301,
+      "preserveQuery": false,
+      "reason": "Legacy about anchor"
+    },
+    {
+      "id": "home-hash-faq",
+      "from": "/#faq",
+      "to": "/#faq",
+      "locales": ["en"],
+      "statusCode": 200,
+      "preserveQuery": false,
+      "reason": "FAQ may remain on home until dedicated page exists — retain inbound hash",
+      "passthrough": true
+    },
+    {
+      "id": "home-hash-contact",
+      "from": "/#contact",
+      "to": "/book-a-fit-call/",
+      "locales": ["en"],
+      "statusCode": 301,
+      "preserveQuery": false,
+      "reason": "Legacy contact anchor → Book a Fit Call"
+    },
+    {
+      "id": "category-general",
+      "from": "/category/general/",
+      "to": "/resources/",
+      "locales": ["en"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Collapse thin category archive into resources"
+    },
+    {
+      "id": "category-am",
+      "from": "/am/category/uncategorized-am/",
+      "to": "/am/resources/",
+      "locales": ["am"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Collapse AM category archive"
+    },
+    {
+      "id": "category-ti",
+      "from": "/ti/category/uncategorized-ti/",
+      "to": "/ti/resources/",
+      "locales": ["ti"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Collapse TI category archive"
+    },
+    {
+      "id": "author-admin-en",
+      "from": "/author/admin/",
+      "to": "/about-saba/",
+      "locales": ["en"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Remove public geez_admin author archive from IA"
+    },
+    {
+      "id": "author-admin-am",
+      "from": "/am/author/admin/",
+      "to": "/am/about-saba/",
+      "locales": ["am"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Remove AM author archive"
+    },
+    {
+      "id": "author-admin-ti",
+      "from": "/ti/author/admin/",
+      "to": "/ti/about-saba/",
+      "locales": ["ti"],
+      "statusCode": 301,
+      "preserveQuery": true,
+      "reason": "Remove TI author archive"
+    }
+  ]
+}

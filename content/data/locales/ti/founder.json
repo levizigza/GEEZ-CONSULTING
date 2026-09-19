@@ -1,0 +1,56 @@
+{
+  "id": "founder-saba-teklu",
+  "displayName": {
+    "value": "ሳባ ተኽሉ",
+    "source": "https://geezconsulting.com/ti/",
+    "approvalStatus": "draft",
+    "lastReviewed": null,
+    "ledgerId": "CL-004",
+    "notes": "Observed on live TI home; confirm preferred spelling"
+  },
+  "roleTitle": {
+    "value": "መስራቲትን ዳይረክተርን",
+    "source": "https://geezconsulting.com/ti/",
+    "approvalStatus": "draft",
+    "lastReviewed": null,
+    "ledgerId": "CL-004"
+  },
+  "bio": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-004",
+    "notes": "Native Tigrinya bio required — do not duplicate English homepage placeholder or invent credentials"
+  },
+  "credentials": {
+    "value": [],
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-019"
+  },
+  "yearsExperience": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-019"
+  },
+  "photo": {
+    "src": {
+      "value": null,
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-004"
+    },
+    "alt": {
+      "value": null,
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-004"
+    }
+  }
+}

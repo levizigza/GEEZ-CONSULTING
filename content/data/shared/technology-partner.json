@@ -1,0 +1,58 @@
+{
+  "hasTechnologyPartner": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-016",
+    "notes": "Candidate under review: Navigate Technology Solutions — do not publish relationship until verified"
+  },
+  "partnerName": {
+    "value": "Navigate Technology Solutions",
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-016",
+    "notes": "Candidate name only; public Technology Support page omits the name until approved"
+  },
+  "relationshipSummary": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-016",
+    "notes": "Define referral vs reseller vs subcontractor vs affiliate"
+  },
+  "contractingParty": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-016",
+    "notes": "Who the client contracts with"
+  },
+  "deliveryResponsibility": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-016",
+    "notes": "Who delivers implementation and ongoing support"
+  },
+  "dataHandlingSummary": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-016",
+    "notes": "How data is collected, stored, shared; link Privacy when ready"
+  },
+  "publicDisclosureCopy": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-016",
+    "notes": "When approved, state affiliation clearly without implying outcome endorsement"
+  }
+}

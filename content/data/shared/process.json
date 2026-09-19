@@ -1,0 +1,76 @@
+{
+  "steps": [
+    {
+      "id": "discover",
+      "sortOrder": 1,
+      "title": {
+        "value": "Discover",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-017"
+      },
+      "description": {
+        "value": "Understand your goals, constraints, and readiness.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-017"
+      }
+    },
+    {
+      "id": "plan",
+      "sortOrder": 2,
+      "title": {
+        "value": "Plan",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-017"
+      },
+      "description": {
+        "value": "Sequence the work: registration, funding readiness, books, or systems.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-017"
+      }
+    },
+    {
+      "id": "build",
+      "sortOrder": 3,
+      "title": {
+        "value": "Build",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-017"
+      },
+      "description": {
+        "value": "Implement the documents, routines, and tools you will actually use.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-017"
+      }
+    },
+    {
+      "id": "steady",
+      "sortOrder": 4,
+      "title": {
+        "value": "Steady",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-017"
+      },
+      "description": {
+        "value": "Review, adjust, and keep the system running as the business grows.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-017"
+      }
+    }
+  ]
+}

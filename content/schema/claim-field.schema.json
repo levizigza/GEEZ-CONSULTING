@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://geezconsulting.com/schemas/claim-field.json",
+  "title": "ClaimField",
+  "description": "Wrapper for any claim-bearing value. Unverified claims must not render in production.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["value", "source", "approvalStatus", "lastReviewed"],
+  "properties": {
+    "value": {
+      "description": "The candidate public value (string, number, boolean, object, or array).",
+      "type": ["string", "number", "boolean", "object", "array", "null"]
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Evidence pointer (URL, doc path, interview ID). Use TODO_VERIFICATION when unknown."
+    },
+    "approvalStatus": {
+      "type": "string",
+      "enum": [
+        "todo_verification",
+        "draft",
+        "pending_review",
+        "approved",
+        "rejected",
+        "remove"
+      ]
+    },
+    "lastReviewed": {
+      "type": ["string", "null"],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "ledgerId": {
+      "type": ["string", "null"],
+      "pattern": "^CL-\\d{3,}$",
+      "description": "Optional link to docs/geez-redesign/claims-ledger.md"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "pages": [
+    {
+      "path": "/",
+      "canonicalPath": "/",
+      "noindex": false,
+      "title": {
+        "value": "Ge'ez Consulting | Business launch & growth support in Calgary",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-021",
+        "notes": "Replace generic live meta with Alberta/newcomer-focused title after approval"
+      },
+      "description": {
+        "value": "Practical business launch and growth support for newcomer and Black entrepreneurs in Calgary and Alberta. English, Amharic, and Tigrinya.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-021"
+      },
+      "ogImage": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-021",
+        "notes": "Legacy OG image exists on live site; confirm rights and redesign asset"
+      }
+    },
+    {
+      "path": "/blog/",
+      "canonicalPath": "/blog/",
+      "noindex": false,
+      "title": {
+        "value": "Resources | Ge'ez Consulting",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-021"
+      },
+      "description": {
+        "value": "Guides for naming, funding readiness, partnerships, and operating a small business in Alberta.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-021"
+      },
+      "ogImage": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-021"
+      }
+    },
+    {
+      "path": "/privacy/",
+      "canonicalPath": "/privacy/",
+      "noindex": false,
+      "title": {
+        "value": "Privacy | Ge'ez Consulting",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-018"
+      },
+      "description": {
+        "value": "How Ge'ez Consulting handles inquiry and website data.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-018"
+      },
+      "ogImage": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-018"
+      }
+    }
+  ]
+}

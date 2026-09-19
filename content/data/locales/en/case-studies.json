@@ -1,0 +1,603 @@
+{
+  "items": [
+    {
+      "id": "cs-jonas-driving-school",
+      "slug": "jonas-driving-school",
+      "locale": "en",
+      "recordStatus": "draft",
+      "migratedFrom": "live-home-testimonial-2026-09",
+      "title": {
+        "value": "Driving school — qualitative client feedback",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001",
+        "notes": "Migrated from live home testimonial; interview + permission required before publish"
+      },
+      "summary": {
+        "value": "Qualitative feedback from a driving-school owner about guidance navigating business challenges. No verified metrics.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "clientName": {
+        "value": "Jonas Driving School",
+        "source": "live-site:geezconsulting.com/home-testimonials",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001",
+        "notes": "Name appears on live site; publication permission not reconfirmed for redesign"
+      },
+      "clientSector": {
+        "value": "Driver training",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001",
+        "notes": "Inferred only as sector label from public org name — confirm in interview"
+      },
+      "anonymizedLabel": {
+        "value": "A Calgary-area driving school",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001",
+        "notes": "Use when permission is story_anonymized"
+      },
+      "permissionStatus": {
+        "value": "pending",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "businessStage": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022",
+        "notes": "Unknown — capture in client interview"
+      },
+      "situation": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022",
+        "notes": "Unknown — capture in client interview"
+      },
+      "constraint": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "goal": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "workPerformed": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022",
+        "notes": "Do not invent scope from the quote alone"
+      },
+      "deliverables": {
+        "value": [],
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "timeline": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022",
+        "notes": "Omit publicly until approved"
+      },
+      "outcomes": [
+        {
+          "kind": "qualitative",
+          "statement": {
+            "value": "Client shared qualitative feedback about guidance on business challenges. Mentions of operations or profitability in the quote are not verified metrics and must not be restated as results.",
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "draft",
+            "lastReviewed": null,
+            "ledgerId": "CL-001",
+            "notes": "Qualitative only — no financing, revenue, profitability, or operational numbers"
+          },
+          "metricDefinition": {
+            "value": null,
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "draft",
+            "lastReviewed": null,
+            "ledgerId": "CL-022"
+          },
+          "baseline": {
+            "value": null,
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "draft",
+            "lastReviewed": null,
+            "ledgerId": "CL-022"
+          },
+          "resultValue": {
+            "value": null,
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "draft",
+            "lastReviewed": null,
+            "ledgerId": "CL-022",
+            "notes": "Never infer numbers from the live quote"
+          },
+          "window": {
+            "value": null,
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "draft",
+            "lastReviewed": null,
+            "ledgerId": "CL-022"
+          },
+          "metricSource": {
+            "value": null,
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "draft",
+            "lastReviewed": null,
+            "ledgerId": "CL-022"
+          }
+        }
+      ],
+      "quote": {
+        "value": "Working with Saba has been a game-changer for our business. Her expertise provided valuable insights and guidance that helped us navigate complex challenges and capitalize on opportunities. We've seen significant improvements in our operations, profitability, and overall business performance.",
+        "source": "live-site:geezconsulting.com/home-testimonials",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001",
+        "notes": "Preserve quote wording; do not elevate profitability/operations language into quantitative outcomes"
+      },
+      "quoteApproverName": {
+        "value": "Yonas Hila",
+        "source": "live-site:geezconsulting.com/home-testimonials",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "quoteApproverRole": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "scopeCaveat": {
+        "value": "Individual results vary. Ge'ez Consulting does not guarantee financing, revenue, profitability, or operational outcomes.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-015"
+      },
+      "relatedServiceId": "grow-with-a-system",
+      "cta": {
+        "label": "Book a Fit Call",
+        "href": "/book-a-fit-call/"
+      },
+      "image": {
+        "src": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "draft",
+          "lastReviewed": null,
+          "ledgerId": "CL-002"
+        },
+        "alt": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "draft",
+          "lastReviewed": null,
+          "ledgerId": "CL-002"
+        }
+      }
+    },
+    {
+      "id": "cs-us1-import-export",
+      "slug": "us1-general-import-export",
+      "locale": "en",
+      "recordStatus": "draft",
+      "migratedFrom": "live-home-testimonial-2026-09",
+      "title": {
+        "value": "Import/export wholesale — qualitative client feedback",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "summary": {
+        "value": "Qualitative feedback about support understanding Canadian lending processes. No loan amount, approval, or financing outcome is claimed or verified.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001",
+        "notes": "Do not infer BDC approval or funding amounts"
+      },
+      "clientName": {
+        "value": "US1 General Import Export and Wholesale INC",
+        "source": "live-site:geezconsulting.com/home-testimonials",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "clientSector": {
+        "value": "Import / export wholesale",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "anonymizedLabel": {
+        "value": "An Alberta import/export wholesaler",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "permissionStatus": {
+        "value": "pending",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "businessStage": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "situation": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "constraint": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "goal": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "workPerformed": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022",
+        "notes": "Quote mentions BDC process support — confirm scope in interview; never claim loan success"
+      },
+      "deliverables": {
+        "value": [],
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "timeline": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "outcomes": [
+        {
+          "kind": "qualitative",
+          "statement": {
+            "value": "Client shared qualitative feedback about guidance on Canadian banking and loan-process steps. No financing amount, approval decision, or funding outcome is verified or published as a result.",
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "draft",
+            "lastReviewed": null,
+            "ledgerId": "CL-001"
+          },
+          "metricDefinition": {
+            "value": null,
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "draft",
+            "lastReviewed": null,
+            "ledgerId": "CL-022"
+          },
+          "baseline": {
+            "value": null,
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "draft",
+            "lastReviewed": null,
+            "ledgerId": "CL-022"
+          },
+          "resultValue": {
+            "value": null,
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "draft",
+            "lastReviewed": null,
+            "ledgerId": "CL-022",
+            "notes": "Do not infer financing numbers"
+          },
+          "window": {
+            "value": null,
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "draft",
+            "lastReviewed": null,
+            "ledgerId": "CL-022"
+          },
+          "metricSource": {
+            "value": null,
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "draft",
+            "lastReviewed": null,
+            "ledgerId": "CL-022"
+          }
+        }
+      ],
+      "quote": {
+        "value": "Saba has been pivotal in helping us understand how the bank (BDC) system works and has taken us every step of the loan process to make sure it succeeds. She had good knowledge of the business environment in Canada and we received valuable advice.",
+        "source": "live-site:geezconsulting.com/home-testimonials",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001",
+        "notes": "Quote may describe process help; do not treat as verified loan approval or amount"
+      },
+      "quoteApproverName": {
+        "value": "Yordanos Tewoldebrahan",
+        "source": "live-site:geezconsulting.com/home-testimonials",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "quoteApproverRole": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "scopeCaveat": {
+        "value": "Ge'ez Consulting does not guarantee loans, grants, or lender decisions. Lender criteria and outcomes are outside our control.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-015"
+      },
+      "relatedServiceId": "plan-funding-readiness",
+      "cta": {
+        "label": "Book a Fit Call",
+        "href": "/book-a-fit-call/"
+      },
+      "image": {
+        "src": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "draft",
+          "lastReviewed": null,
+          "ledgerId": "CL-002"
+        },
+        "alt": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "draft",
+          "lastReviewed": null,
+          "ledgerId": "CL-002"
+        }
+      }
+    },
+    {
+      "id": "cs-ashu-africa",
+      "slug": "ashu-africa-import-export",
+      "locale": "en",
+      "recordStatus": "draft",
+      "migratedFrom": "live-home-testimonial-2026-09",
+      "title": {
+        "value": "Import/export startup — qualitative client feedback",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "summary": {
+        "value": "Qualitative feedback about support setting up an import/export company. No revenue or operational metrics are verified.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "clientName": {
+        "value": "Ashu Africa Import Export LTD",
+        "source": "live-site:geezconsulting.com/home-testimonials",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "clientSector": {
+        "value": "Import / export",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "anonymizedLabel": {
+        "value": "An Alberta import/export startup",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "permissionStatus": {
+        "value": "pending",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "businessStage": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "situation": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "constraint": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "goal": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "workPerformed": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022",
+        "notes": "Quote mentions company setup help — confirm deliverables in interview"
+      },
+      "deliverables": {
+        "value": [],
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "timeline": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "outcomes": [
+        {
+          "kind": "qualitative",
+          "statement": {
+            "value": "Client shared qualitative feedback about assistance setting up their company. No registration outcome guarantee, revenue, or operational metric is verified.",
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "draft",
+            "lastReviewed": null,
+            "ledgerId": "CL-001"
+          },
+          "metricDefinition": {
+            "value": null,
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "draft",
+            "lastReviewed": null,
+            "ledgerId": "CL-022"
+          },
+          "baseline": {
+            "value": null,
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "draft",
+            "lastReviewed": null,
+            "ledgerId": "CL-022"
+          },
+          "resultValue": {
+            "value": null,
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "draft",
+            "lastReviewed": null,
+            "ledgerId": "CL-022"
+          },
+          "window": {
+            "value": null,
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "draft",
+            "lastReviewed": null,
+            "ledgerId": "CL-022"
+          },
+          "metricSource": {
+            "value": null,
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "draft",
+            "lastReviewed": null,
+            "ledgerId": "CL-022"
+          }
+        }
+      ],
+      "quote": {
+        "value": "We are extremely pleased with the services Ge'ez Consulting provided for us. Saba's professional expertise and assistance in setting up Ashu Africa Import Export LTD was invaluable. Saba helped our company's goal reach to a higher result and exceeded our expectatons.",
+        "source": "live-site:geezconsulting.com/home-testimonials",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001",
+        "notes": "Spelling 'expectatons' preserved from live source until client re-approves edited wording"
+      },
+      "quoteApproverName": {
+        "value": "Ashenafi Kassi",
+        "source": "live-site:geezconsulting.com/home-testimonials",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "quoteApproverRole": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "scopeCaveat": {
+        "value": "Company registration and licensing decisions rest with government authorities. Ge'ez Consulting does not guarantee approvals or business results.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "draft",
+        "lastReviewed": null,
+        "ledgerId": "CL-015"
+      },
+      "relatedServiceId": "start-strong",
+      "cta": {
+        "label": "Book a Fit Call",
+        "href": "/book-a-fit-call/"
+      },
+      "image": {
+        "src": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "draft",
+          "lastReviewed": null,
+          "ledgerId": "CL-002"
+        },
+        "alt": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "draft",
+          "lastReviewed": null,
+          "ledgerId": "CL-002"
+        }
+      }
+    }
+  ]
+}

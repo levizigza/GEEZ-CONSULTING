@@ -1,0 +1,190 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--geez-font-sans);
+  font-size: 100%;
+  line-height: var(--geez-leading-body);
+  color: var(--geez-color-charcoal);
+  background: var(--geez-color-surface);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-size: var(--geez-text-md);
+  font-weight: var(--geez-font-weight-regular);
+  overflow-wrap: break-word;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: var(--geez-focus-width) solid var(--geez-color-focus);
+  outline-offset: var(--geez-focus-offset);
+}
+
+.geez-skip {
+  position: absolute;
+  left: var(--geez-space-3);
+  top: var(--geez-space-3);
+  z-index: 100;
+  padding: var(--geez-space-2) var(--geez-space-4);
+  background: var(--geez-color-burgundy);
+  color: var(--geez-color-on-brand);
+  border-radius: var(--geez-radius-sm);
+  transform: translateY(-200%);
+}
+
+.geez-skip:focus,
+.geez-skip:focus-visible {
+  transform: none;
+  outline: var(--geez-focus-width) solid var(--geez-color-focus);
+  outline-offset: var(--geez-focus-offset);
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+.geez-display {
+  font-weight: var(--geez-font-weight-bold);
+  line-height: var(--geez-leading-heading);
+  color: var(--geez-color-burgundy);
+}
+
+h1,
+.geez-display {
+  font-family: var(--geez-font-display);
+  font-size: var(--geez-text-display);
+  letter-spacing: -0.02em;
+}
+
+.geez-locale-am h1,
+.geez-locale-am .geez-display,
+.geez-locale-ti h1,
+.geez-locale-ti .geez-display,
+:lang(am) h1,
+:lang(ti) h1 {
+  font-family: var(--geez-font-sans);
+  letter-spacing: 0;
+}
+
+h2 {
+  font-size: var(--geez-text-xl);
+}
+
+h3 {
+  font-size: var(--geez-text-lg);
+}
+
+p {
+  margin: 0 0 var(--geez-space-4);
+}
+
+a {
+  color: var(--geez-color-burgundy);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  color: var(--geez-color-burgundy-strong);
+}
+
+.geez-container {
+  width: min(100% - var(--geez-space-6), var(--geez-container-wide));
+  margin-inline: auto;
+}
+
+.geez-container--narrow {
+  width: min(100% - var(--geez-space-6), var(--geez-container-narrow));
+}
+
+.geez-media-ph {
+  display: block;
+  width: 100%;
+  background: var(--geez-color-surface-sunken);
+  border-radius: var(--geez-radius-md);
+  border: 1px solid var(--geez-color-border);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Ethiopic scripts: slightly more open line-height for Fidel glyphs */
+.geez-locale-am,
+.geez-locale-ti,
+:lang(am),
+:lang(ti) {
+  line-height: 1.7;
+}
+
+.geez-locale-am h1,
+.geez-locale-am h2,
+.geez-locale-am h3,
+.geez-locale-ti h1,
+.geez-locale-ti h2,
+.geez-locale-ti h3,
+:lang(am) h1,
+:lang(am) h2,
+:lang(am) h3,
+:lang(ti) h1,
+:lang(ti) h2,
+:lang(ti) h3 {
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.geez-lang-pref {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--geez-space-3);
+  padding: var(--geez-space-3) var(--geez-space-4);
+  background: color-mix(in srgb, var(--geez-color-burgundy) 8%, transparent);
+  border-bottom: 1px solid var(--geez-color-border);
+  font-size: var(--geez-text-sm);
+}
+
+.geez-lang-pref p {
+  margin: 0;
+}
+
+.geez-lang-pref__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--geez-space-2);
+  align-items: center;
+}
+
+.geez-text-btn {
+  min-height: 44px;
+  padding: var(--geez-space-2) var(--geez-space-3);
+  background: transparent;
+  border: 1px solid var(--geez-color-border);
+  border-radius: var(--geez-radius-sm);
+  color: var(--geez-color-charcoal);
+  cursor: pointer;
+  font: inherit;
+}

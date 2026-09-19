@@ -1,0 +1,5 @@
+/*
+  Compatibility shim: prefer fonts-latin.css (+ fonts-ethiopic.css on am/ti).
+  Kept so older links still resolve; build also emits the split files.
+*/
+@import url("./fonts-latin.css");

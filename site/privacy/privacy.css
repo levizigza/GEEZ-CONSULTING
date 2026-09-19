@@ -1,0 +1,58 @@
+/* Privacy / consent / legal page styles */
+
+.geez-consent {
+  position: fixed;
+  inset-inline: 0;
+  inset-block-end: 0;
+  z-index: 40;
+  background: var(--geez-surface-elevated, #fff);
+  border-block-start: 1px solid var(--geez-border, #d8d0c8);
+  padding-block: var(--geez-space-3, 0.75rem);
+  box-shadow: 0 -4px 24px rgb(0 0 0 / 8%);
+}
+
+.geez-consent__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--geez-space-3, 0.75rem);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.geez-consent__inner > p {
+  margin: 0;
+  flex: 1 1 16rem;
+  max-width: 40rem;
+  font-size: var(--geez-text-sm, 0.9375rem);
+}
+
+.geez-consent__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--geez-space-2, 0.5rem);
+  align-items: center;
+  margin: 0;
+}
+
+.geez-legal .geez-svc__note {
+  max-width: 40rem;
+}
+
+.geez-field--marketing {
+  margin-block-start: var(--geez-space-4, 1rem);
+  padding: var(--geez-space-3, 0.75rem);
+  background: var(--geez-surface-muted, #f7f4f0);
+  border-radius: var(--geez-radius-sm, 4px);
+}
+
+.geez-jit-notice {
+  margin: 0.25rem 0 0;
+  font-size: var(--geez-text-sm, 0.9375rem);
+  color: var(--geez-text-muted, #5c534c);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .geez-consent {
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,75 @@
+/* Client Results index + case study detail */
+
+.geez-cr__media {
+  margin: 0 0 var(--geez-space-5);
+  overflow: clip;
+  border-radius: var(--geez-radius-md);
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--geez-color-burgundy) 12%, transparent),
+      color-mix(in srgb, var(--geez-color-gold-ink) 10%, transparent)
+    ),
+    var(--geez-color-surface-muted, #f3eee8);
+}
+
+.geez-cr__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.geez-cr__media--pending {
+  min-height: 12rem;
+  display: grid;
+  place-items: center;
+  color: var(--geez-color-ink-muted);
+  font-size: var(--geez-text-sm);
+  border: 1px dashed var(--geez-color-border);
+}
+
+.geez-cr__lede {
+  color: var(--geez-color-ink-muted);
+}
+
+.geez-cr__anon,
+.geez-cr__card-meta {
+  font-size: var(--geez-text-sm);
+  color: var(--geez-color-ink-muted);
+}
+
+.geez-cr__outcomes {
+  padding-inline-start: 1.25rem;
+}
+
+.geez-cr__metric {
+  display: grid;
+  gap: var(--geez-space-2);
+  margin: var(--geez-space-3) 0 0;
+}
+
+.geez-cr__metric > div {
+  display: grid;
+  grid-template-columns: minmax(0, 8rem) minmax(0, 1fr);
+  gap: var(--geez-space-2);
+}
+
+.geez-cr__metric dt {
+  font-weight: 700;
+  margin: 0;
+}
+
+.geez-cr__metric dd {
+  margin: 0;
+}
+
+.geez-cr__empty {
+  padding: var(--geez-space-5);
+  border-inline-start: 4px solid var(--geez-color-gold-ink);
+  background: color-mix(in srgb, var(--geez-color-burgundy) 4%, transparent);
+}
+
+.geez-cr__empty h2 {
+  margin-top: 0;
+}

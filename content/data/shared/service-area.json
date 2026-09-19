@@ -1,0 +1,25 @@
+{
+  "primaryMarket": {
+    "value": "Calgary, Alberta",
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-013",
+    "notes": "Product objective targets Calgary/Alberta newcomers and Black entrepreneurs"
+  },
+  "regions": {
+    "value": ["Calgary", "Alberta"],
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-013"
+  },
+  "remoteNotes": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-013",
+    "notes": "Confirm whether remote / rest-of-Canada clients are served"
+  }
+}

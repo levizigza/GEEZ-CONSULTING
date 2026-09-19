@@ -1,0 +1,89 @@
+{
+  "legalName": {
+    "value": "Ge'ez Consulting",
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-011",
+    "notes": "Confirm legal entity name for NAP / schema.org"
+  },
+  "brandName": {
+    "value": "Ge'ez Consulting",
+    "source": "https://geezconsulting.com/",
+    "approvalStatus": "draft",
+    "lastReviewed": null,
+    "ledgerId": "CL-011",
+    "notes": "Observed live brand; awaiting formal approval"
+  },
+  "streetAddress": {
+    "value": "5235 28 Ave SE",
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-007"
+  },
+  "addressLocality": {
+    "value": "Calgary",
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-007"
+  },
+  "addressRegion": {
+    "value": "AB",
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-007"
+  },
+  "postalCode": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-007",
+    "notes": "Postal code not observed on live site"
+  },
+  "addressCountry": {
+    "value": "CA",
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-007"
+  },
+  "email": {
+    "value": "info@geezconsulting.com",
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-008"
+  },
+  "telephoneDisplay": {
+    "value": "1 (403) 700-2065",
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-006"
+  },
+  "telephoneE164": {
+    "value": "+14037002065",
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-006",
+    "notes": "Candidate E.164; live site incorrectly used tel:+4037002065"
+  },
+  "sameAs": {
+    "value": [
+      "https://www.linkedin.com/company/geez-consulting/",
+      "https://www.facebook.com/geezconsulting",
+      "https://www.instagram.com/geez.consulting",
+      "https://www.youtube.com/@geez.consulting"
+    ],
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-012",
+    "notes": "URLs observed live; confirm official profiles"
+  }
+}

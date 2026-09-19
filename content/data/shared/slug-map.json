@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "1.0.0",
+  "policy": "Use stable Latin path segments for EN/AM/TI until native-reviewed Ethiopic slugs are approved. Do not invent localized slugs in production.",
+  "defaultStrategy": "shared-latin-slug",
+  "entries": [
+    {
+      "id": "home",
+      "en": "/",
+      "am": "/am/",
+      "ti": "/ti/"
+    },
+    {
+      "id": "services",
+      "en": "/services/",
+      "am": "/am/services/",
+      "ti": "/ti/services/"
+    },
+    {
+      "id": "start-a-business",
+      "en": "/services/start-a-business/",
+      "am": "/am/services/start-a-business/",
+      "ti": "/ti/services/start-a-business/"
+    },
+    {
+      "id": "business-plans-funding-readiness",
+      "en": "/services/business-plans-funding-readiness/",
+      "am": "/am/services/business-plans-funding-readiness/",
+      "ti": "/ti/services/business-plans-funding-readiness/"
+    },
+    {
+      "id": "bookkeeping-payroll",
+      "en": "/services/bookkeeping-payroll/",
+      "am": "/am/services/bookkeeping-payroll/",
+      "ti": "/ti/services/bookkeeping-payroll/"
+    },
+    {
+      "id": "growth-operations",
+      "en": "/services/growth-operations/",
+      "am": "/am/services/growth-operations/",
+      "ti": "/ti/services/growth-operations/"
+    },
+    {
+      "id": "technology-support",
+      "en": "/technology-support/",
+      "am": "/am/technology-support/",
+      "ti": "/ti/technology-support/"
+    },
+    {
+      "id": "client-results",
+      "en": "/client-results/",
+      "am": "/am/client-results/",
+      "ti": "/ti/client-results/"
+    },
+    {
+      "id": "find-your-service",
+      "en": "/find-your-service/",
+      "am": "/am/find-your-service/",
+      "ti": "/ti/find-your-service/"
+    },
+    {
+      "id": "book-a-fit-call",
+      "en": "/book-a-fit-call/",
+      "am": "/am/book-a-fit-call/",
+      "ti": "/ti/book-a-fit-call/"
+    },
+    {
+      "id": "thank-you",
+      "en": "/thank-you/",
+      "am": "/am/thank-you/",
+      "ti": "/ti/thank-you/"
+    },
+    {
+      "id": "about-saba",
+      "en": "/about-saba/",
+      "am": "/am/about-saba/",
+      "ti": "/ti/about-saba/"
+    },
+    {
+      "id": "resources",
+      "en": "/resources/",
+      "am": "/am/resources/",
+      "ti": "/ti/resources/"
+    },
+    {
+      "id": "article-how-to-name-your-business",
+      "en": "/resources/how-to-name-your-business/",
+      "am": "/am/resources/how-to-name-your-business/",
+      "ti": "/ti/resources/how-to-name-your-business/",
+      "legacy": {
+        "am": "/am/how-to-name-your-business-2/",
+        "ti": "/ti/how-to-name-your-business-3/"
+      },
+      "notes": "Legacy WP used numeric suffixes; redesign uses shared Latin slug via redirects.json"
+    },
+    {
+      "id": "article-starting-business-alberta-newcomer",
+      "en": "/resources/starting-a-business-in-alberta-newcomer-checklist/",
+      "am": "/am/resources/starting-a-business-in-alberta-newcomer-checklist/",
+      "ti": "/ti/resources/starting-a-business-in-alberta-newcomer-checklist/"
+    },
+    {
+      "id": "article-sole-prop-vs-corporation-alberta",
+      "en": "/resources/sole-proprietorship-vs-corporation-in-alberta-questions/",
+      "am": "/am/resources/sole-proprietorship-vs-corporation-in-alberta-questions/",
+      "ti": "/ti/resources/sole-proprietorship-vs-corporation-in-alberta-questions/"
+    },
+    {
+      "id": "article-lender-ready-business-plan",
+      "en": "/resources/what-a-lender-ready-business-plan-needs/",
+      "am": "/am/resources/what-a-lender-ready-business-plan-needs/",
+      "ti": "/ti/resources/what-a-lender-ready-business-plan-needs/"
+    },
+    {
+      "id": "article-bookkeeping-first-year",
+      "en": "/resources/bookkeeping-setup-for-the-first-year/",
+      "am": "/am/resources/bookkeeping-setup-for-the-first-year/",
+      "ti": "/ti/resources/bookkeeping-setup-for-the-first-year/"
+    },
+    {
+      "id": "article-bdc-or-bank-conversation",
+      "en": "/resources/preparing-for-a-bdc-or-bank-conversation/",
+      "am": "/am/resources/preparing-for-a-bdc-or-bank-conversation/",
+      "ti": "/ti/resources/preparing-for-a-bdc-or-bank-conversation/"
+    },
+    {
+      "id": "article-calgary-newcomer-resource-map",
+      "en": "/resources/calgary-alberta-newcomer-entrepreneur-resource-map/",
+      "am": "/am/resources/calgary-alberta-newcomer-entrepreneur-resource-map/",
+      "ti": "/ti/resources/calgary-alberta-newcomer-entrepreneur-resource-map/"
+    }
+  ]
+}

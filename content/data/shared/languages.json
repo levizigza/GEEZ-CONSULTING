@@ -1,0 +1,18 @@
+{
+  "defaultLocale": "en",
+  "supported": ["en", "am", "ti"],
+  "labels": {
+    "en": "English",
+    "am": "አማርኛ",
+    "ti": "ትግርኛ"
+  },
+  "urlPrefixes": {
+    "en": "/",
+    "am": "/am/",
+    "ti": "/ti/"
+  },
+  "polylang": {
+    "plugin": "polylang",
+    "mappingNotes": "Directory prefixes match live Polylang config (baseline audit 2026-09-18)."
+  }
+}

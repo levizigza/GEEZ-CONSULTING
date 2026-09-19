@@ -1,0 +1,890 @@
+{
+  "schemaVersion": "1.0.0",
+  "items": [
+    {
+      "id": "article-starting-business-alberta-newcomer-am",
+      "slug": "starting-a-business-in-alberta-newcomer-checklist",
+      "locale": "am",
+      "translationOf": "article-starting-business-alberta-newcomer",
+      "legacyWpUrl": null,
+      "recordStatus": "draft",
+      "localeStatus": "pending_translation",
+      "topics": [
+        "startup",
+        "newcomer",
+        "alberta"
+      ],
+      "disclaimerCategory": "registration",
+      "relatedServiceId": "start-strong",
+      "roadmapAction": "new",
+      "roadmapNotes": "Translate after EN outline/article approved. Do not publish English body as am.",
+      "title": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009",
+        "notes": "Native am title required"
+      },
+      "excerpt": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009",
+        "notes": "Native am excerpt required"
+      },
+      "author": {
+        "name": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        },
+        "role": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        }
+      },
+      "reviewer": {
+        "name": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        },
+        "role": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        }
+      },
+      "datePublished": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009"
+      },
+      "dateModified": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009"
+      },
+      "cta": {
+        "label": "Book a Fit Call",
+        "href": "/book-a-fit-call/"
+      },
+      "citations": [],
+      "showToc": true,
+      "downloads": [],
+      "sections": [
+        {
+          "id": "translation-pending",
+          "heading": "Translation pending",
+          "items": [
+            {
+              "text": "EN outline exists; native translation not started. Keep noindex until approved.",
+              "sourceNeeded": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "article-sole-prop-vs-corporation-alberta-am",
+      "slug": "sole-proprietorship-vs-corporation-in-alberta-questions",
+      "locale": "am",
+      "translationOf": "article-sole-prop-vs-corporation-alberta",
+      "legacyWpUrl": null,
+      "recordStatus": "draft",
+      "localeStatus": "pending_translation",
+      "topics": [
+        "startup",
+        "legal-structure",
+        "alberta"
+      ],
+      "disclaimerCategory": "legal",
+      "relatedServiceId": "start-strong",
+      "roadmapAction": "new",
+      "roadmapNotes": "Translate after EN outline/article approved. Do not publish English body as am.",
+      "title": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009",
+        "notes": "Native am title required"
+      },
+      "excerpt": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009",
+        "notes": "Native am excerpt required"
+      },
+      "author": {
+        "name": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        },
+        "role": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        }
+      },
+      "reviewer": {
+        "name": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        },
+        "role": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        }
+      },
+      "datePublished": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009"
+      },
+      "dateModified": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009"
+      },
+      "cta": {
+        "label": "Book a Fit Call",
+        "href": "/book-a-fit-call/"
+      },
+      "citations": [],
+      "showToc": true,
+      "downloads": [],
+      "sections": [
+        {
+          "id": "translation-pending",
+          "heading": "Translation pending",
+          "items": [
+            {
+              "text": "EN outline exists; native translation not started. Keep noindex until approved.",
+              "sourceNeeded": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "article-lender-ready-business-plan-am",
+      "slug": "what-a-lender-ready-business-plan-needs",
+      "locale": "am",
+      "translationOf": "article-lender-ready-business-plan",
+      "legacyWpUrl": null,
+      "recordStatus": "draft",
+      "localeStatus": "pending_translation",
+      "topics": [
+        "funding",
+        "planning"
+      ],
+      "disclaimerCategory": "financing",
+      "relatedServiceId": "plan-funding-readiness",
+      "roadmapAction": "new",
+      "roadmapNotes": "Translate after EN outline/article approved. Do not publish English body as am.",
+      "title": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009",
+        "notes": "Native am title required"
+      },
+      "excerpt": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009",
+        "notes": "Native am excerpt required"
+      },
+      "author": {
+        "name": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        },
+        "role": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        }
+      },
+      "reviewer": {
+        "name": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        },
+        "role": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        }
+      },
+      "datePublished": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009"
+      },
+      "dateModified": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009"
+      },
+      "cta": {
+        "label": "Book a Fit Call",
+        "href": "/book-a-fit-call/"
+      },
+      "citations": [],
+      "showToc": true,
+      "downloads": [],
+      "sections": [
+        {
+          "id": "translation-pending",
+          "heading": "Translation pending",
+          "items": [
+            {
+              "text": "EN outline exists; native translation not started. Keep noindex until approved.",
+              "sourceNeeded": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "article-bookkeeping-first-year-am",
+      "slug": "bookkeeping-setup-for-the-first-year",
+      "locale": "am",
+      "translationOf": "article-bookkeeping-first-year",
+      "legacyWpUrl": null,
+      "recordStatus": "draft",
+      "localeStatus": "pending_translation",
+      "topics": [
+        "bookkeeping",
+        "operations"
+      ],
+      "disclaimerCategory": "payroll",
+      "relatedServiceId": "books-payroll",
+      "roadmapAction": "new",
+      "roadmapNotes": "Translate after EN outline/article approved. Do not publish English body as am.",
+      "title": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009",
+        "notes": "Native am title required"
+      },
+      "excerpt": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009",
+        "notes": "Native am excerpt required"
+      },
+      "author": {
+        "name": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        },
+        "role": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        }
+      },
+      "reviewer": {
+        "name": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        },
+        "role": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        }
+      },
+      "datePublished": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009"
+      },
+      "dateModified": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009"
+      },
+      "cta": {
+        "label": "Book a Fit Call",
+        "href": "/book-a-fit-call/"
+      },
+      "citations": [],
+      "showToc": true,
+      "downloads": [],
+      "sections": [
+        {
+          "id": "translation-pending",
+          "heading": "Translation pending",
+          "items": [
+            {
+              "text": "EN outline exists; native translation not started. Keep noindex until approved.",
+              "sourceNeeded": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "article-bdc-or-bank-conversation-am",
+      "slug": "preparing-for-a-bdc-or-bank-conversation",
+      "locale": "am",
+      "translationOf": "article-bdc-or-bank-conversation",
+      "legacyWpUrl": null,
+      "recordStatus": "draft",
+      "localeStatus": "pending_translation",
+      "topics": [
+        "funding",
+        "banking"
+      ],
+      "disclaimerCategory": "financing",
+      "relatedServiceId": "plan-funding-readiness",
+      "roadmapAction": "new",
+      "roadmapNotes": "Translate after EN outline/article approved. Do not publish English body as am.",
+      "title": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009",
+        "notes": "Native am title required"
+      },
+      "excerpt": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009",
+        "notes": "Native am excerpt required"
+      },
+      "author": {
+        "name": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        },
+        "role": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        }
+      },
+      "reviewer": {
+        "name": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        },
+        "role": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        }
+      },
+      "datePublished": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009"
+      },
+      "dateModified": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009"
+      },
+      "cta": {
+        "label": "Book a Fit Call",
+        "href": "/book-a-fit-call/"
+      },
+      "citations": [],
+      "showToc": true,
+      "downloads": [],
+      "sections": [
+        {
+          "id": "translation-pending",
+          "heading": "Translation pending",
+          "items": [
+            {
+              "text": "EN outline exists; native translation not started. Keep noindex until approved.",
+              "sourceNeeded": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "article-calgary-newcomer-resource-map-am",
+      "slug": "calgary-alberta-newcomer-entrepreneur-resource-map",
+      "locale": "am",
+      "translationOf": "article-calgary-newcomer-resource-map",
+      "legacyWpUrl": null,
+      "recordStatus": "draft",
+      "localeStatus": "pending_translation",
+      "topics": [
+        "newcomer",
+        "calgary",
+        "resources"
+      ],
+      "disclaimerCategory": "program",
+      "relatedServiceId": "start-strong",
+      "roadmapAction": "new",
+      "roadmapNotes": "Translate after EN outline/article approved. Do not publish English body as am.",
+      "title": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009",
+        "notes": "Native am title required"
+      },
+      "excerpt": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009",
+        "notes": "Native am excerpt required"
+      },
+      "author": {
+        "name": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        },
+        "role": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        }
+      },
+      "reviewer": {
+        "name": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        },
+        "role": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        }
+      },
+      "datePublished": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009"
+      },
+      "dateModified": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009"
+      },
+      "cta": {
+        "label": "Book a Fit Call",
+        "href": "/book-a-fit-call/"
+      },
+      "citations": [],
+      "showToc": true,
+      "downloads": [],
+      "sections": [
+        {
+          "id": "translation-pending",
+          "heading": "Translation pending",
+          "items": [
+            {
+              "text": "EN outline exists; native translation not started. Keep noindex until approved.",
+              "sourceNeeded": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "article-how-to-name-your-business-am",
+      "slug": "how-to-name-your-business-2",
+      "locale": "am",
+      "translationOf": "article-how-to-name-your-business",
+      "legacyWpUrl": "https://geezconsulting.com/am/how-to-name-your-business-2/",
+      "recordStatus": "draft",
+      "localeStatus": "pending_translation",
+      "topics": [
+        "startup",
+        "branding"
+      ],
+      "disclaimerCategory": "registration",
+      "relatedServiceId": "start-strong",
+      "roadmapAction": "update",
+      "roadmapNotes": "Translate after EN outline/article approved. Do not publish English body as am.",
+      "title": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009",
+        "notes": "Native am title required"
+      },
+      "excerpt": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009",
+        "notes": "Native am excerpt required"
+      },
+      "author": {
+        "name": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        },
+        "role": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        }
+      },
+      "reviewer": {
+        "name": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        },
+        "role": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        }
+      },
+      "datePublished": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009"
+      },
+      "dateModified": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009"
+      },
+      "cta": {
+        "label": "Book a Fit Call",
+        "href": "/book-a-fit-call/"
+      },
+      "citations": [],
+      "showToc": true,
+      "downloads": [],
+      "sections": [
+        {
+          "id": "translation-pending",
+          "heading": "Translation pending",
+          "items": [
+            {
+              "text": "EN outline exists; native translation not started. Keep noindex until approved.",
+              "sourceNeeded": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "article-credit-financial-situation-am",
+      "slug": "steps-to-improve-your-credit-and-financial-situation-2",
+      "locale": "am",
+      "translationOf": "article-credit-financial-situation",
+      "legacyWpUrl": "https://geezconsulting.com/am/steps-to-improve-your-credit-and-financial-situation-2/",
+      "recordStatus": "draft",
+      "localeStatus": "pending_translation",
+      "topics": [
+        "finance",
+        "credit"
+      ],
+      "disclaimerCategory": "credit",
+      "relatedServiceId": "plan-funding-readiness",
+      "roadmapAction": "merge",
+      "roadmapNotes": "Translate after EN outline/article approved. Do not publish English body as am.",
+      "title": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009",
+        "notes": "Native am title required"
+      },
+      "excerpt": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009",
+        "notes": "Native am excerpt required"
+      },
+      "author": {
+        "name": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        },
+        "role": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        }
+      },
+      "reviewer": {
+        "name": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        },
+        "role": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        }
+      },
+      "datePublished": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009"
+      },
+      "dateModified": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009"
+      },
+      "cta": {
+        "label": "Book a Fit Call",
+        "href": "/book-a-fit-call/"
+      },
+      "citations": [],
+      "showToc": true,
+      "downloads": [],
+      "sections": [
+        {
+          "id": "translation-pending",
+          "heading": "Translation pending",
+          "items": [
+            {
+              "text": "EN outline exists; native translation not started. Keep noindex until approved.",
+              "sourceNeeded": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "article-partnerships-am",
+      "slug": "unlocking-the-power-of-partnerships-for-your-small-business-2",
+      "locale": "am",
+      "translationOf": "article-partnerships",
+      "legacyWpUrl": "https://geezconsulting.com/am/unlocking-the-power-of-partnerships-for-your-small-business-2/",
+      "recordStatus": "draft",
+      "localeStatus": "pending_translation",
+      "topics": [
+        "growth",
+        "partnerships"
+      ],
+      "disclaimerCategory": "legal",
+      "relatedServiceId": "grow-with-a-system",
+      "roadmapAction": "update",
+      "roadmapNotes": "Translate after EN outline/article approved. Do not publish English body as am.",
+      "title": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009",
+        "notes": "Native am title required"
+      },
+      "excerpt": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009",
+        "notes": "Native am excerpt required"
+      },
+      "author": {
+        "name": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        },
+        "role": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        }
+      },
+      "reviewer": {
+        "name": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        },
+        "role": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-009"
+        }
+      },
+      "datePublished": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009"
+      },
+      "dateModified": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-009"
+      },
+      "cta": {
+        "label": "Book a Fit Call",
+        "href": "/book-a-fit-call/"
+      },
+      "citations": [],
+      "showToc": true,
+      "downloads": [],
+      "sections": [
+        {
+          "id": "translation-pending",
+          "heading": "Translation pending",
+          "items": [
+            {
+              "text": "EN outline exists; native translation not started. Keep noindex until approved.",
+              "sourceNeeded": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

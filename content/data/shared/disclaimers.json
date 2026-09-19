@@ -1,0 +1,60 @@
+{
+  "privacySummary": {
+    "value": "We collect only what is needed to respond to your inquiry. Optional marketing is separate and never required. Do not include SIN, banking passwords, full card numbers, or immigration file numbers in the public form.",
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-018",
+    "notes": "Align with privacy-policy.json once counsel approves"
+  },
+  "privacyPolicyUrl": {
+    "value": "/privacy/",
+    "source": "implementation",
+    "approvalStatus": "draft",
+    "lastReviewed": "2026-09-18",
+    "ledgerId": "CL-018",
+    "notes": "Page is draft/noindex until controller/contact claims verified"
+  },
+  "scopeOfAdvice": {
+    "value": "Ge'ez Consulting provides business advisory, coaching, and preparation support. Engagements are collaborative; you remain responsible for decisions and filings.",
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-015"
+  },
+  "consultingVsRegulatedAdvice": {
+    "value": "Consulting and preparation help you organize questions, documents, and next steps. It is not a substitute for advice from a lawyer, tax professional, accountant/CPA, immigration consultant/lawyer, or other regulated advisor.",
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-015"
+  },
+  "noGuaranteedOutcomes": {
+    "value": "We do not guarantee loans, grants, registrations, licenses, immigration results, tax outcomes, legal outcomes, revenue, or funding approvals.",
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-015"
+  },
+  "notLegalTaxImmigrationAdvice": {
+    "value": "Information on this site and in consulting sessions is not legal, tax, accounting, or immigration advice. Consult a qualified professional for your situation.",
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-015"
+  },
+  "notRegistryOrLicensingDecisions": {
+    "value": "Corporate registry filings, name approvals, municipal licences, and permits are decided by the relevant authorities—not by Ge'ez Consulting.",
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-015"
+  },
+  "notFundingOrLenderDecisions": {
+    "value": "Banks, BDC, credit unions, grant programs, and other funders make their own credit and eligibility decisions. Preparation support does not promise approval.",
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-015"
+  }
+}

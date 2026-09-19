@@ -1,0 +1,29 @@
+{
+  "locale": "ti",
+  "nav": {
+    "home": "ዋና ገጽ",
+    "services": "ኣገልግሎታት",
+    "resources": "ብሎግ",
+    "about": "ብዛዕባና",
+    "contact": "TODO_VERIFICATION: Book a Fit Call"
+  },
+  "form": {
+    "name": "TODO_VERIFICATION: localize Name",
+    "email": "TODO_VERIFICATION: localize Email",
+    "message": "TODO_VERIFICATION: localize Message",
+    "submit": "TODO_VERIFICATION: localize Send message",
+    "sending": "TODO_VERIFICATION",
+    "success": "TODO_VERIFICATION",
+    "error": "TODO_VERIFICATION",
+    "privacyHint": "TODO_VERIFICATION"
+  },
+  "sections": {
+    "services": "ኣገልግሎታት",
+    "process": "TODO_VERIFICATION",
+    "about": "ብዛዕባና",
+    "faq": "ሕቶታት",
+    "contact": "ኣድራሻ",
+    "resources": "ብሎግ"
+  },
+  "notes": "Nav labels observed on live /ti/ (baseline audit). Form strings still English on production."
+}

@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "stack": "static HTML + CSS + small deferred JS (no SPA hydration)",
+    "notes": "Budgets sized to current stack. Lab Lighthouse CI optional; these file budgets gate every build."
+  },
+  "budgets": {
+    "totalJsBytes": 45000,
+    "totalCssBytes": 45000,
+    "maxSingleJsBytes": 16000,
+    "maxSingleCssBytes": 20000,
+    "maxHtmlBytes": 50000,
+    "maxImageCandidateBytes": 250000,
+    "maxRenderBlockingStylesheets": 4,
+    "maxSyncScriptsInHead": 0,
+    "maxDeferredScriptsSitewide": 4
+  },
+  "representativePages": [
+    { "id": "home", "rel": "index.html" },
+    { "id": "service", "rel": "services/start-a-business/index.html" },
+    { "id": "case-study", "rel": "client-results/jonas-driving-school/index.html" },
+    { "id": "article", "rel": "resources/starting-a-business-in-alberta-newcomer-checklist/index.html" },
+    { "id": "form", "rel": "book-a-fit-call/index.html" }
+  ]
+}

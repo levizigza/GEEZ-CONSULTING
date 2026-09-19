@@ -1,0 +1,448 @@
+{
+  "generatedAt": "2026-09-19T03:25:16.691Z",
+  "note": "Zero automated errors is not WCAG conformance. See accessibility-audit.md.",
+  "highIssueCount": 0,
+  "high": [],
+  "reports": [
+    {
+      "rel": "index.html",
+      "locale": "en",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "nodes": 1
+          }
+        ],
+        "passes": 36
+      },
+      "structural": [],
+      "label": "EN home"
+    },
+    {
+      "rel": "services/index.html",
+      "locale": "en",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "nodes": 1
+          }
+        ],
+        "passes": 27
+      },
+      "structural": [],
+      "label": "EN services"
+    },
+    {
+      "rel": "services/start-a-business/index.html",
+      "locale": "en",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "nodes": 1
+          }
+        ],
+        "passes": 31
+      },
+      "structural": [],
+      "label": "EN service detail"
+    },
+    {
+      "rel": "book-a-fit-call/index.html",
+      "locale": "en",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "nodes": 1
+          }
+        ],
+        "passes": 40
+      },
+      "structural": [],
+      "label": "EN fit call"
+    },
+    {
+      "rel": "find-your-service/index.html",
+      "locale": "en",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "nodes": 1
+          }
+        ],
+        "passes": 33
+      },
+      "structural": [],
+      "label": "EN finder"
+    },
+    {
+      "rel": "thank-you/index.html",
+      "locale": "en",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "nodes": 1
+          }
+        ],
+        "passes": 28
+      },
+      "structural": [],
+      "label": "EN thank-you"
+    },
+    {
+      "rel": "resources/index.html",
+      "locale": "en",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "nodes": 1
+          }
+        ],
+        "passes": 27
+      },
+      "structural": [],
+      "label": "EN resources"
+    },
+    {
+      "rel": "resources/starting-a-business-in-alberta-newcomer-checklist/index.html",
+      "locale": "en",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "nodes": 1
+          }
+        ],
+        "passes": 32
+      },
+      "structural": [],
+      "label": "EN article outline"
+    },
+    {
+      "rel": "client-results/index.html",
+      "locale": "en",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "nodes": 1
+          }
+        ],
+        "passes": 27
+      },
+      "structural": [],
+      "label": "EN client results"
+    },
+    {
+      "rel": "privacy/index.html",
+      "locale": "en",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "nodes": 1
+          }
+        ],
+        "passes": 28
+      },
+      "structural": [],
+      "label": "EN privacy"
+    },
+    {
+      "rel": "disclaimers/index.html",
+      "locale": "en",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "nodes": 1
+          }
+        ],
+        "passes": 28
+      },
+      "structural": [],
+      "label": "EN disclaimers"
+    },
+    {
+      "rel": "am/index.html",
+      "locale": "am",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "nodes": 1
+          }
+        ],
+        "passes": 36
+      },
+      "structural": [],
+      "label": "AM home"
+    },
+    {
+      "rel": "am/services/start-a-business/index.html",
+      "locale": "am",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "nodes": 1
+          }
+        ],
+        "passes": 31
+      },
+      "structural": [],
+      "label": "AM service"
+    },
+    {
+      "rel": "am/book-a-fit-call/index.html",
+      "locale": "am",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "nodes": 1
+          }
+        ],
+        "passes": 40
+      },
+      "structural": [],
+      "label": "AM fit call"
+    },
+    {
+      "rel": "am/find-your-service/index.html",
+      "locale": "am",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "nodes": 1
+          }
+        ],
+        "passes": 33
+      },
+      "structural": [],
+      "label": "AM finder"
+    },
+    {
+      "rel": "am/resources/index.html",
+      "locale": "am",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "nodes": 1
+          }
+        ],
+        "passes": 27
+      },
+      "structural": [],
+      "label": "AM resources"
+    },
+    {
+      "rel": "ti/index.html",
+      "locale": "ti",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "nodes": 1
+          }
+        ],
+        "passes": 36
+      },
+      "structural": [],
+      "label": "TI home"
+    },
+    {
+      "rel": "ti/book-a-fit-call/index.html",
+      "locale": "ti",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "nodes": 1
+          }
+        ],
+        "passes": 40
+      },
+      "structural": [],
+      "label": "TI fit call"
+    },
+    {
+      "rel": "ti/find-your-service/index.html",
+      "locale": "ti",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "nodes": 1
+          }
+        ],
+        "passes": 33
+      },
+      "structural": [],
+      "label": "TI finder"
+    },
+    {
+      "rel": "ti/privacy/index.html",
+      "locale": "ti",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "nodes": 1
+          }
+        ],
+        "passes": 28
+      },
+      "structural": [],
+      "label": "TI privacy"
+    }
+  ]
+}

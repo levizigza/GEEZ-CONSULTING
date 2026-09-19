@@ -1,0 +1,171 @@
+[
+  {
+    "id": "start-strong",
+    "sortOrder": 1,
+    "name": {
+      "value": "Start Strong",
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-014",
+      "notes": "Redesign service name — replace legacy Business Strategy cluster after approval"
+    },
+    "summary": {
+      "value": "Launch-ready guidance for registering, structuring, and opening a business in Alberta with clear next steps.",
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-014"
+    },
+    "outcomes": {
+      "value": [
+        "Clarity on startup checklist and sequencing",
+        "Support preparing materials for registration and banking conversations"
+      ],
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-014"
+    },
+    "audienceNotes": {
+      "value": "Oriented to newcomer and Black entrepreneurs starting in Calgary/Alberta.",
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-014"
+    },
+    "scopeLimits": {
+      "value": "Does not guarantee registration approval, financing, immigration status, or legal outcomes.",
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-015"
+    }
+  },
+  {
+    "id": "plan-funding-readiness",
+    "sortOrder": 2,
+    "name": {
+      "value": "Plan & Funding Readiness",
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-014"
+    },
+    "summary": {
+      "value": "Business planning and funding-readiness support so owners can present a coherent case to lenders, grant programs, or partners.",
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-014"
+    },
+    "outcomes": {
+      "value": [
+        "Stronger planning documents and financial story",
+        "Preparedness for funding conversations"
+      ],
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-014"
+    },
+    "audienceNotes": {
+      "value": null,
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-014"
+    },
+    "scopeLimits": {
+      "value": "Does not guarantee loans, grants, investment, or program acceptance.",
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-015"
+    }
+  },
+  {
+    "id": "books-payroll",
+    "sortOrder": 3,
+    "name": {
+      "value": "Books & Payroll",
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-014"
+    },
+    "summary": {
+      "value": "Bookkeeping and payroll system setup and coaching so owners can keep reliable records.",
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-014"
+    },
+    "outcomes": {
+      "value": [
+        "Clearer bookkeeping routines",
+        "Payroll process confidence for small teams"
+      ],
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-014"
+    },
+    "audienceNotes": {
+      "value": null,
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-014"
+    },
+    "scopeLimits": {
+      "value": "Does not replace a CPA/lawyer; does not guarantee tax, CRA, or compliance outcomes.",
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-015"
+    }
+  },
+  {
+    "id": "grow-with-a-system",
+    "sortOrder": 4,
+    "name": {
+      "value": "Grow with a System",
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-014"
+    },
+    "summary": {
+      "value": "Operating cadence, KPIs, and simple systems so growth does not depend on memory alone.",
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-014"
+    },
+    "outcomes": {
+      "value": [
+        "Repeatable weekly/monthly operating rhythm",
+        "Visibility into what to fix next"
+      ],
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-014"
+    },
+    "audienceNotes": {
+      "value": null,
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-014"
+    },
+    "scopeLimits": {
+      "value": "Does not guarantee revenue growth, funding, or market results.",
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-015"
+    }
+  }
+]

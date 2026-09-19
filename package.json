@@ -1,0 +1,30 @@
+{
+  "name": "geez-consulting-site",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Ge'ez Consulting redesign workspace — content model and docs. WordPress remains the production CMS until a migration is approved.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test --test-concurrency=1 tests/content-model.test.mjs tests/routes.test.mjs tests/design-system.test.mjs tests/homepage.test.mjs tests/services.test.mjs tests/client-results.test.mjs tests/intake.e2e.test.mjs tests/locale-completeness.test.mjs tests/seo.test.mjs tests/resources.test.mjs tests/privacy.test.mjs tests/a11y.test.mjs tests/performance.test.mjs tests/measurement.test.mjs tests/build.test.mjs",
+    "intake:serve": "node site/intake/http-server.mjs",
+    "validate:content": "node content/lib/cli-validate.mjs",
+    "validate:routes": "node content/lib/cli-validate-routes.mjs",
+    "validate": "npm run validate:content && npm run validate:routes",
+    "localize:queue": "node content/lib/cli-translation-queue.mjs",
+    "lint": "node scripts/lint.mjs",
+    "typecheck": "node scripts/typecheck.mjs",
+    "build": "node site/build.mjs",
+    "a11y": "node scripts/a11y-audit.mjs",
+    "a11y:ci": "npm run build && node scripts/a11y-audit.mjs",
+    "perf": "node scripts/perf-budget.mjs",
+    "perf:ci": "npm run build && node scripts/perf-budget.mjs",
+    "content:production": "node content/lib/cli-production-bundle.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "axe-core": "^4.13.0",
+    "jsdom": "^28.1.0"
+  }
+}

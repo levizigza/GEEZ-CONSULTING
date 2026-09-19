@@ -1,0 +1,83 @@
+{
+  "pages": [
+    {
+      "path": "/am/",
+      "canonicalPath": "/am/",
+      "noindex": false,
+      "title": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-021",
+        "notes": "Live AM home title is English-only"
+      },
+      "description": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-021"
+      },
+      "ogImage": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-021"
+      }
+    },
+    {
+      "path": "/am/blog/",
+      "canonicalPath": "/am/blog/",
+      "noindex": false,
+      "title": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-021"
+      },
+      "description": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-021"
+      },
+      "ogImage": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-021"
+      }
+    },
+    {
+      "path": "/am/privacy/",
+      "canonicalPath": "/am/privacy/",
+      "noindex": false,
+      "title": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-018"
+      },
+      "description": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-018"
+      },
+      "ogImage": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-018"
+      }
+    }
+  ]
+}

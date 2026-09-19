@@ -1,0 +1,58 @@
+{
+  "id": "founder-saba-teklu",
+  "displayName": {
+    "value": "Saba Teklu",
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-004"
+  },
+  "roleTitle": {
+    "value": "Founder and Director",
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-004"
+  },
+  "bio": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-004",
+    "notes": "Do not invent biography; supply approved bio before production. Do not paste EN bio into AM/TI — each locale needs native-reviewed text (see translation queue)."
+  },
+  "credentials": {
+    "value": [],
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-019",
+    "notes": "Empty until verified credentials are provided"
+  },
+  "yearsExperience": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-019",
+    "notes": "Never invent years of experience"
+  },
+  "photo": {
+    "src": {
+      "value": null,
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-004",
+      "notes": "Legacy asset observed: /wp-content/uploads/2024/06/Saba-Profile.jpg — confirm rights + alt"
+    },
+    "alt": {
+      "value": null,
+      "source": "TODO_VERIFICATION",
+      "approvalStatus": "todo_verification",
+      "lastReviewed": null,
+      "ledgerId": "CL-004"
+    }
+  }
+}

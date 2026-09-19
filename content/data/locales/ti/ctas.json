@@ -1,0 +1,25 @@
+{
+  "primary": {
+    "id": "primary-book-fit-call",
+    "kind": "primary",
+    "claimBearing": false,
+    "label": "TODO_VERIFICATION: Tigrinya Book a Fit Call",
+    "href": "/ti/book-a-fit-call/"
+  },
+  "secondary": [
+    {
+      "id": "secondary-services",
+      "kind": "secondary",
+      "claimBearing": false,
+      "label": "TODO_VERIFICATION",
+      "href": "/ti/services/"
+    },
+    {
+      "id": "secondary-resources",
+      "kind": "secondary",
+      "claimBearing": false,
+      "label": "TODO_VERIFICATION",
+      "href": "/ti/resources/"
+    }
+  ]
+}

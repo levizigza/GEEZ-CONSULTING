@@ -1,0 +1,47 @@
+{
+  "nonProduction": true,
+  "productionSafe": false,
+  "warning": "SAMPLE ONLY — do not publish. Invented names/quotes are forbidden in production; this file demonstrates schema shape with clearly fake markers.",
+  "items": [
+    {
+      "id": "sample-testimonial-001",
+      "locale": "en",
+      "quote": {
+        "value": "[SAMPLE — NOT REAL] Example quote placeholder for schema wiring only.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-001",
+        "notes": "NON-PRODUCTION sample"
+      },
+      "attributionName": {
+        "value": "[SAMPLE] A. Example",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "attributionRole": {
+        "value": "[SAMPLE] Owner",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "attributionOrg": {
+        "value": "[SAMPLE] Example Co.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      },
+      "permissionConfirmed": {
+        "value": false,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-001"
+      }
+    }
+  ]
+}

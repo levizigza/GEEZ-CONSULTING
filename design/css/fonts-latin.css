@@ -1,0 +1,7 @@
+/* Latin + display — load on every locale. display=swap avoids FOIT. */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Noto+Sans:wght@400;700&display=swap");
+
+/*
+  Prefer self-hosting in production (Hostinger/static) with unicode-range subsets.
+  Fraunces = expressive display for EN headlines; Noto Sans remains UI/body.
+*/

@@ -1,0 +1,200 @@
+{
+  "nonProduction": true,
+  "productionSafe": false,
+  "warning": "SAMPLE ONLY — illustrates approved qualitative + anonymized shapes. Do not copy values into production without real permission and evidence.",
+  "items": [
+    {
+      "id": "sample-case-qualitative-named",
+      "slug": "sample-qualitative-named",
+      "locale": "en",
+      "recordStatus": "draft",
+      "title": {
+        "value": "[SAMPLE] Qualitative named story",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "summary": {
+        "value": "[SAMPLE] Short summary — not real.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "clientName": {
+        "value": "[SAMPLE] Example Co.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "clientSector": {
+        "value": "[SAMPLE] Retail",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "anonymizedLabel": {
+        "value": "[SAMPLE] A Calgary retailer",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "permissionStatus": {
+        "value": "pending",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "businessStage": {
+        "value": "[SAMPLE] Early operating",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "situation": {
+        "value": "[SAMPLE] Situation placeholder.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "constraint": {
+        "value": "[SAMPLE] Constraint placeholder.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "goal": {
+        "value": "[SAMPLE] Goal placeholder.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "workPerformed": {
+        "value": "[SAMPLE] Work placeholder.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "deliverables": {
+        "value": ["[SAMPLE] Deliverable"],
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "timeline": {
+        "value": null,
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "outcomes": [
+        {
+          "kind": "qualitative",
+          "statement": {
+            "value": "[SAMPLE] Qualitative outcome only — no metrics.",
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "todo_verification",
+            "lastReviewed": null,
+            "ledgerId": "CL-022"
+          },
+          "metricDefinition": {
+            "value": null,
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "todo_verification",
+            "lastReviewed": null,
+            "ledgerId": "CL-022"
+          },
+          "baseline": {
+            "value": null,
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "todo_verification",
+            "lastReviewed": null,
+            "ledgerId": "CL-022"
+          },
+          "resultValue": {
+            "value": null,
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "todo_verification",
+            "lastReviewed": null,
+            "ledgerId": "CL-022"
+          },
+          "window": {
+            "value": null,
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "todo_verification",
+            "lastReviewed": null,
+            "ledgerId": "CL-022"
+          },
+          "metricSource": {
+            "value": null,
+            "source": "TODO_VERIFICATION",
+            "approvalStatus": "todo_verification",
+            "lastReviewed": null,
+            "ledgerId": "CL-022"
+          }
+        }
+      ],
+      "quote": {
+        "value": "[SAMPLE] Quote placeholder.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "quoteApproverName": {
+        "value": "[SAMPLE] A. Example",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "quoteApproverRole": {
+        "value": "[SAMPLE] Owner",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-022"
+      },
+      "scopeCaveat": {
+        "value": "[SAMPLE] Results vary; no guaranteed outcomes.",
+        "source": "TODO_VERIFICATION",
+        "approvalStatus": "todo_verification",
+        "lastReviewed": null,
+        "ledgerId": "CL-015"
+      },
+      "relatedServiceId": "start-strong",
+      "cta": {
+        "label": "Book a Fit Call",
+        "href": "/book-a-fit-call/"
+      },
+      "image": {
+        "src": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-002"
+        },
+        "alt": {
+          "value": null,
+          "source": "TODO_VERIFICATION",
+          "approvalStatus": "todo_verification",
+          "lastReviewed": null,
+          "ledgerId": "CL-002"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "locale": "am",
+  "nav": {
+    "home": "መነሻ ገጽ",
+    "services": "አገልግሎቶች",
+    "resources": "ጡመራ ገጽ",
+    "about": "ስለኛ",
+    "contact": "TODO_VERIFICATION: Book a Fit Call"
+  },
+  "form": {
+    "name": "TODO_VERIFICATION: localize Name",
+    "email": "TODO_VERIFICATION: localize Email",
+    "message": "TODO_VERIFICATION: localize Message",
+    "submit": "TODO_VERIFICATION: localize Send message",
+    "sending": "TODO_VERIFICATION",
+    "success": "TODO_VERIFICATION",
+    "error": "TODO_VERIFICATION",
+    "privacyHint": "TODO_VERIFICATION"
+  },
+  "sections": {
+    "services": "አገልግሎቶች",
+    "process": "TODO_VERIFICATION",
+    "about": "ስለኛ",
+    "faq": "ጥያቄዎች",
+    "contact": "ያግኙን",
+    "resources": "ጡመራ ገጽ"
+  },
+  "notes": "Nav labels observed on live /am/ (baseline audit). Form strings still English on production — must be completed before AM journey ships."
+}

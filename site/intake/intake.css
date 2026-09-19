@@ -1,0 +1,88 @@
+/* Intake: service finder + fit form + thank you */
+
+.geez-intake .geez-form {
+  display: grid;
+  gap: var(--geez-space-4);
+  margin-block: var(--geez-space-5);
+}
+
+.geez-finder__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--geez-space-3);
+}
+
+.geez-btn-link--secondary {
+  background: transparent;
+  color: var(--geez-color-burgundy);
+  box-shadow: inset 0 0 0 2px var(--geez-color-burgundy);
+}
+
+.geez-btn-link--secondary:hover {
+  background: color-mix(in srgb, var(--geez-color-burgundy) 8%, transparent);
+}
+
+.geez-choice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--geez-space-2);
+  min-height: var(--geez-touch);
+  margin-bottom: var(--geez-space-2);
+  cursor: pointer;
+}
+
+.geez-choice input[type="checkbox"],
+.geez-choice input[type="radio"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+  margin-top: 0.35rem;
+  flex-shrink: 0;
+  accent-color: var(--geez-color-burgundy);
+}
+
+.geez-field--consent {
+  padding: var(--geez-space-3);
+  border-inline-start: 4px solid var(--geez-color-gold-ink);
+  background: color-mix(in srgb, var(--geez-color-burgundy) 4%, transparent);
+}
+
+.geez-hp {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  /* Keep in DOM for bots; exclude from hit-testing / AT where supported */
+  pointer-events: none;
+}
+
+.geez-form__live {
+  min-height: 1.5em;
+  color: var(--geez-color-ink-muted);
+  font-size: var(--geez-text-sm);
+}
+
+.geez-form__status {
+  padding: var(--geez-space-3);
+  border: 1px solid var(--geez-color-border);
+  border-radius: var(--geez-radius-md);
+}
+
+.geez-finder__result {
+  margin-top: var(--geez-space-6);
+  padding: var(--geez-space-5);
+  border-inline-start: 4px solid var(--geez-color-burgundy);
+  background: color-mix(in srgb, var(--geez-color-gold-ink) 8%, transparent);
+}
+
+.geez-finder__result:focus {
+  outline: 3px solid var(--geez-color-focus, var(--geez-color-gold-ink));
+  outline-offset: 2px;
+}
+
+.geez-finder__pick {
+  font-size: var(--geez-text-lg);
+}

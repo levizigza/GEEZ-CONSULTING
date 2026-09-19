@@ -1,0 +1,25 @@
+{
+  "primary": {
+    "id": "primary-book-fit-call",
+    "kind": "primary",
+    "claimBearing": false,
+    "label": "Book a Fit Call",
+    "href": "/book-a-fit-call/"
+  },
+  "secondary": [
+    {
+      "id": "secondary-services",
+      "kind": "secondary",
+      "claimBearing": false,
+      "label": "Explore services",
+      "href": "/services/"
+    },
+    {
+      "id": "secondary-resources",
+      "kind": "secondary",
+      "claimBearing": false,
+      "label": "Read resources",
+      "href": "/resources/"
+    }
+  ]
+}

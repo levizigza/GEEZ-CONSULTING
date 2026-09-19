@@ -1,0 +1,361 @@
+{
+  "schemaVersion": "1.0.0",
+  "localization": {
+    "strategy": "directory-prefix",
+    "defaultLocale": "en",
+    "prefixes": {
+      "en": "",
+      "am": "/am",
+      "ti": "/ti"
+    },
+    "notes": "Matches live Polylang convention: EN unprefixed; AM /am/; TI /ti/."
+  },
+  "indexabilityPolicy": {
+    "summary": "A locale route may be indexable only when status is published AND required content claims are production-approved. Draft routes must send noindex,nofollow (or remain unpublished in WP).",
+    "draftRobots": "noindex, nofollow",
+    "publishedRobots": "index, follow"
+  },
+  "routes": [
+    {
+      "id": "home",
+      "path": "/",
+      "type": "page",
+      "navGroup": "primary",
+      "status": "draft",
+      "indexable": false,
+      "breadcrumbLabelKey": "nav.home",
+      "parentId": null,
+      "contentRefs": ["ui", "services", "process", "founder", "faqs", "seo:home"],
+      "legacyWp": { "en": "/", "am": "/am/", "ti": "/ti/" },
+      "title": {
+        "en": "Home",
+        "am": "መነሻ ገጽ",
+        "ti": "ዋና ገጽ"
+      }
+    },
+    {
+      "id": "services",
+      "path": "/services/",
+      "type": "page",
+      "navGroup": "primary",
+      "status": "draft",
+      "indexable": false,
+      "breadcrumbLabelKey": "nav.services",
+      "parentId": "home",
+      "contentRefs": ["services", "seo:services"],
+      "legacyWp": null,
+      "title": {
+        "en": "Services",
+        "am": "አገልግሎቶች",
+        "ti": "ኣገልግሎታት"
+      }
+    },
+    {
+      "id": "service-start-a-business",
+      "path": "/services/start-a-business/",
+      "type": "page",
+      "navGroup": "services",
+      "status": "draft",
+      "indexable": false,
+      "breadcrumbLabelKey": "services.startABusiness",
+      "parentId": "services",
+      "serviceId": "start-strong",
+      "contentRefs": ["services:start-strong", "disclaimers"],
+      "legacyWp": null,
+      "title": {
+        "en": "Start a Business",
+        "am": "TODO_VERIFICATION",
+        "ti": "TODO_VERIFICATION"
+      }
+    },
+    {
+      "id": "service-business-plans-funding",
+      "path": "/services/business-plans-funding-readiness/",
+      "type": "page",
+      "navGroup": "services",
+      "status": "draft",
+      "indexable": false,
+      "breadcrumbLabelKey": "services.businessPlansFunding",
+      "parentId": "services",
+      "serviceId": "plan-funding-readiness",
+      "contentRefs": ["services:plan-funding-readiness", "disclaimers"],
+      "legacyWp": null,
+      "title": {
+        "en": "Business Plans & Funding Readiness",
+        "am": "TODO_VERIFICATION",
+        "ti": "TODO_VERIFICATION"
+      }
+    },
+    {
+      "id": "service-bookkeeping-payroll",
+      "path": "/services/bookkeeping-payroll/",
+      "type": "page",
+      "navGroup": "services",
+      "status": "draft",
+      "indexable": false,
+      "breadcrumbLabelKey": "services.bookkeepingPayroll",
+      "parentId": "services",
+      "serviceId": "books-payroll",
+      "contentRefs": ["services:books-payroll", "disclaimers", "technologyPartner"],
+      "legacyWp": null,
+      "title": {
+        "en": "Bookkeeping & Payroll",
+        "am": "TODO_VERIFICATION",
+        "ti": "TODO_VERIFICATION"
+      }
+    },
+    {
+      "id": "service-growth-operations",
+      "path": "/services/growth-operations/",
+      "type": "page",
+      "navGroup": "services",
+      "status": "draft",
+      "indexable": false,
+      "breadcrumbLabelKey": "services.growthOperations",
+      "parentId": "services",
+      "serviceId": "grow-with-a-system",
+      "contentRefs": ["services:grow-with-a-system", "disclaimers"],
+      "legacyWp": null,
+      "title": {
+        "en": "Growth & Operations",
+        "am": "TODO_VERIFICATION",
+        "ti": "TODO_VERIFICATION"
+      }
+    },
+    {
+      "id": "technology-support",
+      "path": "/technology-support/",
+      "type": "page",
+      "navGroup": "services",
+      "status": "draft",
+      "indexable": false,
+      "breadcrumbLabelKey": "nav.technologySupport",
+      "parentId": "services",
+      "contentRefs": ["technologyPartner", "disclaimers"],
+      "legacyWp": null,
+      "title": {
+        "en": "Technology Support",
+        "am": "TODO_VERIFICATION",
+        "ti": "TODO_VERIFICATION"
+      }
+    },
+    {
+      "id": "client-results",
+      "path": "/client-results/",
+      "type": "page",
+      "navGroup": "secondary",
+      "status": "draft",
+      "indexable": false,
+      "breadcrumbLabelKey": "nav.clientResults",
+      "parentId": "home",
+      "contentRefs": ["caseStudies", "testimonials"],
+      "legacyWp": null,
+      "title": {
+        "en": "Client Results",
+        "am": "TODO_VERIFICATION",
+        "ti": "TODO_VERIFICATION"
+      },
+      "notes": "Remain noindex until at least one approved case study or testimonial exists."
+    },
+    {
+      "id": "case-study",
+      "path": "/client-results/:slug/",
+      "type": "template",
+      "navGroup": "none",
+      "status": "draft",
+      "indexable": false,
+      "breadcrumbLabelKey": "nav.caseStudy",
+      "parentId": "client-results",
+      "contentRefs": ["caseStudies:slug"],
+      "legacyWp": null,
+      "title": {
+        "en": "Case study",
+        "am": "TODO_VERIFICATION",
+        "ti": "TODO_VERIFICATION"
+      },
+      "notes": "Instantiate only for approved case-study slugs; never publish empty shells."
+    },
+    {
+      "id": "resources",
+      "path": "/resources/",
+      "type": "page",
+      "navGroup": "primary",
+      "status": "draft",
+      "indexable": false,
+      "breadcrumbLabelKey": "nav.resources",
+      "parentId": "home",
+      "contentRefs": ["articles", "seo:resources"],
+      "legacyWp": { "en": "/blog/", "am": null, "ti": null },
+      "title": {
+        "en": "Resources",
+        "am": "ጡመራ ገጽ",
+        "ti": "ብሎግ"
+      }
+    },
+    {
+      "id": "article",
+      "path": "/resources/:slug/",
+      "type": "template",
+      "navGroup": "none",
+      "status": "draft",
+      "indexable": false,
+      "breadcrumbLabelKey": "nav.article",
+      "parentId": "resources",
+      "contentRefs": ["articles:slug"],
+      "legacyWp": null,
+      "title": {
+        "en": "Article",
+        "am": "TODO_VERIFICATION",
+        "ti": "TODO_VERIFICATION"
+      },
+      "notes": "Publish per-locale only when that locale article claims are approved."
+    },
+    {
+      "id": "about-saba",
+      "path": "/about-saba/",
+      "type": "page",
+      "navGroup": "primary",
+      "status": "draft",
+      "indexable": false,
+      "breadcrumbLabelKey": "nav.about",
+      "parentId": "home",
+      "contentRefs": ["founder", "seo:about"],
+      "legacyWp": null,
+      "title": {
+        "en": "About Saba",
+        "am": "ስለኛ",
+        "ti": "ብዛዕባና"
+      }
+    },
+    {
+      "id": "service-finder",
+      "path": "/find-your-service/",
+      "type": "page",
+      "navGroup": "tools",
+      "status": "draft",
+      "indexable": false,
+      "breadcrumbLabelKey": "nav.serviceFinder",
+      "parentId": "home",
+      "contentRefs": ["ui.form", "services"],
+      "legacyWp": null,
+      "title": {
+        "en": "Find Your Service",
+        "am": "Find Your Service",
+        "ti": "Find Your Service"
+      },
+      "notes": "Five-question progressive service finder; no eligibility diagnosis or outcome promises."
+    },
+    {
+      "id": "book-a-fit-call",
+      "path": "/book-a-fit-call/",
+      "type": "page",
+      "navGroup": "cta",
+      "status": "draft",
+      "indexable": false,
+      "breadcrumbLabelKey": "nav.bookFitCall",
+      "parentId": "home",
+      "contentRefs": ["ui.form", "disclaimers.privacySummary", "business"],
+      "legacyWp": null,
+      "title": {
+        "en": "Book a Fit Call",
+        "am": "TODO_VERIFICATION",
+        "ti": "TODO_VERIFICATION"
+      },
+      "aliases": ["/contact/"]
+    },
+    {
+      "id": "thank-you",
+      "path": "/thank-you/",
+      "type": "page",
+      "navGroup": "none",
+      "status": "draft",
+      "indexable": false,
+      "breadcrumbLabelKey": "nav.thankYou",
+      "parentId": "home",
+      "contentRefs": ["ui.form"],
+      "legacyWp": null,
+      "title": {
+        "en": "Thank You",
+        "am": "TODO_VERIFICATION",
+        "ti": "TODO_VERIFICATION"
+      },
+      "notes": "Always noindex; confirmation after form submit."
+    },
+    {
+      "id": "privacy",
+      "path": "/privacy/",
+      "type": "page",
+      "navGroup": "legal",
+      "status": "draft",
+      "indexable": false,
+      "breadcrumbLabelKey": "nav.privacy",
+      "parentId": "home",
+      "contentRefs": ["disclaimers.privacySummary", "disclaimers.privacyPolicyUrl"],
+      "legacyWp": { "en": "/privacy-policy/", "am": null, "ti": null },
+      "title": {
+        "en": "Privacy",
+        "am": "TODO_VERIFICATION",
+        "ti": "TODO_VERIFICATION"
+      }
+    },
+    {
+      "id": "terms",
+      "path": "/terms/",
+      "type": "page",
+      "navGroup": "legal",
+      "status": "draft",
+      "indexable": false,
+      "breadcrumbLabelKey": "nav.terms",
+      "parentId": "home",
+      "contentRefs": ["disclaimers"],
+      "legacyWp": null,
+      "title": {
+        "en": "Terms of Use",
+        "am": "TODO_VERIFICATION",
+        "ti": "TODO_VERIFICATION"
+      }
+    },
+    {
+      "id": "disclaimers",
+      "path": "/disclaimers/",
+      "type": "page",
+      "navGroup": "legal",
+      "status": "draft",
+      "indexable": false,
+      "breadcrumbLabelKey": "nav.disclaimers",
+      "parentId": "home",
+      "contentRefs": [
+        "disclaimers.scopeOfAdvice",
+        "disclaimers.consultingVsRegulatedAdvice",
+        "disclaimers.noGuaranteedOutcomes",
+        "disclaimers.notLegalTaxImmigrationAdvice",
+        "disclaimers.notRegistryOrLicensingDecisions",
+        "disclaimers.notFundingOrLenderDecisions"
+      ],
+      "legacyWp": null,
+      "title": {
+        "en": "Important Disclaimers",
+        "am": "TODO_VERIFICATION",
+        "ti": "TODO_VERIFICATION"
+      }
+    },
+    {
+      "id": "unsubscribe",
+      "path": "/unsubscribe/",
+      "type": "page",
+      "navGroup": "legal",
+      "status": "draft",
+      "indexable": false,
+      "breadcrumbLabelKey": "nav.privacy",
+      "parentId": "privacy",
+      "contentRefs": ["privacy-policy.marketing", "disclaimers.privacySummary"],
+      "legacyWp": null,
+      "title": {
+        "en": "Unsubscribe",
+        "am": "TODO_VERIFICATION",
+        "ti": "TODO_VERIFICATION"
+      },
+      "notes": "CASL-informed marketing opt-out landing; always noindex."
+    }
+  ]
+}

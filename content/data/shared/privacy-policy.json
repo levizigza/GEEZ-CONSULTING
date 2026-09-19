@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyVersion": "draft-2026-09-18",
+  "status": "draft",
+  "lastReviewed": null,
+  "notLegalAdviceNotice": {
+    "value": "This privacy notice is an implementation draft for website operations. It is not legal advice. Alberta PIPA and CASL obligations should be confirmed with qualified counsel before publish.",
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-018"
+  },
+  "controller": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-018",
+    "notes": "Legal entity that controls personal information (confirm vs brand name)"
+  },
+  "contact": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-018",
+    "notes": "Privacy contact email/mail address for access, correction, complaints"
+  },
+  "purposes": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-018",
+    "notes": "Respond to Fit Call inquiries; optional marketing with separate consent; site security/spam; language preference"
+  },
+  "processors": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-018",
+    "notes": "Hostinger hosting, WPForms/SMTP or successor intake provider, any CRM — list legal names once confirmed"
+  },
+  "locations": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-018",
+    "notes": "Storage/processing regions (Canada / US / other) for host, email, backups"
+  },
+  "retention": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-018",
+    "notes": "Inquiry retention period; mailbox; form entries; backups; marketing list"
+  },
+  "accessCorrection": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-018",
+    "notes": "How individuals request access or correction under PIPA"
+  },
+  "safeguards": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-018",
+    "notes": "HTTPS, access controls, redacted logs, staff handling rules"
+  },
+  "breaches": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-018",
+    "notes": "Incident response and notification approach — counsel to confirm PIPA thresholds"
+  },
+  "deletion": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-018",
+    "notes": "How to request deletion / marketing unsubscribe handling"
+  },
+  "marketing": {
+    "value": null,
+    "source": "TODO_VERIFICATION",
+    "approvalStatus": "todo_verification",
+    "lastReviewed": null,
+    "ledgerId": "CL-018",
+    "notes": "CASL: express consent, identification, unsubscribe — separate from Fit Call response consent"
+  },
+  "cookiesAndStorage": {
+    "value": "Functional language preference may be stored in your browser (localStorage key geez_lang_pref). Non-essential analytics or marketing scripts do not load until you opt in (geez_script_consent_v1).",
+    "source": "implementation",
+    "approvalStatus": "draft",
+    "lastReviewed": "2026-09-18",
+    "ledgerId": "CL-018"
+  },
+  "sectionsOrder": [
+    "notLegalAdviceNotice",
+    "controller",
+    "contact",
+    "purposes",
+    "processors",
+    "locations",
+    "retention",
+    "accessCorrection",
+    "safeguards",
+    "breaches",
+    "deletion",
+    "marketing",
+    "cookiesAndStorage"
+  ]
+}

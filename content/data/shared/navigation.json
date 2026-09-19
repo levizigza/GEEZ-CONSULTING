@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "1.0.0",
+  "philosophy": "Shallow, task-based navigation: few header items, service detail one click from Services overview, one primary CTA, accessible language selector.",
+  "header": {
+    "items": [
+      { "routeId": "home", "order": 1 },
+      { "routeId": "services", "order": 2 },
+      { "routeId": "resources", "order": 3 },
+      { "routeId": "about-saba", "order": 4 }
+    ],
+    "primaryCta": {
+      "routeId": "book-a-fit-call",
+      "labelKey": "cta.bookFitCall"
+    },
+    "languageSelector": {
+      "enabled": true,
+      "ariaLabelKey": "a11y.languageSelector",
+      "pattern": "native-or-listbox",
+      "requirements": [
+        "Keyboard operable",
+        "Accessible name",
+        "Announces current language",
+        "Links to equivalent route in target locale when translation exists; otherwise to that locale home with notice policy TBD"
+      ]
+    },
+    "excludeFromHeader": [
+      "service-start-a-business",
+      "service-business-plans-funding",
+      "service-bookkeeping-payroll",
+      "service-growth-operations",
+      "technology-support",
+      "client-results",
+      "case-study",
+      "article",
+      "thank-you",
+      "service-finder",
+      "privacy",
+      "terms",
+      "disclaimers"
+    ]
+  },
+  "footer": {
+    "groups": [
+      {
+        "id": "services",
+        "routeIds": [
+          "services",
+          "service-start-a-business",
+          "service-business-plans-funding",
+          "service-bookkeeping-payroll",
+          "service-growth-operations",
+          "technology-support"
+        ]
+      },
+      {
+        "id": "company",
+        "routeIds": ["about-saba", "client-results", "resources", "service-finder", "book-a-fit-call"]
+      },
+      {
+        "id": "legal",
+        "routeIds": ["privacy", "terms", "disclaimers"]
+      }
+    ]
+  },
+  "breadcrumbs": {
+    "enabled": true,
+    "showOnHome": false,
+    "ariaLabelKey": "a11y.breadcrumbs",
+    "includeHome": true,
+    "separator": "/"
+  },
+  "labels": {
+    "en": {
+      "nav.home": "Home",
+      "nav.services": "Services",
+      "nav.resources": "Resources",
+      "nav.about": "About Saba",
+      "nav.clientResults": "Client Results",
+      "nav.technologySupport": "Technology Support",
+      "nav.bookFitCall": "Book a Fit Call",
+      "nav.serviceFinder": "Find Your Service",
+      "nav.thankYou": "Thank You",
+      "nav.privacy": "Privacy",
+      "nav.terms": "Terms",
+      "nav.disclaimers": "Disclaimers",
+      "nav.caseStudy": "Case study",
+      "nav.article": "Article",
+      "services.startABusiness": "Start a Business",
+      "services.businessPlansFunding": "Business Plans & Funding Readiness",
+      "services.bookkeepingPayroll": "Bookkeeping & Payroll",
+      "services.growthOperations": "Growth & Operations",
+      "cta.bookFitCall": "Book a Fit Call",
+      "a11y.languageSelector": "Language",
+      "a11y.breadcrumbs": "Breadcrumb"
+    },
+    "am": {
+      "nav.home": "መነሻ ገጽ",
+      "nav.services": "አገልግሎቶች",
+      "nav.resources": "ጡመራ ገጽ",
+      "nav.about": "ስለኛ",
+      "nav.clientResults": "TODO_VERIFICATION",
+      "nav.technologySupport": "TODO_VERIFICATION",
+      "nav.bookFitCall": "Book a Fit Call",
+      "nav.serviceFinder": "Find Your Service",
+      "nav.thankYou": "Thank You",
+      "nav.privacy": "TODO_VERIFICATION",
+      "nav.terms": "TODO_VERIFICATION",
+      "nav.disclaimers": "TODO_VERIFICATION",
+      "nav.caseStudy": "TODO_VERIFICATION",
+      "nav.article": "TODO_VERIFICATION",
+      "services.startABusiness": "TODO_VERIFICATION",
+      "services.businessPlansFunding": "TODO_VERIFICATION",
+      "services.bookkeepingPayroll": "TODO_VERIFICATION",
+      "services.growthOperations": "TODO_VERIFICATION",
+      "cta.bookFitCall": "TODO_VERIFICATION",
+      "a11y.languageSelector": "ቋንቋ",
+      "a11y.breadcrumbs": "የገጽ ዱካ"
+    },
+    "ti": {
+      "nav.home": "ዋና ገጽ",
+      "nav.services": "ኣገልግሎታት",
+      "nav.resources": "ብሎግ",
+      "nav.about": "ብዛዕባና",
+      "nav.clientResults": "TODO_VERIFICATION",
+      "nav.technologySupport": "TODO_VERIFICATION",
+      "nav.bookFitCall": "Book a Fit Call",
+      "nav.serviceFinder": "Find Your Service",
+      "nav.thankYou": "Thank You",
+      "nav.privacy": "TODO_VERIFICATION",
+      "nav.terms": "TODO_VERIFICATION",
+      "nav.disclaimers": "TODO_VERIFICATION",
+      "nav.caseStudy": "TODO_VERIFICATION",
+      "nav.article": "TODO_VERIFICATION",
+      "services.startABusiness": "TODO_VERIFICATION",
+      "services.businessPlansFunding": "TODO_VERIFICATION",
+      "services.bookkeepingPayroll": "TODO_VERIFICATION",
+      "services.growthOperations": "TODO_VERIFICATION",
+      "cta.bookFitCall": "TODO_VERIFICATION",
+      "a11y.languageSelector": "ቋንቋ",
+      "a11y.breadcrumbs": "ናይ ገጽ መስመር"
+    }
+  }
+}

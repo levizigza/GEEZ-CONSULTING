@@ -1,0 +1,7 @@
+/* Ethiopic (Fidel) — load only on am/ti pages to cut EN LCP font weight. */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;700&display=swap");
+
+/*
+  Prefer self-hosting with:
+  unicode-range: U+1200-137F, U+1380-139F, U+2D80-2DDF, U+AB00-AB2F
+*/

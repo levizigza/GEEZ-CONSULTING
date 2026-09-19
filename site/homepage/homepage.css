@@ -1,0 +1,539 @@
+/* Homepage — S-tier presence: full-bleed hero, cultural motif, FAQ elevation. */
+
+.geez-home {
+  overflow-x: clip;
+}
+
+.geez-home-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(10px);
+  background: color-mix(in srgb, var(--geez-color-surface-raised) 88%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--geez-color-border) 70%, transparent);
+}
+
+.geez-home-header .geez-header__inner {
+  row-gap: var(--geez-space-3);
+}
+
+.geez-home-header .geez-header__brand {
+  font-family: var(--geez-font-display);
+  font-size: var(--geez-text-lg);
+  letter-spacing: -0.01em;
+}
+
+.geez-locale-am .geez-home-header .geez-header__brand,
+.geez-locale-ti .geez-home-header .geez-header__brand {
+  font-family: var(--geez-font-sans);
+}
+
+/* ---- Full-bleed hero ---- */
+.geez-home-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: min(92vh, 52rem);
+  display: grid;
+  align-items: end;
+  color: var(--geez-color-on-brand);
+  background:
+    linear-gradient(
+      105deg,
+      rgba(58, 15, 24, 0.94) 0%,
+      rgba(76, 20, 32, 0.78) 42%,
+      rgba(76, 20, 32, 0.35) 70%,
+      rgba(76, 20, 32, 0.15) 100%
+    ),
+    var(--geez-motif),
+    url("../media/atmosphere/calgary-skyline.jpg") center / cover no-repeat;
+  padding: 0;
+  border-bottom: 0;
+}
+
+.geez-home-hero__grid {
+  display: grid;
+  gap: var(--geez-space-6);
+  align-items: end;
+  width: min(100% - 2rem, var(--geez-container-wide));
+  margin-inline: auto;
+  padding-block: var(--geez-space-7) var(--geez-space-8);
+}
+
+@media (min-width: 48rem) {
+  .geez-home-hero__grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: var(--geez-space-7);
+    padding-block: var(--geez-space-8);
+  }
+}
+
+.geez-home-hero__brand {
+  margin: 0 0 var(--geez-space-3);
+  font-family: var(--geez-font-display);
+  font-size: clamp(1.35rem, 1.1rem + 1vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--geez-color-gold-accent);
+}
+
+.geez-locale-am .geez-home-hero__brand,
+.geez-locale-ti .geez-home-hero__brand {
+  font-family: var(--geez-font-sans);
+}
+
+.geez-home-hero h1 {
+  margin: 0 0 var(--geez-space-4);
+  max-width: 16ch;
+  color: var(--geez-color-on-brand);
+  text-wrap: balance;
+}
+
+.geez-home-hero__lead {
+  font-size: var(--geez-text-lg);
+  margin: 0 0 var(--geez-space-3);
+  max-width: 36ch;
+  color: color-mix(in srgb, var(--geez-color-on-brand) 92%, white);
+}
+
+.geez-home-hero__reassure {
+  margin: 0 0 var(--geez-space-5);
+  color: color-mix(in srgb, var(--geez-color-on-brand) 78%, #c9a227);
+  font-size: var(--geez-text-sm);
+  max-width: 42ch;
+}
+
+.geez-home-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--geez-space-3);
+  margin: 0;
+}
+
+.geez-home-hero__actions .geez-btn-link {
+  background: var(--geez-color-ochre);
+  border-color: var(--geez-color-ochre);
+  color: #1c1208;
+  box-shadow: var(--geez-shadow-md);
+  transition: transform var(--geez-motion), box-shadow var(--geez-motion);
+}
+
+.geez-home-hero__actions .geez-btn-link:hover {
+  transform: translateY(-2px);
+}
+
+.geez-home-hero__actions .geez-btn-link--secondary {
+  background: transparent;
+  border-color: color-mix(in srgb, var(--geez-color-on-brand) 70%, transparent);
+  color: var(--geez-color-on-brand);
+  box-shadow: none;
+}
+
+.geez-home-hero__media {
+  min-width: 0;
+  justify-self: center;
+  width: min(100%, 28rem);
+  position: relative;
+}
+
+.geez-home-hero__media::before {
+  content: "";
+  position: absolute;
+  inset: 8% -6% -4% 12%;
+  border: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 55%, transparent);
+  border-radius: 1.25rem 0.35rem 1.25rem 0.35rem;
+  z-index: -1;
+  opacity: 0.85;
+}
+
+.geez-home-hero__portrait {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 18%;
+  border-radius: 1.1rem 0.25rem 1.1rem 0.25rem;
+  display: block;
+  box-shadow: var(--geez-shadow-md);
+  animation: geez-hero-rise 700ms var(--geez-motion) both;
+}
+
+.geez-home-hero__mark {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  border-radius: 1.1rem 0.25rem 1.1rem 0.25rem;
+  background:
+    radial-gradient(circle at 30% 30%, var(--geez-color-gold-accent), transparent 45%),
+    linear-gradient(145deg, var(--geez-color-burgundy), var(--geez-color-burgundy-strong));
+}
+
+@keyframes geez-hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .geez-home-hero__portrait {
+    animation: none;
+  }
+  .geez-home-hero__actions .geez-btn-link:hover {
+    transform: none;
+  }
+}
+
+/* ---- Audience strip ---- */
+.geez-home-audience {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--geez-color-burgundy) 8%, var(--geez-color-surface)) 0%,
+      var(--geez-color-surface) 100%
+    ),
+    var(--geez-motif);
+  border-bottom: 1px solid var(--geez-color-border);
+  padding-block: var(--geez-space-5);
+}
+
+.geez-home-audience__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--geez-space-4);
+}
+
+@media (min-width: 48rem) {
+  .geez-home-audience__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.geez-home-audience__list li {
+  margin: 0;
+  padding: var(--geez-space-4);
+  border-left: 3px solid var(--geez-color-ochre);
+  background: color-mix(in srgb, var(--geez-color-surface-raised) 80%, transparent);
+}
+
+.geez-home-audience__list strong {
+  display: block;
+  color: var(--geez-color-burgundy);
+  margin-bottom: var(--geez-space-2);
+  font-size: var(--geez-text-sm);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.geez-home-audience__list p {
+  margin: 0;
+  color: var(--geez-color-ink-muted);
+  font-size: var(--geez-text-sm);
+}
+
+/* ---- Sections ---- */
+.geez-section {
+  padding-block: var(--geez-space-7);
+}
+
+@media (min-width: 48rem) {
+  .geez-section {
+    padding-block: var(--geez-space-8);
+  }
+}
+
+.geez-section__header {
+  margin-bottom: var(--geez-space-5);
+  max-width: 42rem;
+}
+
+.geez-section__kicker {
+  margin: 0 0 var(--geez-space-2);
+  color: var(--geez-color-ochre-deep);
+  font-size: var(--geez-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.geez-home-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--geez-space-4);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 32rem) {
+  .geez-home-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .geez-home-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.geez-home-card {
+  margin: 0;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--geez-color-border);
+  border-radius: var(--geez-radius-lg);
+  background: var(--geez-color-surface-raised);
+  box-shadow: var(--geez-shadow-sm);
+  transition: transform var(--geez-motion), box-shadow var(--geez-motion);
+}
+
+.geez-home-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--geez-shadow-md);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .geez-home-card:hover {
+    transform: none;
+  }
+}
+
+.geez-home-card__media {
+  aspect-ratio: 16 / 10;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid var(--geez-color-border);
+}
+
+.geez-home-card__media--start {
+  background-image: linear-gradient(180deg, transparent, rgba(58, 15, 24, 0.35)),
+    url("../media/atmosphere/planning-desk.jpg");
+}
+
+.geez-home-card__media--funding {
+  background-image: linear-gradient(180deg, transparent, rgba(58, 15, 24, 0.35)),
+    url("../media/atmosphere/collaboration.jpg");
+}
+
+.geez-home-card__media--books {
+  background-image: linear-gradient(180deg, transparent, rgba(58, 15, 24, 0.35)),
+    url("../media/atmosphere/woven-texture.jpg");
+}
+
+.geez-home-card__media--grow {
+  background-image: linear-gradient(180deg, transparent, rgba(58, 15, 24, 0.45)),
+    url("../media/atmosphere/calgary-skyline.jpg");
+}
+
+.geez-home-card__body {
+  padding: var(--geez-space-4);
+}
+
+.geez-home-card h3 {
+  margin: 0 0 var(--geez-space-2);
+  font-size: var(--geez-text-lg);
+}
+
+.geez-home-card h3 a {
+  text-decoration: none;
+}
+
+.geez-home-card h3 a:hover {
+  text-decoration: underline;
+}
+
+.geez-home-card p {
+  margin: 0;
+  color: var(--geez-color-ink-muted);
+  font-size: var(--geez-text-sm);
+}
+
+/* Process */
+.geez-home-process {
+  background:
+    linear-gradient(180deg, var(--geez-color-surface-sunken), var(--geez-color-surface)),
+    var(--geez-motif);
+}
+
+.geez-home-process__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--geez-space-4);
+}
+
+@media (min-width: 48rem) {
+  .geez-home-process__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.geez-home-step {
+  background: var(--geez-color-surface-raised);
+  border: 1px solid var(--geez-color-border);
+  border-radius: var(--geez-radius-md);
+  padding: var(--geez-space-5);
+  min-width: 0;
+  position: relative;
+}
+
+.geez-home-step__num {
+  margin: 0 0 var(--geez-space-2);
+  color: var(--geez-color-ochre-deep);
+  font-family: var(--geez-font-display);
+  font-size: var(--geez-text-xl);
+  font-weight: 700;
+}
+
+.geez-home-step h3 {
+  margin: 0 0 var(--geez-space-2);
+  font-size: var(--geez-text-lg);
+}
+
+.geez-home-step p:last-child {
+  margin: 0;
+  color: var(--geez-color-ink-muted);
+  font-size: var(--geez-text-sm);
+}
+
+/* Why + founder */
+.geez-home-why {
+  position: relative;
+}
+
+.geez-home-why::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--geez-motif);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.geez-home-founder {
+  background: var(--geez-color-burgundy-strong);
+  color: var(--geez-color-on-brand);
+}
+
+.geez-home-founder h2,
+.geez-home-founder p,
+.geez-home-founder a {
+  color: var(--geez-color-on-brand);
+}
+
+.geez-home-founder a:hover {
+  color: var(--geez-color-gold-accent);
+}
+
+.geez-home-founder__grid {
+  display: grid;
+  gap: var(--geez-space-6);
+  align-items: center;
+}
+
+@media (min-width: 48rem) {
+  .geez-home-founder__grid {
+    grid-template-columns: minmax(0, 18rem) minmax(0, 1fr);
+  }
+}
+
+.geez-home-founder__placeholder {
+  aspect-ratio: 4 / 5;
+  width: min(100%, 18rem);
+  border-radius: var(--geez-radius-lg);
+  background: var(--geez-color-burgundy);
+  border: 1px dashed color-mix(in srgb, var(--geez-color-gold-accent) 50%, transparent);
+}
+
+.geez-home-founder__img {
+  width: min(100%, 18rem);
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 15%;
+  border-radius: 1rem 0.25rem 1rem 0.25rem;
+  box-shadow: var(--geez-shadow-md);
+  border: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 40%, transparent);
+}
+
+.geez-home-founder__name {
+  margin: 0 0 var(--geez-space-1);
+  font-family: var(--geez-font-display);
+  font-size: var(--geez-text-xl);
+  font-weight: 700;
+}
+
+.geez-home-founder__role {
+  margin: 0 0 var(--geez-space-4);
+  color: var(--geez-color-gold-accent);
+  font-size: var(--geez-text-sm);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* FAQ elevated */
+.geez-home-faq {
+  background:
+    linear-gradient(180deg, var(--geez-color-surface), var(--geez-color-surface-sunken));
+}
+
+.geez-home-faq .geez-container--narrow {
+  max-width: 46rem;
+}
+
+.geez-home-faq .geez-accordion {
+  border-color: color-mix(in srgb, var(--geez-color-burgundy) 18%, var(--geez-color-border));
+  box-shadow: var(--geez-shadow-sm);
+}
+
+.geez-home-faq .geez-accordion > summary {
+  font-size: var(--geez-text-md);
+}
+
+.geez-home-faq .geez-accordion[open] {
+  border-color: color-mix(in srgb, var(--geez-color-ochre) 45%, var(--geez-color-border));
+}
+
+/* Final CTA */
+.geez-home-final {
+  position: relative;
+  background:
+    linear-gradient(120deg, var(--geez-color-burgundy-strong), var(--geez-color-burgundy) 55%, #6a2a18),
+    var(--geez-motif);
+  color: var(--geez-color-on-brand);
+  text-align: center;
+}
+
+.geez-home-final h2,
+.geez-home-final p {
+  color: var(--geez-color-on-brand);
+}
+
+.geez-home-final .geez-container--narrow {
+  margin-inline: auto;
+}
+
+.geez-home-final .geez-btn-link {
+  background: var(--geez-color-ochre);
+  color: #1c1208;
+  border-color: var(--geez-color-ochre);
+  box-shadow: var(--geez-shadow-md);
+}
+
+.geez-footer__note {
+  margin-top: var(--geez-space-4);
+  font-size: var(--geez-text-sm);
+  color: var(--geez-color-on-brand);
+}
+
+.geez-home img,
+.geez-home svg,
+.geez-home video {
+  max-width: 100%;
+}
