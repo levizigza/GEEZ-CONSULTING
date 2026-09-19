@@ -38,12 +38,6 @@
   max-width: 40rem;
 }
 
-.geez-legal .geez-page-band {
-  margin-inline: calc(50% - 50vw);
-  width: 100vw;
-  max-width: 100%;
-}
-
 .geez-legal section {
   animation: geez-legal-fade 500ms ease both;
 }

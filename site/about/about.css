@@ -5,12 +5,6 @@
   overflow-x: clip;
 }
 
-.geez-about .geez-page-band {
-  margin-inline: calc(50% - 50vw);
-  width: 100vw;
-  max-width: 100%;
-}
-
 .geez-about__layout {
   display: grid;
   gap: var(--geez-space-6);

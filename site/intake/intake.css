@@ -87,12 +87,6 @@
   font-size: var(--geez-text-lg);
 }
 
-.geez-intake .geez-page-band {
-  margin-inline: calc(50% - 50vw);
-  width: 100vw;
-  max-width: 100%;
-}
-
 /* Finder: pathway line grows under the form */
 .geez-finder {
   position: relative;

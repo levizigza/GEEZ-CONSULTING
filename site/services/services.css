@@ -9,12 +9,6 @@
   width: min(100% - var(--geez-space-6), var(--geez-container-content));
 }
 
-.geez-svc .geez-page-band {
-  margin-inline: calc(50% - 50vw);
-  width: 100vw;
-  max-width: 100%;
-}
-
 .geez-svc__header {
   margin-bottom: var(--geez-space-6);
 }

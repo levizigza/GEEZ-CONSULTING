@@ -124,6 +124,33 @@ body.geez-home {
   overflow: clip;
   margin-bottom: 0;
   border-bottom: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 40%, transparent);
+  /* Break out of .geez-container on every viewport without horizontal scroll */
+  width: 100vw;
+  max-width: 100%;
+  margin-inline: calc(50% - 50vw);
+}
+
+@supports (width: 100dvw) {
+  .geez-page-band {
+    width: 100dvw;
+    margin-inline: calc(50% - 50dvw);
+  }
+}
+
+@media (max-height: 28rem) and (orientation: landscape) {
+  .geez-page-band {
+    min-height: 7.5rem;
+  }
+
+  .geez-page-band__inner {
+    padding-block: var(--geez-space-4) var(--geez-space-5);
+  }
+}
+
+@media (min-width: 90rem) {
+  .geez-page-band {
+    min-height: clamp(12rem, 18vw, 16rem);
+  }
 }
 
 .geez-page-band__media {

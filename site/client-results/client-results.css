@@ -100,12 +100,6 @@
   }
 }
 
-.geez-cr .geez-page-band {
-  margin-inline: calc(50% - 50vw);
-  width: 100vw;
-  max-width: 100%;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .geez-cr .geez-svc-grid .geez-svc-card {
     animation: none;

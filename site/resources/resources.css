@@ -119,12 +119,6 @@
   color: var(--geez-color-ink-muted);
 }
 
-.geez-res .geez-page-band {
-  margin-inline: calc(50% - 50vw);
-  width: 100vw;
-  max-width: 100%;
-}
-
 .geez-res-card {
   animation: geez-res-fade 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
   border-bottom: 1px solid var(--geez-color-border);

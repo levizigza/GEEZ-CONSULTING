@@ -60,9 +60,12 @@
   --geez-container-content: 45rem;
   --geez-container-wide: 72rem;
 
-  --geez-bp-sm: 32rem;
-  --geez-bp-md: 48rem;
-  --geez-bp-lg: 64rem;
+  /* Viewport matrix (use these names in comments; media queries need literal rem) */
+  --geez-bp-xs: 22.5rem; /* compact phones ~360px */
+  --geez-bp-sm: 32rem; /* large phones / small tablets */
+  --geez-bp-md: 48rem; /* tablets / small laptops */
+  --geez-bp-lg: 64rem; /* desktop chrome + multi-column */
+  --geez-bp-xl: 90rem; /* ultrawide calm */
 
   --geez-motion: 220ms cubic-bezier(0.22, 1, 0.36, 1);
   --geez-touch: 2.75rem;

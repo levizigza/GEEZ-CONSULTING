@@ -120,6 +120,51 @@ a:hover {
   max-width: 100%;
 }
 
+/* Full-bleed bands: stay edge-to-edge without horizontal scroll on any viewport */
+.geez-full-bleed {
+  width: 100%;
+  max-width: 100%;
+  margin-inline: 0;
+}
+
+.geez-full-bleed--breakout {
+  width: 100vw;
+  max-width: 100%;
+  margin-inline: calc(50% - 50vw);
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+@supports (width: 100dvw) {
+  .geez-full-bleed--breakout {
+    width: 100dvw;
+    margin-inline: calc(50% - 50dvw);
+  }
+}
+
+/* Ultrawide: keep content from stretching into sparse emptiness */
+@media (min-width: 90rem) {
+  :root {
+    --geez-container-wide: 78rem;
+  }
+}
+
+/* Short landscape (phones + foldables + laptop half-heights) */
+@media (max-height: 28rem) and (orientation: landscape) {
+  .geez-section {
+    padding-block: clamp(var(--geez-space-5), 4vw, var(--geez-space-6));
+  }
+}
+
+/* Compact phones: keep gutters usable without crushing type */
+@media (max-width: 22.5rem) {
+  .geez-container,
+  .geez-container--narrow {
+    width: min(100% - var(--geez-space-4), var(--geez-container-wide));
+  }
+}
+
 .geez-media-ph {
   display: block;
   width: 100%;

@@ -216,6 +216,35 @@
   }
 }
 
+/* Header mid-widths: brand + Menu + CTA stay one coherent row */
+@media (max-width: 63.99rem) {
+  .geez-header__inner {
+    flex-wrap: nowrap;
+    gap: var(--geez-space-2) var(--geez-space-3);
+  }
+
+  .geez-header__brand {
+    flex: 1 1 auto;
+  }
+
+  .geez-nav-drawer {
+    flex: 0 0 auto;
+    margin-inline-start: auto;
+  }
+
+  .geez-header__cta {
+    flex: 0 0 auto;
+    margin-inline-start: 0;
+  }
+}
+
+@media (max-width: 28rem) {
+  .geez-header__cta .geez-btn-link {
+    padding-inline: var(--geez-space-2);
+    font-size: var(--geez-text-xs);
+  }
+}
+
 /* Compact phones + landscape short height */
 @media (max-width: 22.5rem) {
   .geez-header__brand {

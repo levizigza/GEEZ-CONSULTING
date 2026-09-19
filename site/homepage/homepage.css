@@ -438,11 +438,12 @@
   color: var(--geez-color-on-brand);
 }
 
-/* ---- Full-bleed hero — photo + gradient only (patterns live on empty surfaces) ---- */
+/* ---- Full-bleed hero — same composition phone → desktop, scaled ---- */
 .geez-home-hero {
   position: relative;
   isolation: isolate;
-  min-height: min(92vh, 54rem);
+  min-height: min(88vh, 54rem);
+  min-height: min(88dvh, 54rem);
   display: grid;
   align-items: end;
   color: var(--geez-color-on-brand);
@@ -456,6 +457,8 @@
     ),
     url("../media/atmosphere/calgary-skyline.jpg") center / cover no-repeat;
   padding: 0;
+  padding-inline: max(0px, env(safe-area-inset-left, 0px))
+    max(0px, env(safe-area-inset-right, 0px));
   border-bottom: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 35%, transparent);
   overflow: clip;
 }
@@ -468,14 +471,69 @@
   align-items: end;
   width: min(100% - 2rem, var(--geez-container-wide));
   margin-inline: auto;
-  padding-block: var(--geez-space-7) var(--geez-space-8);
+  padding-block: clamp(var(--geez-space-6), 5vw, var(--geez-space-8))
+    clamp(var(--geez-space-6), 6vw, var(--geez-space-8));
 }
 
-@media (min-width: 48rem) {
+/* Phones + tablets: single column keeps brand → copy → portrait coherent */
+@media (max-width: 63.99rem) {
+  .geez-home-hero {
+    min-height: 0;
+    align-items: stretch;
+  }
+
+  .geez-home-hero__grid {
+    align-items: start;
+  }
+
+  .geez-home-hero__media {
+    width: min(100%, 22rem);
+    justify-self: start;
+  }
+}
+
+/* Desktop: two-column hero aligns with desktop header chrome (64rem) */
+@media (min-width: 64rem) {
   .geez-home-hero__grid {
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     gap: var(--geez-space-8);
     padding-block: var(--geez-space-8) 5.5rem;
+    align-items: end;
+  }
+
+  .geez-home-hero__media {
+    width: min(100%, 26rem);
+    justify-self: center;
+  }
+}
+
+/* Ultrawide desktops: cap hero height so the band does not dominate */
+@media (min-width: 90rem) {
+  .geez-home-hero {
+    min-height: min(78vh, 48rem);
+    min-height: min(78dvh, 48rem);
+  }
+}
+
+/* Short landscape (phone rotate, foldable, short laptop windows) */
+@media (max-height: 28rem) and (orientation: landscape) {
+  .geez-home-hero {
+    min-height: 0;
+  }
+
+  .geez-home-hero__grid {
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+    gap: var(--geez-space-4);
+    padding-block: var(--geez-space-4) var(--geez-space-5);
+    align-items: center;
+  }
+
+  .geez-home-hero__media {
+    width: min(100%, 12.5rem);
+  }
+
+  .geez-home-hero__reassure {
+    display: none;
   }
 }
 
@@ -568,8 +626,6 @@
 
 .geez-home-hero__media {
   min-width: 0;
-  justify-self: center;
-  width: min(100%, 26rem);
   position: relative;
 }
 
