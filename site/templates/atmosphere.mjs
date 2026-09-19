@@ -1,7 +1,6 @@
 /** Page atmosphere helpers — imagery bands + shared media map (base-path aware). */
 
 import { withBase } from '../../content/lib/base-path.mjs';
-import { renderVinePair } from './vines.mjs';
 
 /**
  * @param {string} s
@@ -96,7 +95,8 @@ export function atmosphereUrl(key) {
 }
 
 /**
- * Decorative page band with photography + pattern veil.
+ * Decorative page band with photography + gradient veil.
+ * Patterns and vines stay on empty surfaces, not on stock photos.
  * @param {{
  *   key: string,
  *   title: string,
@@ -110,21 +110,14 @@ export function renderPageBand({ key, title, lead = '', kicker = '', quiet = fal
   const entry = ATMOSPHERE[key] || ATMOSPHERE.calgary;
   const isQuiet = quiet || entry.quiet;
   const src = withBase(`/media/atmosphere/${entry.file}`);
-  const veilClass =
-    entry.pattern === 'geometry'
-      ? 'geez-page-band__veil geez-page-band__veil--geometry'
-      : entry.pattern === 'star'
-        ? 'geez-page-band__veil geez-page-band__veil--star'
-        : 'geez-page-band__veil';
   const alt = entry.alt ? e(entry.alt) : '';
   const imgAttrs = alt
     ? `alt="${alt}"`
     : `alt="" role="presentation"`;
 
-  return `<div class="geez-page-band${isQuiet ? ' geez-page-band--quiet' : ''} geez-reveal geez-vine-host" data-geez-atmosphere="${e(key)}" data-geez-motion>
-  ${renderVinePair('band')}
+  return `<div class="geez-page-band${isQuiet ? ' geez-page-band--quiet' : ''} geez-reveal" data-geez-atmosphere="${e(key)}" data-geez-motion>
   <img class="geez-page-band__media" src="${e(src)}" ${imgAttrs} width="1600" height="900" loading="eager" decoding="async" />
-  <div class="${veilClass}" aria-hidden="true"></div>
+  <div class="geez-page-band__veil" aria-hidden="true"></div>
   <div class="geez-page-band__inner">
     ${kicker ? `<p class="geez-page-band__kicker">${e(kicker)}</p>` : ''}
     <h1>${e(title)}</h1>

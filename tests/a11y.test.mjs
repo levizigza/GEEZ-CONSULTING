@@ -70,8 +70,10 @@ test('header stacks safely at narrow widths', async () => {
     path.join(root, 'design/css/primitives.css'),
     'utf8',
   );
-  assert.match(css, /@media \(max-width: 32rem\)/);
-  assert.match(css, /\.geez-header__nav[\s\S]*order:\s*3/);
+  assert.match(css, /\.geez-nav-drawer/);
+  assert.match(css, /@media \(min-width: 64rem\)/);
+  assert.match(css, /\.geez-header__nav--desktop/);
+  assert.match(css, /@media \(max-width: 22\.5rem\)/);
 });
 
 test('structural checks catch missing skip and lang', () => {

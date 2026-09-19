@@ -235,15 +235,12 @@
 
 /* Service-specific accents */
 .geez-svc--start-a-business .geez-page-band__veil {
-  background-image:
-    linear-gradient(
-      105deg,
-      rgba(26, 7, 12, 0.92) 0%,
-      rgba(58, 15, 24, 0.78) 48%,
-      rgba(76, 20, 32, 0.4) 100%
-    ),
-    var(--geez-pattern-geometry);
-  background-size: auto, 14rem 14rem;
+  background: linear-gradient(
+    105deg,
+    rgba(26, 7, 12, 0.92) 0%,
+    rgba(58, 15, 24, 0.78) 48%,
+    rgba(76, 20, 32, 0.4) 100%
+  );
 }
 
 .geez-svc--business-plans-funding-readiness .geez-svc-section--check li::before {

@@ -649,8 +649,7 @@ export function renderHomepageHtml(m) {
 <body class="${bodyClass}" data-geez-page-type="home">
   ${intro}
   <a class="geez-skip" href="#main">${e(m.skip)}</a>
-  <header class="geez-header geez-home-header geez-vine-host" data-geez-motion>
-    ${renderVinePair('header')}
+  <header class="geez-header geez-home-header" data-geez-motion>
     <div class="geez-header__inner geez-container">
       <a class="geez-header__brand" href="${e(m.homeHref)}" aria-label="${e(
         m.brand,
@@ -699,8 +698,7 @@ export function renderHomepageHtml(m) {
   </header>
 
   <main id="main">
-    <section class="geez-home-hero geez-vine-host" aria-labelledby="home-hero-heading" data-geez-motion>
-      ${renderVinePair('band')}
+    <section class="geez-home-hero" aria-labelledby="home-hero-heading" data-geez-motion>
       <div class="geez-home-hero__grid">
         <div class="geez-home-hero__copy">
           <p class="geez-home-hero__brand">${e(m.brand)}</p>
@@ -771,8 +769,7 @@ export function renderHomepageHtml(m) {
       </div>
     </section>
 
-    <section class="geez-section geez-home-founder geez-vine-host" aria-labelledby="founder-heading" data-geez-motion>
-      ${renderVinePair('band')}
+    <section class="geez-section geez-home-founder" aria-labelledby="founder-heading" data-geez-motion>
       <div class="geez-container geez-home-founder__grid">
         ${founderImage}
         <div>

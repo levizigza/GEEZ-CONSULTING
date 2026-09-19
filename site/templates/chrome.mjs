@@ -197,8 +197,7 @@ export function renderHeader(m) {
       </nav>`;
 
   return `<a class="geez-skip" href="#main">${e(m.skip)}</a>
-  <header class="geez-header geez-vine-host" data-geez-motion>
-    ${renderVinePair('header')}
+  <header class="geez-header" data-geez-motion>
     <div class="geez-header__inner geez-container">
       <a class="geez-header__brand" href="${e(m.homeHref)}" aria-label="${e(m.brand)}">${brandInner}</a>
       <details class="geez-nav-drawer">

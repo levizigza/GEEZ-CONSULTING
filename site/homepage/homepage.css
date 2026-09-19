@@ -438,7 +438,7 @@
   color: var(--geez-color-on-brand);
 }
 
-/* ---- Full-bleed hero ---- */
+/* ---- Full-bleed hero — photo + gradient only (patterns live on empty surfaces) ---- */
 .geez-home-hero {
   position: relative;
   isolation: isolate;
@@ -454,63 +454,10 @@
       rgba(76, 20, 32, 0.42) 68%,
       rgba(76, 20, 32, 0.18) 100%
     ),
-    var(--geez-pattern-tibeb, url("../media/patterns/tibeb-lattice.svg")),
-    var(--geez-motif),
     url("../media/atmosphere/calgary-skyline.jpg") center / cover no-repeat;
-  background-size: auto, 10rem 10rem, auto, cover;
-  background-blend-mode: normal, soft-light, normal, normal;
   padding: 0;
   border-bottom: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 35%, transparent);
   overflow: clip;
-}
-
-/* Wallpaper vines only when interactive SVG host is absent */
-.geez-home-hero:not(.geez-vine-host)::before,
-.geez-home-hero:not(.geez-vine-host)::after,
-.geez-home-founder:not(.geez-vine-host)::before,
-.geez-home-founder:not(.geez-vine-host)::after,
-.geez-home-final:not(.geez-vine-host)::before,
-.geez-home-final:not(.geez-vine-host)::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  z-index: 0;
-  background-image: var(--geez-pattern-vine, url("../media/patterns/gold-vine.svg"));
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: var(--geez-vine-opacity, 0.62);
-  filter: drop-shadow(0 0 0.55px color-mix(in srgb, var(--geez-color-gold-accent, #c9a227) 70%, #e8c547));
-}
-
-.geez-home-hero:not(.geez-vine-host)::before {
-  left: -0.75rem;
-  bottom: 1rem;
-  width: min(44vw, 18rem);
-  height: min(24vw, 10rem);
-  background-position: left bottom;
-}
-
-.geez-home-hero:not(.geez-vine-host)::after {
-  right: -0.5rem;
-  top: 12%;
-  width: min(34vw, 14rem);
-  height: min(18vw, 8rem);
-  background-position: right top;
-  transform: scaleX(-1) rotate(10deg);
-  opacity: calc(var(--geez-vine-opacity, 0.62) * 0.9);
-}
-
-.geez-home-hero.geez-vine-host .geez-vine--left {
-  left: -0.75rem;
-  bottom: 1rem;
-  width: min(44vw, 18rem);
-}
-
-.geez-home-hero.geez-vine-host .geez-vine--right {
-  right: -0.5rem;
-  top: 12%;
-  width: min(34vw, 14rem);
-  transform: scaleX(-1) rotate(10deg);
 }
 
 .geez-home-hero__grid {
@@ -932,11 +879,28 @@
   color: var(--geez-color-ink-muted);
 }
 
-/* Process */
+/* Process — empty surface carries quiet geometry */
 .geez-home-process {
-  background:
-    linear-gradient(180deg, var(--geez-color-surface-sunken), var(--geez-color-surface));
+  position: relative;
+  background: linear-gradient(180deg, var(--geez-color-surface-sunken), var(--geez-color-surface));
   border-block: 1px solid var(--geez-color-border);
+}
+
+.geez-home-process::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: var(--geez-pattern-geometry, url("../media/patterns/sacred-geometry.svg"));
+  background-size: 18rem 18rem;
+  background-position: -3rem 60%;
+  background-repeat: no-repeat;
+}
+
+.geez-home-process .geez-container {
+  position: relative;
+  z-index: 1;
 }
 
 .geez-home-process__list {
@@ -991,7 +955,24 @@
 }
 
 .geez-home-quotes {
+  position: relative;
   background: color-mix(in srgb, var(--geez-color-burgundy) 4%, var(--geez-color-surface));
+}
+
+.geez-home-quotes::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: var(--geez-pattern-tibeb, url("../media/patterns/tibeb-lattice.svg"));
+  background-size: 13rem 13rem;
+  background-repeat: repeat;
+}
+
+.geez-home-quotes .geez-container {
+  position: relative;
+  z-index: 1;
 }
 
 .geez-home-quotes__list {
@@ -1074,18 +1055,26 @@
   letter-spacing: 0.04em;
 }
 
-/* Why + founder */
+/* Why + founder — patterns on empty why band; photo founder stays clean */
 .geez-home-why {
   position: relative;
   text-align: center;
+  background-image:
+    radial-gradient(ellipse 55% 50% at 50% 0%, rgba(201, 162, 39, 0.07), transparent 70%),
+    var(--geez-pattern-geometry, url("../media/patterns/sacred-geometry.svg")),
+    var(--geez-motif);
+  background-size: auto, 20rem 20rem, auto;
+  background-position: 0 0, 50% 120%, 0 0;
+  background-repeat: no-repeat, no-repeat, repeat;
 }
 
 .geez-home-why::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: var(--geez-motif);
-  opacity: 0.4;
+  background: var(--geez-pattern-tibeb, url("../media/patterns/tibeb-lattice.svg"));
+  background-size: 12rem 12rem;
+  opacity: 0.035;
   pointer-events: none;
 }
 
@@ -1095,43 +1084,9 @@
   overflow: clip;
   background:
     linear-gradient(135deg, rgba(47, 12, 22, 0.92), rgba(74, 21, 32, 0.88) 55%, rgba(58, 15, 24, 0.9)),
-    var(--geez-pattern-tibeb),
     url("../media/atmosphere/multicultural-team.jpg") center / cover no-repeat;
-  background-blend-mode: normal, soft-light, normal;
   color: var(--geez-color-on-brand);
   border-block: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 35%, transparent);
-}
-
-.geez-home-founder:not(.geez-vine-host)::before {
-  left: -0.5rem;
-  bottom: 0.5rem;
-  width: min(40vw, 16rem);
-  height: min(22vw, 9rem);
-  background-position: left bottom;
-  z-index: 0;
-}
-
-.geez-home-founder:not(.geez-vine-host)::after {
-  right: -0.35rem;
-  top: 0.75rem;
-  width: min(32vw, 13rem);
-  height: min(18vw, 7.5rem);
-  background-position: right top;
-  transform: scaleX(-1) rotate(8deg);
-  opacity: calc(var(--geez-vine-opacity, 0.62) * 0.9);
-  z-index: 0;
-}
-
-.geez-home-founder.geez-vine-host .geez-vine--left {
-  left: -0.5rem;
-  bottom: 0.5rem;
-  width: min(40vw, 16rem);
-}
-
-.geez-home-founder.geez-vine-host .geez-vine--right {
-  right: -0.35rem;
-  top: 0.75rem;
-  width: min(32vw, 13rem);
 }
 
 .geez-home-founder__grid {
@@ -1192,12 +1147,41 @@
   text-transform: uppercase;
 }
 
-/* FAQ */
+/* FAQ — patterns on empty surface */
 .geez-home-faq {
+  position: relative;
   background: linear-gradient(180deg, var(--geez-color-surface), var(--geez-color-surface-sunken));
 }
 
+.geez-home-faq::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: var(--geez-pattern-tibeb, url("../media/patterns/tibeb-lattice.svg"));
+  background-size: 11rem 11rem;
+  background-repeat: repeat;
+}
+
+.geez-home-faq::after {
+  content: "";
+  position: absolute;
+  right: -1rem;
+  top: 12%;
+  width: min(40vw, 14rem);
+  height: min(40vw, 14rem);
+  pointer-events: none;
+  opacity: 0.055;
+  background-image: var(--geez-pattern-star, url("../media/patterns/meskel-star.svg"));
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .geez-home-faq .geez-container--narrow {
+  position: relative;
+  z-index: 1;
   max-width: 44rem;
 }
 
@@ -1218,7 +1202,7 @@
   border-color: color-mix(in srgb, var(--geez-color-ochre) 45%, var(--geez-color-border));
 }
 
-/* Final CTA */
+/* Final CTA — solid burgundy; vines belong here */
 .geez-home-final {
   position: relative;
   overflow: clip;
@@ -1228,6 +1212,19 @@
   color: var(--geez-color-on-brand);
   text-align: center;
   border-top: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 40%, transparent);
+}
+
+.geez-home-final:not(.geez-vine-host)::before,
+.geez-home-final:not(.geez-vine-host)::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  background-image: var(--geez-pattern-vine, url("../media/patterns/gold-vine.svg"));
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: var(--geez-vine-opacity, 0.62);
+  filter: drop-shadow(0 0 0.55px color-mix(in srgb, var(--geez-color-gold-accent, #c9a227) 70%, #e8c547));
 }
 
 .geez-home-final:not(.geez-vine-host)::before {

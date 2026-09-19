@@ -122,7 +122,7 @@ body.geez-home {
   align-items: end;
   color: var(--geez-color-on-brand);
   overflow: clip;
-  margin-bottom: var(--geez-space-6);
+  margin-bottom: 0;
   border-bottom: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 40%, transparent);
 }
 
@@ -141,40 +141,13 @@ body.geez-home {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background:
-    linear-gradient(
-      105deg,
-      rgba(26, 7, 12, 0.92) 0%,
-      rgba(58, 15, 24, 0.78) 48%,
-      rgba(76, 20, 32, 0.45) 100%
-    ),
-    var(--geez-pattern-tibeb);
-  background-size: auto, 9rem 9rem;
+  background: linear-gradient(
+    105deg,
+    rgba(26, 7, 12, 0.92) 0%,
+    rgba(58, 15, 24, 0.78) 48%,
+    rgba(76, 20, 32, 0.45) 100%
+  );
   opacity: 1;
-}
-
-.geez-page-band__veil--geometry {
-  background-image:
-    linear-gradient(
-      105deg,
-      rgba(26, 7, 12, 0.92) 0%,
-      rgba(58, 15, 24, 0.78) 48%,
-      rgba(76, 20, 32, 0.45) 100%
-    ),
-    var(--geez-pattern-geometry);
-  background-size: auto, 14rem 14rem;
-}
-
-.geez-page-band__veil--star {
-  background-image:
-    linear-gradient(
-      105deg,
-      rgba(26, 7, 12, 0.92) 0%,
-      rgba(58, 15, 24, 0.78) 48%,
-      rgba(76, 20, 32, 0.45) 100%
-    ),
-    var(--geez-pattern-star);
-  background-size: auto, 11rem 11rem;
 }
 
 .geez-page-band__inner {
@@ -217,15 +190,12 @@ body.geez-home {
 }
 
 .geez-page-band--quiet .geez-page-band__veil {
-  background:
-    linear-gradient(
-      100deg,
-      rgba(26, 7, 12, 0.94) 0%,
-      rgba(58, 15, 24, 0.88) 70%,
-      rgba(58, 15, 24, 0.72) 100%
-    ),
-    var(--geez-pattern-geometry);
-  background-size: auto, 20rem 20rem;
+  background: linear-gradient(
+    100deg,
+    rgba(26, 7, 12, 0.94) 0%,
+    rgba(58, 15, 24, 0.88) 70%,
+    rgba(58, 15, 24, 0.72) 100%
+  );
 }
 
 .geez-page-band--quiet .geez-page-band__media {
@@ -233,13 +203,9 @@ body.geez-home {
   opacity: 0.55;
 }
 
-/* ---- Gold vine ornaments on burgundy / brown bands ---- */
-/* Wallpaper fallback (no SVG host). Interactive hosts hide these. */
-.geez-page-band:not(.geez-vine-host)::before,
-.geez-page-band:not(.geez-vine-host)::after,
+/* ---- Gold vine ornaments on solid burgundy bands only (not photos) ---- */
 .geez-footer:not(.geez-vine-host)::before,
-.geez-footer:not(.geez-vine-host)::after,
-.geez-header:not(.geez-vine-host)::after {
+.geez-footer:not(.geez-vine-host)::after {
   content: "";
   position: absolute;
   pointer-events: none;
@@ -251,47 +217,9 @@ body.geez-home {
   filter: drop-shadow(0 0 0.55px color-mix(in srgb, var(--geez-color-gold-accent) 70%, #e8c547));
 }
 
-.geez-page-band:not(.geez-vine-host)::before {
-  left: -0.5rem;
-  bottom: 0.35rem;
-  width: min(42vw, 17rem);
-  height: min(24vw, 9.5rem);
-  background-position: left bottom;
-}
-
-.geez-page-band:not(.geez-vine-host)::after {
-  right: -0.35rem;
-  top: 0.5rem;
-  width: min(36vw, 14rem);
-  height: min(20vw, 8rem);
-  background-position: right top;
-  transform: scaleX(-1) rotate(8deg);
-  opacity: calc(var(--geez-vine-opacity) * 0.9);
-}
-
-.geez-page-band__inner {
-  position: relative;
-  z-index: 1;
-}
-
-.geez-page-band--quiet:not(.geez-vine-host)::before,
-.geez-page-band--quiet:not(.geez-vine-host)::after {
-  opacity: calc(var(--geez-vine-opacity) * 0.72);
-}
-
 .geez-header {
   position: relative;
   overflow: clip;
-}
-
-.geez-header:not(.geez-vine-host)::after {
-  right: 0.15rem;
-  top: 50%;
-  width: min(30vw, 12rem);
-  height: 3rem;
-  background-position: right center;
-  transform: translateY(-50%);
-  opacity: calc(var(--geez-vine-opacity) * 0.88);
 }
 
 .geez-header__inner {
@@ -363,22 +291,8 @@ body.geez-home {
   /* class marker for mirrored vines */
 }
 
-.geez-vine--header {
-  width: min(28vw, 11rem);
-  right: 0.2rem;
-  top: 50%;
-  bottom: auto;
-  left: auto;
-  transform: translateY(-50%) scaleX(-1);
-  opacity: 0.9;
-}
-
 .geez-vine--slim {
   width: min(34vw, 13rem);
-}
-
-.geez-header.geez-vine-host .geez-vine--header {
-  z-index: 0;
 }
 
 .geez-footer.geez-vine-host .geez-vine--left {
@@ -392,16 +306,6 @@ body.geez-home {
   top: 0.75rem;
   width: min(38vw, 15rem);
   transform: scaleX(-1) rotate(6deg);
-}
-
-.geez-page-band.geez-vine-host .geez-vine--left {
-  left: -0.5rem;
-  bottom: 0.35rem;
-}
-
-.geez-page-band.geez-vine-host .geez-vine--right {
-  right: -0.35rem;
-  top: 0.5rem;
 }
 
 .geez-vine__glow {

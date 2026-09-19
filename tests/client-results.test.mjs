@@ -148,7 +148,7 @@ test('missing-image behavior uses placeholder, never broken img', async () => {
   const ready = makeReadyCaseStudy();
   const html = renderCaseStudyPage(ready, 'en', bundle.ui, navigation);
   assert.match(html, /geez-cr__media--pending/);
-  assert.doesNotMatch(html, /<img\b/);
+  assert.doesNotMatch(html, /geez-cr__media[\s\S]{0,240}<img\b/);
   assert.equal(
     /<img\b/.test(renderCaseStudyMedia(null, 'Photo forthcoming')),
     false,

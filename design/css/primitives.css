@@ -473,7 +473,7 @@
 }
 
 .geez-section {
-  padding-block: var(--geez-space-7);
+  padding-block: clamp(var(--geez-space-6), 5vw, var(--geez-space-8));
 }
 
 .geez-section__header {
