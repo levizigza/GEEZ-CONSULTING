@@ -63,7 +63,7 @@ test('legacy credit post is marked merge in roadmap fields', async () => {
   assert.match(credit.roadmapNotes, /BDC or Bank/i);
 });
 
-test('Resources index lists EN outlines with badge and one H1', async () => {
+test('Resources index shows only production-ready articles and one H1', async () => {
   const navigation = await readDataJson('shared/navigation.json');
   const bundle = await loadLocaleBundle('en');
   const html = renderResourcesIndex(
@@ -73,13 +73,14 @@ test('Resources index lists EN outlines with badge and one H1', async () => {
     bundle.articles,
   );
   assert.equal(countH1(html), 1);
-  assert.match(html, /Outline — under review/);
-  assert.match(html, /starting-a-business-in-alberta-newcomer-checklist/);
-  assert.match(html, /noindex/);
+  assert.doesNotMatch(html, /Outline — under review/);
+  assert.doesNotMatch(html, /\bDraft\b/);
+  assert.doesNotMatch(html, /starting-a-business-in-alberta-newcomer-checklist/);
+  assert.match(html, /noindex|Guides are being prepared|Resources/);
   assert.match(html, /og:title/);
 });
 
-test('article template has TOC, update notice, flags, sources, CTA', async () => {
+test('article template has TOC, sources, CTA without outline/draft chrome', async () => {
   const navigation = await readDataJson('shared/navigation.json');
   const bundle = await loadLocaleBundle('en');
   const article = bundle.articles.find(
@@ -94,8 +95,9 @@ test('article template has TOC, update notice, flags, sources, CTA', async () =>
   );
   assert.equal(countH1(html), 1);
   assert.match(html, /geez-res-toc/);
-  assert.match(html, /editorial outline|Outline — under review/i);
-  assert.match(html, /Flagged for qualified review|geez-res-flag/);
+  assert.doesNotMatch(html, /Outline — under review/i);
+  assert.doesNotMatch(html, /editorial outline/i);
+  assert.doesNotMatch(html, /Flagged for qualified review/);
   assert.match(html, /Sources and citations/);
   assert.match(html, /Related service/);
   assert.match(html, /Book a Fit Call/);

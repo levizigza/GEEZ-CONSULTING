@@ -261,7 +261,6 @@ export function renderClientResultsIndex(
         kicker: labels.breadcrumbResults || 'Client Results',
       })}
       <header class="geez-svc__header geez-svc__header--after-band">
-        <p class="geez-svc__draft">${e(labels.draftBanner)}</p>
         ${
           labels.translationNote
             ? `<p class="geez-svc__note">${e(labels.translationNote)}</p>`
@@ -345,7 +344,6 @@ export function renderCaseStudyPage(
   } else {
     mainInner = `<header class="geez-svc__header">
         <h1>${e(title)}</h1>
-        <p class="geez-svc__draft">${e(labels.draftBanner)}</p>
         <p>${e(description)}</p>
       </header>
       ${renderCaseStudyMedia(null, labels.imagePending)}

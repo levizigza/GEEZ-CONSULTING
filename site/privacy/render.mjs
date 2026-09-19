@@ -94,9 +94,6 @@ export function renderPrivacyPage(locale, ui, navigation, privacyPolicy) {
         kicker: 'Legal',
         quiet: true,
       })}
-      <header class="geez-svc__header geez-svc__header--after-band">
-        <p class="geez-svc__note">${e(labels.draftBanner)}</p>
-      </header>
       ${sections}
       <p><a href="${e(chrome.localizeHref('/unsubscribe/'))}">${e(
           labels.unsubscribeLink,
@@ -201,9 +198,6 @@ export function renderDisclaimersPage(locale, ui, navigation, disclaimers) {
         kicker: 'Legal',
         quiet: true,
       })}
-      <header class="geez-svc__header geez-svc__header--after-band">
-        <p class="geez-svc__note">${e(labels.draftBanner)}</p>
-      </header>
       ${sections}`,
         locale,
       )}
@@ -268,9 +262,6 @@ export function renderTermsPage(locale, ui, navigation) {
         kicker: 'Legal',
         quiet: true,
       })}
-      <header class="geez-svc__header geez-svc__header--after-band">
-        <p class="geez-svc__note">${e(labels.draftBanner)}</p>
-      </header>
       <section aria-labelledby="terms-use">
         <h2 id="terms-use">${e(labels.termsUseHeading)}</h2>
         <p>${e(labels.termsUseBody)}</p>
@@ -330,7 +321,6 @@ export function renderUnsubscribePage(locale, ui, navigation) {
       <header class="geez-svc__header">
         <h1>${e(labels.unsubscribeH1)}</h1>
         <p>${e(labels.unsubscribeIntro)}</p>
-        <p class="geez-svc__note">${e(labels.draftBanner)}</p>
       </header>
       <ol>
         ${labels.unsubscribeSteps.map((s) => `<li>${e(s)}</li>`).join('\n')}

@@ -54,13 +54,8 @@ export function renderResourcesIndex(locale, ui, navigation, articles) {
       ${list
         .map((a) => {
           const href = chrome.localizeHref(`/resources/${a.slug}/`);
-          const badge = a.isOutline
-            ? `<span class="geez-res-badge">${e(labels.outlineBadge)}</span>`
-            : a.productionReady
-              ? ''
-              : `<span class="geez-res-badge">${e(labels.draftBadge)}</span>`;
           return `<li class="geez-res-card">
-          <h2><a href="${e(href)}">${e(a.title)}</a> ${badge}</h2>
+          <h2><a href="${e(href)}">${e(a.title)}</a></h2>
           <p>${e(a.excerpt)}</p>
         </li>`;
         })
@@ -230,25 +225,6 @@ export function renderArticlePage(
     );
   }
 
-  const updateNotice = `<p class="geez-res-update" role="note">${e(
-    labels.updateNoticePrefix,
-  )} ${e(String(view.localeStatus))}${
-    view.isOutline ? ` — ${e(labels.outlineBadge)}` : ''
-  }</p>`;
-
-  const outlineBanner = view.isOutline
-    ? `<p class="geez-svc__note" role="status">${e(labels.outlineNotice)}</p>`
-    : '';
-
-  const flagsHtml = view.reviewFlags.length
-    ? `<section aria-labelledby="flags-h">
-      <h2 id="flags-h">${e(labels.reviewFlagsHeading)}</h2>
-      <ul class="geez-res-flags">${view.reviewFlags
-        .map((f) => `<li>${e(DISCLAIMER_LABELS[f] || f)}</li>`)
-        .join('\n')}</ul>
-    </section>`
-    : '';
-
   const citationsHtml =
     view.citations.length > 0
       ? `<section aria-labelledby="sources-h">
@@ -368,8 +344,6 @@ export function renderArticlePage(
       <header class="geez-svc__header">
         <h1>${e(view.title)}</h1>
         <p>${e(view.excerpt)}</p>
-        ${outlineBanner}
-        ${updateNotice}
         <div class="geez-res-meta">${metaBits.join('\n')}</div>
         <p class="geez-res-disclaimer">${e(labels.disclaimerGeneral)} (${e(
           DISCLAIMER_LABELS[/** @type {string} */ (view.disclaimerCategory)] ||
@@ -378,7 +352,6 @@ export function renderArticlePage(
       </header>
       ${toc}
       ${sectionsHtml}
-      ${flagsHtml}
       ${citationsHtml}
       ${downloadsHtml}
       ${relatedService}

@@ -6,9 +6,9 @@ export const resourcesChrome = {
   en: {
     indexH1: 'Resources',
     indexMeta:
-      'Practical guides and checklists for Calgary and Alberta entrepreneurs. Outlines pending expert review stay clearly marked.',
+      'Practical guides and checklists for Calgary and Alberta entrepreneurs.',
     indexIntro:
-      'Useful guides—not content volume. Outlines are preparation checklists awaiting dated sources and qualified review. They are not legal, tax, immigration, or financing advice.',
+      'Useful guides for newcomers and local owners—not content volume. These are not legal, tax, immigration, or financing advice.',
     outlineBadge: 'Outline — under review',
     draftBadge: 'Draft',
     updatedLabel: 'Updated',
@@ -32,7 +32,7 @@ export const resourcesChrome = {
       'Consulting and preparation support is not legal, tax, accounting, immigration, registry, funding, or lender decision-making.',
     breadcrumbHome: 'Home',
     breadcrumbResources: 'Resources',
-    emptyState: 'Resources are being prepared. Check back after outlines are reviewed.',
+    emptyState: 'Guides are being prepared. Check back soon.',
     ctaFallback: 'Book a Fit Call',
   },
   am: {

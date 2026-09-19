@@ -256,11 +256,22 @@ export function isArticleProductionReady(article) {
 }
 
 /**
- * List articles safe to show on Resources index (outlines + drafts OK as cards;
- * retired/remove excluded). Production-ready get indexable detail pages.
+ * List articles safe to show on the public Resources index.
+ * Only production-ready articles appear — outlines/drafts stay off the index.
  * @param {unknown[]} items
  */
 export function filterIndexArticles(items) {
+  return (Array.isArray(items) ? items : []).filter((raw) => {
+    if (!raw || typeof raw !== 'object') return false;
+    return isArticleProductionReady(/** @type {Record<string, unknown>} */ (raw));
+  });
+}
+
+/**
+ * Articles included in the static build (outlines/drafts as noindex shells).
+ * @param {unknown[]} items
+ */
+export function filterBuildArticles(items) {
   return (Array.isArray(items) ? items : []).filter((raw) => {
     if (!raw || typeof raw !== 'object') return false;
     const a = /** @type {Record<string, unknown>} */ (raw);
@@ -270,13 +281,6 @@ export function filterIndexArticles(items) {
     const title = /** @type {any} */ (a.title)?.value;
     return typeof title === 'string' && title.trim().length > 0;
   });
-}
-
-/**
- * @param {unknown[]} items
- */
-export function filterBuildArticles(items) {
-  return filterIndexArticles(items);
 }
 
 /**
