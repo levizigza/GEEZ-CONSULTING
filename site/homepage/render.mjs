@@ -278,25 +278,12 @@ export function renderHomepageHtml(m) {
   const e = escapeHtml;
   const asset = m.assetPrefix;
 
-  const trustHtml = m.trust?.render
-    ? `<section class="geez-section geez-home-trust" aria-labelledby="trust-heading">
-      <div class="geez-container">
-        <header class="geez-section__header geez-section__header--center">
-          <p class="geez-section__kicker">${e(m.slogan)}</p>
-          <h2 id="trust-heading">${e(m.trust.heading || 'Client reflections')}</h2>
-          ${m.trust.note ? `<p>${e(m.trust.note)}</p>` : ''}
-        </header>
-      </div>
-    </section>`
-    : '';
-
   const testimonialsHtml =
     m.testimonials?.render && Array.isArray(m.testimonials.items)
       ? `<section class="geez-section geez-home-quotes" aria-labelledby="testimonials-heading">
       <div class="geez-container">
         <header class="geez-section__header">
           <h2 id="testimonials-heading">${e(m.testimonials.heading)}</h2>
-          ${m.testimonials.intro ? `<p>${e(m.testimonials.intro)}</p>` : ''}
         </header>
         <ul class="geez-home-quotes__list">
           ${m.testimonials.items
@@ -722,7 +709,6 @@ export function renderHomepageHtml(m) {
     </section>
 
     ${audience}
-    ${trustHtml}
 
     <section class="geez-section" id="pathways" aria-labelledby="pathways-heading">
       <div class="geez-container">

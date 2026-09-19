@@ -15,6 +15,8 @@ test('about-saba ships live-site bio without verification disclaimer', async () 
   assert.match(html, /yonas-profile\.png/);
   assert.match(html, /Yonas Hila/);
   assert.match(html, /Jonas Driving School/);
+  assert.doesNotMatch(html, /Individual experiences vary/);
+  assert.doesNotMatch(html, /What clients share on geezconsulting\.com/);
   assert.match(html, /geez-header__logo/);
 });
 

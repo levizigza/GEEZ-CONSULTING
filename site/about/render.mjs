@@ -126,7 +126,6 @@ export function renderAboutSabaPage(locale, ui, navigation, founder) {
       <section class="geez-about-reflections" aria-labelledby="about-reflections-heading">
         <header class="geez-section__header">
           <h2 id="about-reflections-heading">${e(copy.reflectionsHeading)}</h2>
-          <p>${e(copy.reflectionsIntro)}</p>
         </header>
         <ul class="geez-about-reflections__list">
           ${reflections}

@@ -89,7 +89,6 @@ test('live-site reviews + portrait + logo + socials ship; case studies stay gate
   const navigation = await readDataJson('shared/navigation.json');
   const bundle = await loadLocaleBundle('en');
   const model = buildHomepageModel('en', bundle.ui, navigation);
-  assert.equal(model.trust.render, true);
   assert.equal(model.caseStudy.render, false);
   assert.equal(model.testimonials.render, true);
   assert.ok(model.hero.image);
@@ -100,9 +99,10 @@ test('live-site reviews + portrait + logo + socials ship; case studies stay gate
   assert.ok(model.logo);
   assert.equal(model.socials.length, 4);
   const html = renderHomepageHtml(model);
-  assert.match(html, /geez-home-trust/);
   assert.match(html, /geez-home-quotes/);
   assert.match(html, /Yonas Hila/);
+  assert.doesNotMatch(html, /geez-home-trust/);
+  assert.doesNotMatch(html, /Individual experiences vary/);
   assert.match(html, /geez-home-hero__portrait/);
   assert.match(html, /\/media\/founder\/saba-teklu\.jpg/);
   assert.match(html, /geez-header__logo/);
