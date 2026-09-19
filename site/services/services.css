@@ -88,14 +88,18 @@
   margin-bottom: var(--geez-space-3);
 }
 
+.geez-svc-card__icon .geez-svc-icon {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
 .geez-svc__showcase {
   color: var(--geez-color-burgundy);
   margin-bottom: var(--geez-space-4);
 }
 
-.geez-svc__showcase .geez-svc-icon {
-  width: 3.25rem;
-  height: 3.25rem;
+.geez-svc__header .geez-svc-stage {
+  margin-top: var(--geez-space-2);
 }
 
 .geez-svc-card::before {

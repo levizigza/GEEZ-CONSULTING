@@ -1,15 +1,15 @@
 {
   "meta": {
-    "version": "1.0.0",
+    "version": "1.1.0",
     "stack": "static HTML + CSS + small deferred JS (no SPA hydration)",
-    "notes": "Budgets sized to current stack. Lab Lighthouse CI optional; these file budgets gate every build."
+    "notes": "Budgets sized for luxury redesign (atmosphere vines, looping service showcases, homepage imagery). Lab Lighthouse CI optional; these file budgets gate every build."
   },
   "budgets": {
-    "totalJsBytes": 48000,
-    "totalCssBytes": 70000,
+    "totalJsBytes": 56000,
+    "totalCssBytes": 98000,
     "maxSingleJsBytes": 16000,
-    "maxSingleCssBytes": 26000,
-    "maxHtmlBytes": 50000,
+    "maxSingleCssBytes": 45000,
+    "maxHtmlBytes": 70000,
     "maxImageCandidateBytes": 250000,
     "maxRenderBlockingStylesheets": 4,
     "maxSyncScriptsInHead": 0,

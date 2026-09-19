@@ -1,6 +1,8 @@
 /**
- * Sitewide viewport motion — gold vine stroke-draw + service icon showcases.
- * One-shot grow via Intersection Observer. prefers-reduced-motion → static.
+ * Sitewide viewport motion — gold vine stroke-draw + looping service showcases.
+ * Vines: one-shot grow via Intersection Observer.
+ * Service icons: stay live while in view (toggle geez-motion--in).
+ * prefers-reduced-motion → static.
  * On the homepage, waits for brand intro dismissal so hero vines are visible.
  */
 (function () {
@@ -11,8 +13,19 @@
   var nodes = document.querySelectorAll('[data-geez-motion]');
   if (!nodes.length) return;
 
+  function isShowcase(el) {
+    return (
+      el.hasAttribute('data-geez-showcase') ||
+      !!el.querySelector('.geez-svc-icon')
+    );
+  }
+
   function activate(el) {
     el.classList.add('geez-motion--in');
+  }
+
+  function deactivate(el) {
+    el.classList.remove('geez-motion--in');
   }
 
   function activateAllStatic() {
@@ -36,9 +49,15 @@
       function (entries) {
         for (var k = 0; k < entries.length; k++) {
           var entry = entries[k];
+          var el = entry.target;
+          if (isShowcase(el)) {
+            if (entry.isIntersecting) activate(el);
+            else deactivate(el);
+            continue;
+          }
           if (!entry.isIntersecting) continue;
-          activate(entry.target);
-          io.unobserve(entry.target);
+          activate(el);
+          io.unobserve(el);
         }
       },
       { threshold: 0.18, rootMargin: '0px 0px -6% 0px' },

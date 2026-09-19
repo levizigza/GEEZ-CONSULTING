@@ -893,13 +893,31 @@
 
 @media (min-width: 40rem) {
   .geez-home-service {
-    grid-template-columns: 3.5rem minmax(0, 1fr);
+    grid-template-columns: 4.75rem minmax(0, 1fr);
     gap: var(--geez-space-5);
   }
 }
 
 .geez-home-service__icon {
   color: var(--geez-color-burgundy);
+  display: grid;
+  place-items: center;
+  width: 4.75rem;
+  aspect-ratio: 1;
+  padding: 0.55rem;
+  border: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 38%, transparent);
+  background:
+    radial-gradient(
+      circle at 28% 22%,
+      color-mix(in srgb, var(--geez-color-gold-accent) 16%, transparent),
+      transparent 58%
+    ),
+    color-mix(in srgb, var(--geez-color-burgundy) 3.5%, transparent);
+}
+
+.geez-home-service__icon .geez-svc-icon {
+  width: 100%;
+  height: 100%;
 }
 
 .geez-home-service h3 {

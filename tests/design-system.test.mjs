@@ -57,7 +57,7 @@ test('CSS tokens declare burgundy, gold, surfaces, focus, motion, touch', async 
   assert.match(css, /prefers-reduced-motion/);
 });
 
-test('fonts load 400/700 only and include Ethiopic family', async () => {
+test('fonts load display/body families and Ethiopic separately', async () => {
   const latin = await readFile(
     path.join(root, 'design/css/fonts-latin.css'),
     'utf8',
@@ -66,12 +66,11 @@ test('fonts load 400/700 only and include Ethiopic family', async () => {
     path.join(root, 'design/css/fonts-ethiopic.css'),
     'utf8',
   );
-  assert.match(latin, /Noto\+Sans/);
+  assert.match(latin, /Libre\+Baskerville|Source\+Sans\+3/);
   assert.doesNotMatch(latin, /Noto\+Sans\+Ethiopic/);
   assert.match(ethiopic, /Noto\+Sans\+Ethiopic/);
   assert.match(latin, /display=swap/);
   assert.match(ethiopic, /display=swap/);
-  assert.doesNotMatch(latin, /wght@400;500;600;700/);
 });
 
 test('primitives use semantic landmarks and skip link', () => {

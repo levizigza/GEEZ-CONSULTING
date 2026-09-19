@@ -522,88 +522,301 @@ body.geez-home {
   }
 }
 
-/* ---- Service icon showcases (viewport-triggered) ---- */
+/* ---- Service showcase animations (loop while in view) ---- */
 .geez-svc-icon {
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 3.25rem;
+  height: 3.25rem;
   display: block;
   color: inherit;
+  overflow: visible;
 }
 
-.geez-svc-icon__draw,
-.geez-svc-icon__line,
-.geez-svc-icon__motif,
-.geez-svc-icon__pulse {
-  stroke-dasharray: 120;
-  stroke-dashoffset: 120;
+.geez-svc-icon--lg {
+  width: 7.5rem;
+  height: 7.5rem;
 }
 
-.geez-motion--in .geez-svc-icon__draw {
-  animation: geez-svc-draw 1.05s cubic-bezier(0.33, 0.1, 0.2, 1) 0.08s forwards;
+.geez-svc-stage {
+  display: grid;
+  gap: var(--geez-space-3, 0.75rem);
+  justify-items: start;
+  margin-bottom: var(--geez-space-4, 1rem);
 }
 
-.geez-motion--in .geez-svc-icon__line--1 {
-  animation: geez-svc-draw 0.7s ease 0.35s forwards;
-}
-.geez-motion--in .geez-svc-icon__line--2 {
-  animation: geez-svc-draw 0.7s ease 0.5s forwards;
-}
-.geez-motion--in .geez-svc-icon__line--3 {
-  animation: geez-svc-draw 0.7s ease 0.65s forwards;
+.geez-svc-stage__frame {
+  display: grid;
+  place-items: center;
+  width: min(100%, 11rem);
+  aspect-ratio: 1;
+  padding: 1.1rem;
+  border: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 42%, transparent);
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      color-mix(in srgb, var(--geez-color-gold-accent) 18%, transparent),
+      transparent 55%
+    ),
+    color-mix(in srgb, var(--geez-color-burgundy) 4%, transparent);
+  color: var(--geez-color-burgundy);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--geez-color-gold-accent) 12%, transparent);
 }
 
-.geez-motion--in .geez-svc-icon__motif {
-  animation: geez-svc-draw 0.85s ease 0.4s forwards;
+.geez-svc-stage__caption {
+  margin: 0;
+  max-width: 22rem;
+  color: var(--geez-color-ink-muted);
+  font-size: var(--geez-text-sm);
+  line-height: 1.45;
 }
 
-.geez-motion--in .geez-svc-icon--start .geez-svc-icon__motif {
-  animation:
-    geez-svc-draw 0.85s ease 0.4s forwards,
-    geez-svc-nudge 1.8s ease 1.2s 1;
+/* Start — orbiting marker + sequenced steps + traveling arrow */
+.geez-motion--in .geez-svc-icon--start .geez-svc-icon__orbit {
+  transform-origin: 48px 48px;
+  animation: geez-svc-orbit 4.2s linear infinite;
+}
+
+.geez-motion--in .geez-svc-icon--start .geez-svc-icon__step--1 {
+  animation: geez-svc-step-fill 2.4s ease-in-out infinite;
+}
+.geez-motion--in .geez-svc-icon--start .geez-svc-icon__step--2 {
+  animation: geez-svc-step-fill 2.4s ease-in-out 0.4s infinite;
+}
+.geez-motion--in .geez-svc-icon--start .geez-svc-icon__step--3 {
+  animation: geez-svc-step-fill 2.4s ease-in-out 0.8s infinite;
+}
+
+.geez-motion--in .geez-svc-icon--start .geez-svc-icon__arrow {
+  animation: geez-svc-arrow-nudge 1.8s ease-in-out infinite;
+}
+
+.geez-motion--in .geez-svc-icon--start .geez-svc-icon__path {
+  stroke-dasharray: 8 6;
+  animation: geez-svc-dash 1.6s linear infinite;
+}
+
+/* Funding — lines rewrite + seal pulse */
+.geez-svc-icon--funding .geez-svc-icon__line {
+  stroke-dasharray: 32;
+  stroke-dashoffset: 32;
+}
+
+.geez-motion--in .geez-svc-icon--funding .geez-svc-icon__line--1 {
+  animation: geez-svc-write 2.8s ease-in-out infinite;
+}
+.geez-motion--in .geez-svc-icon--funding .geez-svc-icon__line--2 {
+  animation: geez-svc-write 2.8s ease-in-out 0.25s infinite;
+}
+.geez-motion--in .geez-svc-icon--funding .geez-svc-icon__line--3 {
+  animation: geez-svc-write 2.8s ease-in-out 0.5s infinite;
+}
+
+.geez-motion--in .geez-svc-icon--funding .geez-svc-icon__seal {
+  transform-origin: 62px 64px;
+  animation: geez-svc-seal 2.8s ease-in-out infinite;
+}
+
+.geez-motion--in .geez-svc-icon--funding .geez-svc-icon__check {
+  stroke-dasharray: 24;
+  stroke-dashoffset: 24;
+  animation: geez-svc-check 2.8s ease-in-out infinite;
+}
+
+.geez-motion--in .geez-svc-icon--funding .geez-svc-icon__page {
+  animation: geez-svc-page-breathe 2.8s ease-in-out infinite;
+}
+
+/* Books — ledger columns rise + soft book sway */
+.geez-svc-icon--books .geez-svc-icon__col {
+  stroke-dasharray: 28;
+  stroke-dashoffset: 28;
+}
+
+.geez-motion--in .geez-svc-icon--books .geez-svc-icon__col--1 {
+  animation: geez-svc-col 2.6s ease-in-out infinite;
+}
+.geez-motion--in .geez-svc-icon--books .geez-svc-icon__col--2 {
+  animation: geez-svc-col 2.6s ease-in-out 0.15s infinite;
+}
+.geez-motion--in .geez-svc-icon--books .geez-svc-icon__col--3 {
+  animation: geez-svc-col 2.6s ease-in-out 0.3s infinite;
+}
+.geez-motion--in .geez-svc-icon--books .geez-svc-icon__col--4 {
+  animation: geez-svc-col 2.6s ease-in-out 0.45s infinite;
 }
 
 .geez-motion--in .geez-svc-icon--books .geez-svc-icon__book-l {
-  transform-origin: 30px 32px;
-  animation:
-    geez-svc-draw 1s ease 0.08s forwards,
-    geez-svc-book-l 1.1s ease 0.9s 1;
+  transform-origin: 44px 52px;
+  animation: geez-svc-book-l 3.2s ease-in-out infinite;
 }
 
 .geez-motion--in .geez-svc-icon--books .geez-svc-icon__book-r {
-  transform-origin: 34px 32px;
-  animation:
-    geez-svc-draw 1s ease 0.18s forwards,
-    geez-svc-book-r 1.1s ease 0.9s 1;
+  transform-origin: 52px 52px;
+  animation: geez-svc-book-r 3.2s ease-in-out infinite;
 }
 
-.geez-motion--in .geez-svc-icon--grow .geez-svc-icon__motif {
-  animation:
-    geez-svc-draw 0.7s ease 0.55s forwards,
-    geez-svc-pulse 1.6s ease 1.15s 1;
+/* Grow — bars pump + tip climbs the trend */
+.geez-svc-icon--grow .geez-svc-icon__bar {
+  transform-box: fill-box;
+  transform-origin: bottom center;
 }
 
-.geez-motion--in .geez-svc-icon--tech .geez-svc-icon__pulse {
-  animation:
-    geez-svc-draw 0.7s ease 0.45s forwards,
-    geez-svc-pulse 1.5s ease 1.1s 1;
+.geez-motion--in .geez-svc-icon--grow .geez-svc-icon__bar--1 {
+  animation: geez-svc-bar 2.4s ease-in-out infinite;
+}
+.geez-motion--in .geez-svc-icon--grow .geez-svc-icon__bar--2 {
+  animation: geez-svc-bar 2.4s ease-in-out 0.18s infinite;
+}
+.geez-motion--in .geez-svc-icon--grow .geez-svc-icon__bar--3 {
+  animation: geez-svc-bar 2.4s ease-in-out 0.36s infinite;
 }
 
-@keyframes geez-svc-draw {
+.geez-svc-icon--grow .geez-svc-icon__trend {
+  stroke-dasharray: 90;
+  stroke-dashoffset: 90;
+}
+
+.geez-motion--in .geez-svc-icon--grow .geez-svc-icon__trend {
+  animation: geez-svc-trend 2.8s ease-in-out infinite;
+}
+
+.geez-motion--in .geez-svc-icon--grow .geez-svc-icon__tip {
+  animation: geez-svc-tip 2.8s ease-in-out infinite;
+}
+
+/* Tech — signal hops across nodes */
+.geez-motion--in .geez-svc-icon--tech .geez-svc-icon__signal {
+  animation: geez-svc-signal 2.2s ease-in-out infinite;
+}
+
+.geez-motion--in .geez-svc-icon--tech .geez-svc-icon__node--a {
+  animation: geez-svc-node 2.2s ease-in-out infinite;
+}
+.geez-motion--in .geez-svc-icon--tech .geez-svc-icon__node--b {
+  animation: geez-svc-node 2.2s ease-in-out 0.35s infinite;
+}
+.geez-motion--in .geez-svc-icon--tech .geez-svc-icon__node--c {
+  animation: geez-svc-node 2.2s ease-in-out 0.7s infinite;
+}
+
+.geez-motion--in .geez-svc-icon--tech .geez-svc-icon__screen {
+  animation: geez-svc-screen 2.2s ease-in-out infinite;
+}
+
+/* Hover / focus: quicken the loop (interactive feel) */
+.geez-svc-card:hover .geez-svc-icon *,
+.geez-svc-card:focus-within .geez-svc-icon *,
+.geez-home-service:hover .geez-svc-icon *,
+.geez-home-service:focus-within .geez-svc-icon *,
+.geez-home-card:hover .geez-svc-icon *,
+.geez-home-card:focus-within .geez-svc-icon *,
+.geez-svc-stage:hover .geez-svc-icon *,
+.geez-svc-stage:focus-within .geez-svc-icon * {
+  animation-duration: 1.15s !important;
+}
+
+@keyframes geez-svc-orbit {
   to {
-    stroke-dashoffset: 0;
+    transform: rotate(360deg);
   }
 }
 
-@keyframes geez-svc-nudge {
+@keyframes geez-svc-step-fill {
+  0%,
+  100% {
+    fill: transparent;
+    opacity: 0.55;
+  }
+  35%,
+  55% {
+    fill: currentColor;
+    opacity: 1;
+  }
+}
+
+@keyframes geez-svc-arrow-nudge {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes geez-svc-dash {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+@keyframes geez-svc-write {
+  0% {
+    stroke-dashoffset: 32;
+    opacity: 0.35;
+  }
+  35%,
+  55% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 32;
+    opacity: 0.35;
+  }
+}
+
+@keyframes geez-svc-check {
+  0%,
+  40% {
+    stroke-dashoffset: 24;
+    opacity: 0.2;
+  }
+  55%,
+  75% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 24;
+    opacity: 0.2;
+  }
+}
+
+@keyframes geez-svc-seal {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+@keyframes geez-svc-page-breathe {
   0%,
   100% {
     transform: translateY(0);
   }
-  40% {
-    transform: translateY(2px);
-  }
-  70% {
+  50% {
     transform: translateY(-1px);
+  }
+}
+
+@keyframes geez-svc-col {
+  0% {
+    stroke-dashoffset: 28;
+    opacity: 0.35;
+  }
+  40%,
+  60% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 28;
+    opacity: 0.35;
   }
 }
 
@@ -613,7 +826,7 @@ body.geez-home {
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(-4deg);
+    transform: rotate(-3deg);
   }
 }
 
@@ -623,19 +836,91 @@ body.geez-home {
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(4deg);
+    transform: rotate(3deg);
   }
 }
 
-@keyframes geez-svc-pulse {
+@keyframes geez-svc-bar {
   0%,
   100% {
+    transform: scaleY(0.45);
+    opacity: 0.55;
+  }
+  45%,
+  60% {
+    transform: scaleY(1);
     opacity: 1;
-    transform: scale(1);
+  }
+}
+
+@keyframes geez-svc-trend {
+  0% {
+    stroke-dashoffset: 90;
+    opacity: 0.4;
+  }
+  45%,
+  65% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 90;
+    opacity: 0.4;
+  }
+}
+
+@keyframes geez-svc-tip {
+  0% {
+    transform: translate(-34px, 30px);
+    opacity: 0.2;
+  }
+  45%,
+  65% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-34px, 30px);
+    opacity: 0.2;
+  }
+}
+
+@keyframes geez-svc-signal {
+  0%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.35;
+  }
+  33% {
+    transform: translate(14px, -4px);
+    opacity: 1;
+  }
+  66% {
+    transform: translate(28px, 2px);
+    opacity: 1;
+  }
+}
+
+@keyframes geez-svc-node {
+  0%,
+  100% {
+    fill: transparent;
+    opacity: 0.55;
+  }
+  40%,
+  55% {
+    fill: currentColor;
+    opacity: 1;
+  }
+}
+
+@keyframes geez-svc-screen {
+  0%,
+  100% {
+    opacity: 0.75;
   }
   50% {
-    opacity: 0.55;
-    transform: scale(1.35);
+    opacity: 1;
   }
 }
 
@@ -699,13 +984,21 @@ body.geez-home {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .geez-svc-icon__draw,
-  .geez-svc-icon__line,
-  .geez-svc-icon__motif,
-  .geez-svc-icon__pulse {
-    stroke-dasharray: none;
-    stroke-dashoffset: 0;
+  .geez-svc-icon *,
+  .geez-svc-icon--funding .geez-svc-icon__line,
+  .geez-svc-icon--books .geez-svc-icon__col,
+  .geez-svc-icon--grow .geez-svc-icon__trend {
+    stroke-dasharray: none !important;
+    stroke-dashoffset: 0 !important;
     animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    fill: revert-layer;
+  }
+
+  .geez-svc-icon--start .geez-svc-icon__step,
+  .geez-svc-icon--tech .geez-svc-icon__node {
+    fill: currentColor;
   }
 
   .geez-home-step[data-geez-motion] .geez-home-step__num::after {

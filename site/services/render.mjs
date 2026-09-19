@@ -19,6 +19,7 @@ import {
 import { buildDocumentTitle } from '../../content/lib/seo.mjs';
 import {
   renderServiceIcon,
+  renderServiceShowcase,
   SERVICE_ICON_BY_PATH,
 } from '../templates/service-icons.mjs';
 
@@ -48,8 +49,8 @@ export function renderServicesOverview(locale, ui, navigation) {
     .map((c) => {
       const href = chrome.localizeHref(c.href);
       const iconId = SERVICE_ICON_BY_PATH[c.id] || 'start';
-      return `<li class="geez-card geez-svc-card" data-geez-motion>
-        <div class="geez-svc-card__icon">${renderServiceIcon(iconId)}</div>
+      return `<li class="geez-card geez-svc-card" data-geez-motion data-geez-showcase="1">
+        <div class="geez-svc-card__icon" aria-hidden="true">${renderServiceIcon(iconId)}</div>
         <h2><a href="${e(href)}">${e(c.title)}</a></h2>
         <p>${e(c.text)}</p>
       </li>`;
@@ -96,8 +97,8 @@ export function renderServicesOverview(locale, ui, navigation) {
       </header>
       <ul class="geez-svc-grid geez-svc-grid--animate">
         ${cards}
-        <li class="geez-card geez-svc-card geez-svc-card--tech" data-geez-motion>
-          <div class="geez-svc-card__icon">${renderServiceIcon('tech')}</div>
+        <li class="geez-card geez-svc-card geez-svc-card--tech" data-geez-motion data-geez-showcase="1">
+          <div class="geez-svc-card__icon" aria-hidden="true">${renderServiceIcon('tech')}</div>
           <h2><a href="${e(techHref)}">${e(overview.techCard.title)}</a></h2>
           <p>${e(overview.techCard.text)}</p>
         </li>
@@ -234,9 +235,7 @@ export function renderServiceDetail(serviceKey, locale, ui, navigation) {
         kicker: labels.breadcrumbServices || 'Services',
       })}
       <header class="geez-svc__header geez-svc__header--after-band">
-        <div class="geez-svc__showcase" data-geez-motion>
-          ${renderServiceIcon(iconId)}
-        </div>
+        ${renderServiceShowcase(iconId)}
         ${
           labels.translationNote
             ? `<p class="geez-svc__note">${e(labels.translationNote)}</p>`

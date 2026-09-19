@@ -326,7 +326,7 @@ export function renderHomepageHtml(m) {
             p.mediaClass,
           )}" aria-hidden="true"></div>`
         : '';
-      return `<li class="geez-home-card geez-reveal" data-geez-motion>
+      return `<li class="geez-home-card geez-reveal" data-geez-motion data-geez-showcase="1">
         ${media}
         <div class="geez-home-card__body">
           <div class="geez-home-card__icon">${icon}</div>
@@ -352,8 +352,8 @@ export function renderHomepageHtml(m) {
     .map((s, i) => {
       const id = serviceIds[i] || 'start';
       const icon = renderServiceIcon(id);
-      return `<li class="geez-home-service geez-reveal" data-geez-motion>
-        <div class="geez-home-service__icon">${icon}</div>
+      return `<li class="geez-home-service geez-reveal" data-geez-motion data-geez-showcase="1">
+        <div class="geez-home-service__icon" aria-hidden="true">${icon}</div>
         <div class="geez-home-service__body">
           <h3><a href="${e(s.href)}">${e(s.title)}</a></h3>
           <p>${e(s.text)}</p>
