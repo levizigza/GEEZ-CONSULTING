@@ -23,14 +23,13 @@ const sharedProcess = {
 };
 
 const timelinePricingEn =
-  'Pricing and timelines are discussed in a Fit Call for your situation. This site does not publish fees, packages, or turnaround guarantees until those figures are verified.';
+  'Our prices are competitive and reasonable. Because every client’s needs are unique, we customize pricing to fit your requirements. Ge’ez Consulting is happy to discuss a scope of work with mutually acceptable timelines based on your needs and budget—contact us for a free quote or consultation.';
 
 const exclusionsBaseEn = [
-  'We do not guarantee loans, grants, registrations, licenses, or program acceptance.',
+  'We do not guarantee loans, grants, registrations, licenses, or program acceptance—those decisions belong to lenders, programs, and authorities.',
   'We do not provide legal, tax, CPA, or immigration advice. Engage a regulated professional for those matters.',
   'Corporate registry, licensing, and permit decisions belong to the authorities—not to our consulting work.',
-  'Banks, BDC, credit unions, and grant programs make their own funding decisions.',
-  'You remain responsible for filings, applications, and decisions.',
+  'You remain responsible for filings, applications, and decisions you make.',
 ];
 
 /** @type {Record<string, object>} */
@@ -40,38 +39,38 @@ export const servicesCatalogEn = {
     path: '/services/',
     h1: 'Services for launching and growing a business in Alberta',
     metaDescription:
-      'Explore Start a Business, Plans & Funding Readiness, Bookkeeping & Payroll, Growth & Operations, and Technology Support. Scope and limits on each page.',
+      'Explore Start a Business, Plans & Funding Readiness, Bookkeeping & Payroll, Growth & Operations, and Technology Support with Navigate Technology Solutions Inc.',
     intro:
-      'Choose a path that matches where you are. Each service page explains fit, deliverables, process, exclusions, and how to book a Fit Call—without invented prices or guaranteed outcomes.',
+      'Ge’ez Consulting offers a wide range of services tailored to your business—from strategy to implementation. Choose a path below to see fit, deliverables, process, and how to book a Fit Call.',
     cards: [
       {
         id: 'start-a-business',
         title: 'Start a Business',
-        text: 'Sequencing and readiness for opening in Alberta.',
+        text: 'New business registration assistance and launch sequencing for Alberta.',
         href: '/services/start-a-business/',
       },
       {
         id: 'business-plans-funding-readiness',
         title: 'Business Plans & Funding Readiness',
-        text: 'Planning materials for funding conversations—decisions stay with lenders and programs.',
+        text: 'Business plan writing and planning materials for funding conversations.',
         href: '/services/business-plans-funding-readiness/',
       },
       {
         id: 'bookkeeping-payroll',
         title: 'Bookkeeping & Payroll',
-        text: 'Clearer books and payroll routines, with referrals to regulated professionals when needed.',
+        text: 'Bookkeeping and payroll for teams of up to 10 employees.',
         href: '/services/bookkeeping-payroll/',
       },
       {
         id: 'growth-operations',
         title: 'Growth & Operations',
-        text: 'Simple operating rhythms so growth is not left to memory alone.',
+        text: 'Guidance on growth opportunities, expansion, and stronger operations.',
         href: '/services/growth-operations/',
       },
     ],
     techCard: {
       title: 'Technology Support',
-      text: 'Separate disclosure page for any technology partnership—published only after verification.',
+      text: 'Digital adoption and technology integration with Navigate Technology Solutions Inc., a consulting and managed service provider (MSP).',
       href: '/technology-support/',
     },
   },
@@ -182,13 +181,13 @@ export const servicesCatalogEn = {
     metaDescription:
       'Bookkeeping and payroll system setup and coaching for small Alberta businesses. Not a substitute for a CPA or payroll lawyer.',
     audience:
-      'Owners who need reliable books and payroll routines without claiming tax or legal coverage.',
+      'Owners who need reliable books and payroll routines for teams of up to 10 employees—without claiming tax or legal coverage.',
     problem:
       'Records are scattered, payroll feels risky, and you are unsure what “good enough” looks like day to day.',
     outcome:
       'Clearer bookkeeping and payroll routines you can run—or hand to a bookkeeper—while tax and legal advice stay with regulated professionals.',
     deliverables: [
-      'Recommended chart-of-accounts and record-keeping rhythm',
+      'Recommended chart-of-accounts and record-keeping rhythm for small teams (up to 10 employees)',
       'Payroll process checklist appropriate to your team size',
       'Handoff notes if you engage a bookkeeper or accountant',
     ],

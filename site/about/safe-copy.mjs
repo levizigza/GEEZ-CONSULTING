@@ -60,7 +60,7 @@ export const CLIENT_REFLECTIONS = [
   },
 ];
 
-/** Powerful rewrite of the live Founder and Director bio (same facts, clearer voice). */
+/** Founder and Director bio — cleaned wording, same sentiments as geezconsulting.com/#about. */
 export const ABOUT_SABA_EN = {
   h1: 'About Saba',
   metaDescription:
@@ -69,11 +69,11 @@ export const ABOUT_SABA_EN = {
   name: 'Saba Teklu',
   role: 'Founder and Director',
   lead:
-    'Saba Teklu is Founder and Director of Ge’ez Consulting. She has devoted her career to helping people move forward—and to strengthening the entrepreneurial landscape around them.',
+    'Saba is a dedicated professional who has devoted her career to aiding individuals and contributing positively to the entrepreneurial landscape.',
   paragraphs: [
-    'With a background supporting immigrants through non-profit work, she brings a clear understanding of what newcomers need when they build a life and a business in Canada. That focus sets her apart: Saba is among the few consultants dedicated to newcomers, startups, and established businesses within the Black community.',
-    'Those experiences equipped her with essential skills and a deep sense of purpose—steering her toward entrepreneurship as a way to put her knowledge to work for positive change.',
-    'Driven by a commitment to excellence in business transformation and innovation, her mission is to empower organizations through strategic insight, collaborative problem-solving, and practical solutions that support growth and sustainability.',
+    'With a background in a non-profit organization—where she provided guidance and assistance to immigrants—Saba has gained valuable insights into the unique needs of this community. A specialization in serving the immigrant community sets her apart as a socially responsible and forward-thinking professional.',
+    'Saba is among the few in the industry solely dedicated to newcomers, startups, and established businesses within the Black community. These experiences have not only equipped her with essential skills but also ignited a deep sense of purpose, steering her toward entrepreneurship as a powerful means to leverage her knowledge for positive change.',
+    'Driven by an unwavering commitment to excellence in business transformation and innovation, Saba’s mission is to empower organizations through strategic insights, collaborative problem-solving, and transformative solutions. Extensive knowledge and expertise enable her to provide valuable guidance and support in driving growth and sustainability for businesses.',
   ],
   portrait: {
     src: '/media/founder/saba-teklu-live.jpg',

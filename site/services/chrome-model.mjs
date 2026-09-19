@@ -71,6 +71,10 @@ export function buildChromeModel(locale, ui, navigation, currentPath) {
       labels['nav.disclaimers'],
       safe.footerDisclaimers || 'Disclaimers',
     ),
+    footerContactHeading: safe.footerContactHeading || 'Contact',
+    footerAddress: safe.footerAddress || '',
+    footerEmail: safe.footerEmail || '',
+    footerPhone: safe.footerPhone || '',
     languages: [
       {
         code: 'en',

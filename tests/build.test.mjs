@@ -43,7 +43,9 @@ test('production build writes homepage, services, and technology pages', async (
     const html = await readDistFile(rel);
     assert.equal(countH1(html), 1, rel);
     assert.doesNotMatch(html, /TODO_VERIFICATION/);
-    assert.doesNotMatch(html, /Navigate Technology Solutions/i);
+    if (rel.includes('technology-support')) {
+      assert.match(html, /Navigate Technology Solutions/i, rel);
+    }
   }
 
   const crIndex = await readDistFile('client-results/index.html');

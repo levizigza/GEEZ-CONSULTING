@@ -248,6 +248,31 @@ export function renderBreadcrumbs(crumbs, ariaLabel = 'Breadcrumb') {
  */
 export function renderFooter(m) {
   const e = escapeHtml;
+  const contactItems = [];
+  if (m.footerAddress) {
+    contactItems.push(`<li>${e(m.footerAddress)}</li>`);
+  }
+  if (m.footerEmail) {
+    contactItems.push(
+      `<li><a href="mailto:${e(m.footerEmail)}">${e(m.footerEmail)}</a></li>`,
+    );
+  }
+  if (m.footerPhone) {
+    const tel = String(m.footerPhone).replace(/[^\d+]/g, '');
+    contactItems.push(
+      `<li><a href="tel:${e(tel)}">${e(m.footerPhone)}</a></li>`,
+    );
+  }
+  const contactNav =
+    contactItems.length > 0
+      ? `<nav aria-label="${e(m.footerContactHeading || 'Contact')}">
+      <h2>${e(m.footerContactHeading || 'Contact')}</h2>
+      <ul>
+        ${contactItems.join('\n')}
+      </ul>
+    </nav>`
+      : '';
+
   return `<footer class="geez-footer geez-vine-host" data-geez-motion>
   ${renderVinePair('band')}
   <div class="geez-container geez-footer__grid">
@@ -274,6 +299,7 @@ export function renderFooter(m) {
         }
       </ul>
     </nav>
+    ${contactNav}
     <nav aria-label="${e(m.footerLegalHeading || 'Legal')}">
       <h2>${e(m.footerLegalHeading || 'Legal')}</h2>
       <ul>

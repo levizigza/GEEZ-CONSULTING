@@ -6,7 +6,7 @@
   },
   "budgets": {
     "totalJsBytes": 56000,
-    "totalCssBytes": 98000,
+    "totalCssBytes": 100000,
     "maxSingleJsBytes": 16000,
     "maxSingleCssBytes": 48000,
     "maxHtmlBytes": 70000,

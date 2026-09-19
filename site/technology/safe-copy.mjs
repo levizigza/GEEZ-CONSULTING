@@ -1,7 +1,6 @@
 /**
- * Technology Support page — draft/noindex until partner facts are verified.
- * Do not invent Navigate Technology Solutions relationship details in public HTML.
- * Candidate partner name is tracked in claims ledger CL-016 / technology-partner.json.
+ * Technology Support — aligned with live geezconsulting.com Technology Integration copy.
+ * Partner: Navigate Technology Solutions Inc. (MSP focused on digital adoption).
  */
 
 export const technologySupportCopy = {
@@ -9,46 +8,45 @@ export const technologySupportCopy = {
     path: '/technology-support/',
     h1: 'Technology Support',
     metaDescription:
-      'Draft disclosure page for Ge’ez Consulting technology support relationships. Partner, contracting, delivery, and data-handling facts publish only after verification.',
+      'Ge’ez Consulting teams with Navigate Technology Solutions Inc. for digital adoption and technology integration—a consulting and managed service provider (MSP).',
     intro:
-      'This page is reserved for a clear disclosure of any technology support relationship that Ge’ez Consulting offers or refers—including partner identity, who contracts with you, who delivers support, and how data is handled.',
-    statusNote:
-      'Status: draft. No partner relationship, contracting party, delivery responsibility, or data-handling claim is published until verified (see claims ledger CL-016).',
+      'Ge’ez Consulting has teamed with Navigate Technology Solutions Inc.—a consulting and managed service provider (MSP) focused on digital adoption and expert technology integration.',
+    statusNote: null,
     sections: [
       {
         id: 'relationship',
-        title: 'Relationship disclosure',
-        body: 'Named technology partners and the nature of the relationship (referral, reseller, subcontractor, or affiliate) appear here only after verification. A candidate name is under review and is not stated on this public page until approved.',
+        title: 'Our technology partnership',
+        body: 'Through Navigate Technology Solutions Inc., clients can access specialized expertise in digital adoption and technology integration alongside Ge’ez Consulting’s business advisory work.',
+      },
+      {
+        id: 'focus',
+        title: 'What this supports',
+        body: 'Engagements may include guidance on adopting the right tools, integrating systems into day-to-day operations, and managed technology support—scoped to your business needs in a Fit Call.',
       },
       {
         id: 'contracting',
-        title: 'Contracting party',
-        body: 'Who you contract with for technology products or support will be stated here once verified. Until then, do not assume Ge’ez Consulting or any third party is the contracting entity.',
-      },
-      {
-        id: 'delivery',
-        title: 'Delivery and support responsibility',
-        body: 'Who delivers implementation and ongoing support will be disclosed here after verification. Unverified responsibility claims are omitted.',
+        title: 'How engagement works',
+        body: 'Details of who contracts with you and who delivers each part of the work are confirmed when we scope the engagement. Ask in a Fit Call so expectations are clear before work begins.',
       },
       {
         id: 'data',
-        title: 'Data handling',
-        body: 'How business or personal data is collected, stored, and shared for technology support will be described here and linked to the Privacy page once verified. Do not submit sensitive payroll or identity data through the public contact form.',
+        title: 'Data and privacy',
+        body: 'Do not submit sensitive payroll or identity data through the public contact form. Data-handling practices for any technology engagement are confirmed in writing and align with our Privacy page.',
       },
     ],
     exclusions: [
-      'This page does not currently assert a partnership with any named vendor.',
       'Technology support does not replace legal, tax, or cybersecurity advice from qualified professionals.',
       'No uptime, security, or implementation outcomes are guaranteed on this site.',
+      'Specific products, SLAs, and contracting parties are confirmed per engagement—not as a blanket website claim.',
     ],
     faqs: [
       {
         q: 'Who is the technology partner?',
-        a: 'A public partner name will appear here only after verification. Until then, no partner is claimed on this page.',
+        a: 'Ge’ez Consulting has teamed with Navigate Technology Solutions Inc., a consulting and managed service provider (MSP) focused on digital adoption and technology integration.',
       },
       {
         q: 'Who do I contract with?',
-        a: 'Contracting party details publish after verification. Ask in a Fit Call for the current status—nothing on this page invents that fact.',
+        a: 'Contracting details are confirmed when we scope your engagement. Contact us for a Fit Call to discuss the current arrangement for your project.',
       },
     ],
     related: [
@@ -57,7 +55,7 @@ export const technologySupportCopy = {
       { label: 'Services overview', href: '/services/' },
     ],
     ctaLabel: 'Book a Fit Call',
-    indexable: false,
-    draft: true,
+    indexable: true,
+    draft: false,
   },
 };

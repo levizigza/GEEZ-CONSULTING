@@ -63,9 +63,13 @@ export function renderTechnologySupport(locale, ui, navigation) {
         lead: copy.intro,
         kicker: labels.breadcrumbServices || 'Services',
       })}
-      <header class="geez-svc__header geez-svc__header--after-band">
+      ${
+        copy.statusNote
+          ? `<header class="geez-svc__header geez-svc__header--after-band">
         <p class="geez-svc__draft" role="status">${e(copy.statusNote)}</p>
-      </header>
+      </header>`
+          : ''
+      }
       ${sections}
       <section aria-labelledby="tech-exclusions-heading">
         <h2 id="tech-exclusions-heading">${e(labels.sectionExclusions)}</h2>
@@ -86,13 +90,13 @@ export function renderTechnologySupport(locale, ui, navigation) {
   </main>
   ${renderFooter(chrome)}`;
 
-  // No Service JSON-LD: draft page asserts no offerable verified service facts.
+  // JSON-LD omitted: partnership disclosure is narrative; contracting details confirmed per engagement.
   return renderDocument({
     lang: chrome.lang,
     locale,
     title: `${copy.h1} | ${chrome.brand}`,
     description: copy.metaDescription,
-    robots: 'noindex, nofollow',
+    robots: copy.indexable ? 'index, follow' : 'noindex, nofollow',
     assetPrefix,
     bodyHtml: body,
     jsonLd: null,

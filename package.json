@@ -5,7 +5,7 @@
   "description": "Ge'ez Consulting redesign workspace — content model and docs. WordPress remains the production CMS until a migration is approved.",
   "type": "module",
   "scripts": {
-    "test": "node --test --test-concurrency=1 tests/content-model.test.mjs tests/routes.test.mjs tests/design-system.test.mjs tests/homepage.test.mjs tests/services.test.mjs tests/client-results.test.mjs tests/intake.e2e.test.mjs tests/locale-completeness.test.mjs tests/seo.test.mjs tests/resources.test.mjs tests/privacy.test.mjs tests/a11y.test.mjs tests/performance.test.mjs tests/measurement.test.mjs tests/mobile.test.mjs tests/about.test.mjs tests/build.test.mjs",
+    "test": "node --test --test-concurrency=1 tests/content-model.test.mjs tests/routes.test.mjs tests/design-system.test.mjs tests/homepage.test.mjs tests/services.test.mjs tests/client-results.test.mjs tests/intake.e2e.test.mjs tests/locale-completeness.test.mjs tests/seo.test.mjs tests/resources.test.mjs tests/privacy.test.mjs tests/a11y.test.mjs tests/performance.test.mjs tests/measurement.test.mjs tests/mobile.test.mjs tests/about.test.mjs tests/live-parity.test.mjs tests/build.test.mjs",
     "intake:serve": "node site/intake/http-server.mjs",
     "validate:content": "node content/lib/cli-validate.mjs",
     "validate:routes": "node content/lib/cli-validate-routes.mjs",

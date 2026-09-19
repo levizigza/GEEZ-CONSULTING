@@ -214,6 +214,10 @@ export function buildHomepageModel(locale, ui, navigation, shared = {}) {
       labels['nav.disclaimers'],
       safe.footerDisclaimers || 'Disclaimers',
     ),
+    footerContactHeading: safe.footerContactHeading || 'Contact',
+    footerAddress: safe.footerAddress || '',
+    footerEmail: safe.footerEmail || '',
+    footerPhone: safe.footerPhone || '',
     techSupportLabel: publicText(
       labels['nav.technologySupport'],
       safe.techSupportLabel || 'Technology Support',
@@ -838,6 +842,28 @@ export function renderHomepageHtml(m) {
         </ul>
         ${footerSocials}
       </nav>
+      ${
+        m.footerAddress || m.footerEmail || m.footerPhone
+          ? `<nav aria-label="${e(m.footerContactHeading || 'Contact')}">
+        <h2>${e(m.footerContactHeading || 'Contact')}</h2>
+        <ul>
+          ${m.footerAddress ? `<li>${e(m.footerAddress)}</li>` : ''}
+          ${
+            m.footerEmail
+              ? `<li><a href="mailto:${e(m.footerEmail)}">${e(m.footerEmail)}</a></li>`
+              : ''
+          }
+          ${
+            m.footerPhone
+              ? `<li><a href="tel:${e(String(m.footerPhone).replace(/[^\d+]/g, ''))}">${e(
+                  m.footerPhone,
+                )}</a></li>`
+              : ''
+          }
+        </ul>
+      </nav>`
+          : ''
+      }
       <nav aria-label="${e(m.footerLegalHeading)}">
         <h2>${e(m.footerLegalHeading)}</h2>
         <ul>

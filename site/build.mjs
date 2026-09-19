@@ -113,11 +113,6 @@ function assertNoTodo(html, label) {
   if (/TODO_VERIFICATION/i.test(html)) {
     throw new Error(`${label} contains TODO_VERIFICATION public text`);
   }
-  if (/Navigate Technology Solutions/i.test(html)) {
-    throw new Error(
-      `${label} publicly names Navigate Technology Solutions before verification`,
-    );
-  }
 }
 
 /**

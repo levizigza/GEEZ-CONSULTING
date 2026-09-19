@@ -46,6 +46,14 @@ test('service catalog covers overview plus four core services', () => {
   }
 });
 
+test('catalog timeline copy invites a free quote without inventing dollar amounts', () => {
+  for (const id of listServiceDetailIds()) {
+    const s = servicesCatalogEn[id];
+    assert.match(s.timelinePricing, /free quote|free consultation|customize/i);
+    assert.doesNotMatch(s.timelinePricing, /\$|CAD|\d+\s*%/i);
+  }
+});
+
 test('services overview has one H1, breadcrumbs, and links to four services + tech', async () => {
   const navigation = await readDataJson('shared/navigation.json');
   const bundle = await loadLocaleBundle('en');
@@ -59,8 +67,8 @@ test('services overview has one H1, breadcrumbs, and links to four services + te
   assert.match(html, /href="(?:\/GEEZ-CONSULTING)?\/services\/growth-operations\/"/);
   assert.match(html, /href="(?:\/GEEZ-CONSULTING)?\/technology-support\/"/);
   assert.match(html, /href="(?:\/GEEZ-CONSULTING)?\/book-a-fit-call\/"/);
+  assert.match(html, /Navigate Technology Solutions/i);
   assert.doesNotMatch(html, /TODO_VERIFICATION/);
-  assert.doesNotMatch(html, /Navigate Technology Solutions/i);
 });
 
 test('each service detail includes required sections, one H1, CTA, no invented prices', async () => {
@@ -143,16 +151,14 @@ test('AM/TI service pages prefix locale paths and keep one H1', async () => {
   }
 });
 
-test('Technology Support is draft/noindex, omits partner name, has no Service JSON-LD', async () => {
+test('Technology Support names Navigate partnership and stays free of invented SLAs', async () => {
   const navigation = await readDataJson('shared/navigation.json');
   const bundle = await loadLocaleBundle('en');
   const html = renderTechnologySupport('en', bundle.ui, navigation);
   assert.equal(countH1(html), 1);
-  assert.match(html, /noindex/);
-  assert.match(html, /draft/i);
-  assert.match(html, /Contracting party/);
-  assert.match(html, /Data handling/);
-  assert.doesNotMatch(html, /Navigate Technology Solutions/i);
+  assert.match(html, /Navigate Technology Solutions/i);
+  assert.match(html, /managed service provider|MSP/i);
+  assert.match(html, /digital adoption/i);
   assert.doesNotMatch(html, /TODO_VERIFICATION/);
   assert.equal(extractJsonLd(html), null);
   assert.match(html, /aria-label="Breadcrumb"/);

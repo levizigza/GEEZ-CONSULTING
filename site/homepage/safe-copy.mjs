@@ -22,7 +22,8 @@ export const homepageSafeCopy = {
   en: {
     brand: "Ge'ez Consulting",
     slogan: 'More than paperwork',
-    sloganSupport: 'Clear counsel for the path ahead—without guaranteed outcomes.',
+    sloganSupport:
+      'Expert advice and guidance to help you navigate challenges, capitalize on opportunities, and improve overall business performance.',
     skip: 'Skip to content',
     skipIntro: 'Skip intro',
     menuLabel: 'Menu',
@@ -31,11 +32,11 @@ export const homepageSafeCopy = {
     seoTitle: 'Business launch and growth support in Calgary',
     ctaPrimary: 'Book a Fit Call',
     ctaSecondary: 'Find the right service',
-    heroH1: 'Business launch and growth support for Calgary and Alberta entrepreneurs',
+    heroH1: 'Working for your company’s future',
     heroLead:
-      'Clear next steps for newcomer and Black business owners—without guaranteed loan, grant, or legal outcomes.',
+      'Whether you are a startup looking to scale or an established organization seeking to optimize performance, Ge’ez Consulting provides expert advice and guidance to help you achieve your strategic objectives.',
     heroReassure:
-      'We do not guarantee funding, registration, immigration, tax, or legal results. You stay in control of every decision.',
+      'We serve newcomers, startups, and Black-owned businesses in Calgary and Alberta—with clear counsel that is not a substitute for legal, tax, or immigration advice.',
     logo: {
       src: '/media/logo/geez-wordmark-light.png',
       width: 220,
@@ -58,21 +59,21 @@ export const homepageSafeCopy = {
     audience: [
       {
         label: 'Newcomers',
-        text: 'Translate Canadian systems into a practical sequence you can act on.',
+        text: 'Guidance rooted in the unique needs of immigrant entrepreneurs building a life and a business in Canada.',
       },
       {
         label: 'Black-owned businesses',
-        text: 'Support that respects your context—without locking you into a single market.',
+        text: 'Dedicated support for startups and established businesses within the Black community.',
       },
       {
         label: 'Calgary & Alberta',
-        text: 'Local knowledge for registration, planning, books, and growth conversations.',
+        text: 'Local counsel for registration, planning, books, growth, and day-to-day business decisions.',
       },
     ],
     trust: {
       render: true,
       heading: 'Client reflections',
-      note: 'Quotes published on geezconsulting.com. Individual experiences vary—results are not guaranteed.',
+      note: 'What clients share on geezconsulting.com. Individual experiences vary.',
       logos: [
         {
           src: '/media/logo/geez-mark-192.png',
@@ -106,78 +107,86 @@ export const homepageSafeCopy = {
       },
     ],
     pathwaysHeading: 'Where are you now?',
-    pathwaysIntro: 'Pick the path that matches your stage. Each page explains scope and limits.',
+    pathwaysIntro:
+      'From strategy to implementation, choose the path that matches your stage. Each service page explains how we help.',
     pathways: [
       {
         id: 'start',
         title: 'Start a Business',
-        text: 'Explore registration and launch sequencing for Alberta.',
+        text: 'New business registration assistance and launch sequencing for Alberta.',
         href: '/services/start-a-business/',
         mediaClass: 'start',
       },
       {
         id: 'funding',
         title: 'Plans & Funding Readiness',
-        text: 'Prepare planning materials for funding conversations—decisions stay with lenders and programs.',
+        text: 'Business plan writing and planning materials for funding conversations.',
         href: '/services/business-plans-funding-readiness/',
         mediaClass: 'funding',
       },
       {
         id: 'books',
         title: 'Bookkeeping & Payroll',
-        text: 'Set up clearer books and payroll routines with qualified professionals when needed.',
+        text: 'Bookkeeping and payroll support for teams of up to 10 employees.',
         href: '/services/bookkeeping-payroll/',
         mediaClass: 'books',
       },
       {
         id: 'grow',
         title: 'Growth & Operations',
-        text: 'Build simple operating rhythms so growth is not left to memory alone.',
+        text: 'Guidance on growth opportunities, expansion, and stronger day-to-day operations.',
         href: '/services/growth-operations/',
         mediaClass: 'grow',
       },
     ],
     caseStudy: { render: false, reason: 'No approved case study' },
     processHeading: 'How a fit call works',
-    processIntro: 'A simple website path—not a promise of business results.',
+    processIntro: 'A simple path to start the conversation—then we scope work that fits your needs and budget.',
     process: [
       { title: 'Share your stage', text: 'Tell us where you are and what you need clarified.' },
-      { title: 'Match a service path', text: 'We point you to the service page that fits—or say when we are not the right fit.' },
-      { title: 'Book a Fit Call', text: 'Use the contact form to request a conversation. Response times are not guaranteed until verified.' },
+      {
+        title: 'Match a service path',
+        text: 'We point you to the service that fits—or say when we are not the right partner.',
+      },
+      {
+        title: 'Book a Fit Call',
+        text: 'Request a conversation. We are committed to being responsive by email, phone, or virtual meeting.',
+      },
     ],
     servicesHeading: 'Services at a glance',
-    servicesIntro: 'Outcome-led summaries without invented metrics. Full scope and limits live on each service page.',
+    servicesIntro:
+      'Ge’ez Consulting offers tailored services—from strategy to implementation—so you can navigate consulting with confidence.',
     services: [
       {
         title: 'Start a Business',
-        text: 'Clarity on startup sequencing in Alberta.',
+        text: 'New business registration assistance and startup sequencing in Alberta.',
         href: '/services/start-a-business/',
       },
       {
         title: 'Plans & Funding Readiness',
-        text: 'Stronger planning documents for funding discussions.',
+        text: 'Business plan writing and funding-readiness materials.',
         href: '/services/business-plans-funding-readiness/',
       },
       {
         title: 'Bookkeeping & Payroll',
-        text: 'Practical record-keeping and payroll routines.',
+        text: 'Bookkeeping and payroll for teams of up to 10 employees.',
         href: '/services/bookkeeping-payroll/',
       },
       {
         title: 'Growth & Operations',
-        text: 'Simple systems and cadence as you grow.',
+        text: 'Guidance on growth opportunities and expansion.',
         href: '/services/growth-operations/',
       },
     ],
     whyHeading: 'Why Ge’ez',
     whyText:
-      'We focus on practical support for entrepreneurs in Calgary and Alberta, including newcomers and Black business owners.',
+      'Our personalized approach, industry expertise, and track record of supporting entrepreneurs make Ge’ez Consulting a strong partner for your business—especially newcomers, startups, and Black-owned businesses in Calgary and Alberta.',
     founder: {
       render: true,
       heading: 'Meet the founder',
       name: 'Saba Teklu',
       role: 'Founder and Director',
-      bio: 'Saba Teklu is Founder and Director of Ge’ez Consulting. She supports newcomers, startups, and Black-owned businesses in Calgary and Alberta with clear, practical guidance.',
+      bio: 'Saba is a dedicated professional who has devoted her career to aiding individuals and contributing positively to the entrepreneurial landscape—with a focus on newcomers, startups, and Black-owned businesses.',
       href: '/about-saba/',
       linkLabel: 'About Saba',
       image: {
@@ -190,8 +199,7 @@ export const homepageSafeCopy = {
     testimonials: {
       render: true,
       heading: 'What clients share',
-      intro:
-        'Reflections from geezconsulting.com. Quotes are client voices—individual experiences vary.',
+      intro: 'Client reflections published on geezconsulting.com. Individual experiences vary.',
       items: [
         {
           quote:
@@ -250,27 +258,31 @@ export const homepageSafeCopy = {
       ],
     },
     faqHeading: 'Common questions',
-    faqIntro: 'Straight answers—especially about what we do not promise.',
+    faqIntro: 'Straight answers drawn from how Ge’ez Consulting presents its work.',
     faqs: [
       {
         q: 'What services do you offer?',
-        a: 'Support spans new business registration assistance, business-plan writing, bookkeeping and payroll for smaller teams, growth and expansion guidance, and technology integration through a partner when appropriate. Each service page lists scope and limits.',
-      },
-      {
-        q: 'Can you guarantee a loan, grant, or registration?',
-        a: 'No. We help with planning and readiness. Approvals belong to lenders, programs, and authorities.',
-      },
-      {
-        q: 'Do you give legal, tax, or immigration advice?',
-        a: 'No. We provide business advisory support and encourage qualified professionals for legal, tax, or immigration matters.',
+        a: 'Our services are tailored to new business registration assistance; business plan writing; bookkeeping and payroll for up to 10 employees; guidance on growth opportunities and expansion; and specialized expertise in digital adoption and technology integration through our technology partner.',
       },
       {
         q: 'How does pricing work?',
-        a: 'Every engagement is scoped to your needs. Contact us for a conversation and quote—we do not publish fixed package prices here.',
+        a: 'Our prices are competitive and reasonable. Because every client’s needs are unique, we customize pricing to fit your requirements. Contact us for a free quote.',
       },
       {
         q: 'What about timelines and availability?',
-        a: 'We discuss mutually acceptable timelines based on your situation and capacity. No fixed turnaround SLA is published until verified.',
+        a: 'Ge’ez Consulting is happy to discuss a scope of work with mutually acceptable timelines based on your unique needs and budget. Contact us for a free consultation.',
+      },
+      {
+        q: 'Do you have references from previous clients?',
+        a: 'We are proud of the relationships we have built with our clients, and we would be happy to provide references upon request.',
+      },
+      {
+        q: 'How do you communicate and support clients?',
+        a: 'Communication is key to our success. Whether through email, phone calls, or virtual meetings, we are here to address questions or concerns during and after the project.',
+      },
+      {
+        q: 'Do you give legal, tax, or immigration advice?',
+        a: 'No. We provide business consulting and preparation support. Engage a regulated professional for legal, tax, CPA, or immigration matters.',
       },
       {
         q: 'What languages does this website support?',
@@ -281,8 +293,9 @@ export const homepageSafeCopy = {
         a: 'Do not include SIN, banking passwords, full card numbers, or immigration file numbers.',
       },
     ],
-    finalHeading: 'Ready to talk through your next step?',
-    finalText: 'Request a Fit Call. We will respond when we can—without a published response SLA until one is verified.',
+    finalHeading: 'Contact us for a consultation',
+    finalText:
+      'Request a Fit Call to talk through your next step. We customize scope and pricing to your needs—and welcome you to ask for a free quote.',
     finalCta: 'Book a Fit Call',
     footerLegalNote:
       'Consulting and preparation support is not legal, tax, accounting, immigration, registry, funding, or lender decision-making.',
@@ -290,6 +303,10 @@ export const homepageSafeCopy = {
     footerPrivacy: 'Privacy',
     footerTerms: 'Terms',
     footerDisclaimers: 'Disclaimers',
+    footerContactHeading: 'Contact',
+    footerAddress: '5235 28 Ave SE, Calgary, AB',
+    footerEmail: 'info@geezconsulting.com',
+    footerPhone: '1 (403) 700-2065',
     techSupportLabel: 'Technology Support',
     clientResultsLabel: 'Client Results',
   },
@@ -513,6 +530,10 @@ export const homepageSafeCopy = {
     footerPrivacy: 'ግላዊነት',
     footerTerms: 'ውሎች',
     footerDisclaimers: 'ማስተባበያዎች',
+    footerContactHeading: 'Contact',
+    footerAddress: '5235 28 Ave SE, Calgary, AB',
+    footerEmail: 'info@geezconsulting.com',
+    footerPhone: '1 (403) 700-2065',
     techSupportLabel: 'የቴክኖሎጂ ድጋፍ',
     clientResultsLabel: 'የደንበኛ ውጤቶች',
   },
@@ -735,6 +756,10 @@ export const homepageSafeCopy = {
     footerPrivacy: 'ብሕታውነት',
     footerTerms: 'ውዕላት',
     footerDisclaimers: 'መግለጺታት',
+    footerContactHeading: 'Contact',
+    footerAddress: '5235 28 Ave SE, Calgary, AB',
+    footerEmail: 'info@geezconsulting.com',
+    footerPhone: '1 (403) 700-2065',
     techSupportLabel: 'ናይ ቴክኖሎጂ ድጋፍ',
     clientResultsLabel: 'ናይ ዓሚል ውጽኢታት',
   },
