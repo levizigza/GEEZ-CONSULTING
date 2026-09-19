@@ -2,14 +2,13 @@
  * Ethiopian/Tigrinya cultural ambience — default ON (with mute control).
  * Attempts autoplay; if blocked by browser policy, keeps “on” intent in the UI
  * and starts on the first user gesture. Persists mute preference in localStorage.
+ * Mute cue arrow stays visible permanently so visitors always know how to turn sound off.
  * Pauses when the tab is hidden (Page Visibility API).
  */
 (function () {
   var MUTED_KEY = 'geez-ambient-muted';
   var LEGACY_UNMUTED_KEY = 'geez-ambient-unmuted';
-  var CUE_KEY = 'geez-audio-cue-v2';
   var VOLUME = 0.28;
-  var CUE_MS = 45000;
 
   function basePath() {
     var meta = document.querySelector('meta[name="geez-base-path"]');
@@ -45,22 +44,6 @@
     }
   }
 
-  function cueWasDismissed() {
-    try {
-      return localStorage.getItem(CUE_KEY) === '1';
-    } catch (_) {
-      return false;
-    }
-  }
-
-  function markCueDismissed() {
-    try {
-      localStorage.setItem(CUE_KEY, '1');
-    } catch (_) {
-      /* ignore */
-    }
-  }
-
   function iconMuted() {
     return (
       '<svg class="geez-audio-toggle__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">' +
@@ -80,28 +63,36 @@
 
   function cueMarkup() {
     return (
-      '<p class="geez-audio-cue" id="geez-audio-cue" role="status">' +
+      '<p class="geez-audio-cue" id="geez-audio-cue" role="note">' +
       '<span class="geez-audio-cue__pointer" aria-hidden="true">' +
       '<svg viewBox="0 0 48 24" width="48" height="24" focusable="false">' +
       '<path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M2 12h34M28 4l12 8-12 8"/>' +
       '</svg>' +
       '</span>' +
-      '<span class="geez-audio-cue__text">You can turn this off</span>' +
+      '<span class="geez-audio-cue__text" id="geez-audio-cue-text">Mute here</span>' +
       '</p>'
     );
   }
 
-  function ensureDock(showCue) {
+  function ensureDock() {
     var existing = document.getElementById('geez-audio-dock');
-    if (existing) return existing;
+    if (existing) {
+      existing.classList.add('geez-audio-dock--cue');
+      if (!document.getElementById('geez-audio-cue')) {
+        existing.insertAdjacentHTML('afterbegin', cueMarkup());
+      }
+      var existingBtn = document.getElementById('geez-audio-toggle');
+      if (existingBtn) {
+        existingBtn.setAttribute('aria-describedby', 'geez-audio-cue');
+      }
+      return existing;
+    }
     var dock = document.createElement('div');
     dock.id = 'geez-audio-dock';
-    dock.className = 'geez-audio-dock' + (showCue ? ' geez-audio-dock--cue' : '');
+    dock.className = 'geez-audio-dock geez-audio-dock--cue';
     dock.innerHTML =
-      (showCue ? cueMarkup() : '') +
-      '<button type="button" class="geez-audio-toggle" id="geez-audio-toggle" aria-pressed="true" aria-label="Mute ambient music"' +
-      (showCue ? ' aria-describedby="geez-audio-cue"' : '') +
-      '>' +
+      cueMarkup() +
+      '<button type="button" class="geez-audio-toggle" id="geez-audio-toggle" aria-pressed="true" aria-label="Mute ambient music" aria-describedby="geez-audio-cue">' +
       iconPlaying() +
       '<span class="geez-audio-toggle__label">Mute</span>' +
       '</button>';
@@ -111,9 +102,9 @@
 
   function init() {
     var userWantsSound = !readMutedPreference();
-    var showCue = userWantsSound && !cueWasDismissed();
-    var dock = ensureDock(showCue);
+    ensureDock();
     var btn = document.getElementById('geez-audio-toggle');
+    var cueText = document.getElementById('geez-audio-cue-text');
     if (!btn) return;
 
     var audio = new Audio(audioSrc());
@@ -123,7 +114,6 @@
 
     var playing = false;
     var gestureBound = false;
-    var cueTimer = null;
 
     function syncUi() {
       var on = userWantsSound;
@@ -139,19 +129,8 @@
         '<span class="geez-audio-toggle__label">' +
         (on ? 'Mute' : 'Sound') +
         '</span>';
-    }
-
-    function dismissCue() {
-      if (!dock.classList.contains('geez-audio-dock--cue')) return;
-      dock.classList.remove('geez-audio-dock--cue');
-      dock.classList.add('geez-audio-dock--cue-done');
-      btn.removeAttribute('aria-describedby');
-      var cue = document.getElementById('geez-audio-cue');
-      if (cue) cue.remove();
-      markCueDismissed();
-      if (cueTimer) {
-        clearTimeout(cueTimer);
-        cueTimer = null;
+      if (cueText) {
+        cueText.textContent = on ? 'Mute here' : 'Sound here';
       }
     }
 
@@ -211,12 +190,7 @@
     }
 
     btn.addEventListener('click', function () {
-      dismissCue();
       setUnmuted(!userWantsSound);
-    });
-
-    dock.addEventListener('pointerdown', function () {
-      dismissCue();
     });
 
     document.addEventListener('visibilitychange', function () {
@@ -236,10 +210,6 @@
     });
 
     syncUi();
-
-    if (showCue) {
-      cueTimer = setTimeout(dismissCue, CUE_MS);
-    }
 
     if (userWantsSound) {
       if (document.visibilityState === 'hidden') {
