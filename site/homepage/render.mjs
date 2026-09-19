@@ -184,7 +184,22 @@ export function buildHomepageModel(locale, ui, navigation, shared = {}) {
             : null,
         }
       : { render: false },
-    testimonials: safe.testimonials,
+    testimonials: safe.testimonials
+      ? {
+          ...safe.testimonials,
+          items: Array.isArray(safe.testimonials.items)
+            ? safe.testimonials.items.map((t) => ({
+                ...t,
+                photo: t.photo
+                  ? { ...t.photo, src: assetUrl(t.photo.src) }
+                  : null,
+                logo: t.logo
+                  ? { ...t.logo, src: assetUrl(t.logo.src) }
+                  : null,
+              }))
+            : [],
+        }
+      : { render: false },
     faqHeading: safe.faqHeading,
     faqIntro: safe.faqIntro || '',
     faqs: safe.faqs,
@@ -281,8 +296,23 @@ export function renderHomepageHtml(m) {
         </header>
         <ul class="geez-home-quotes__list">
           ${m.testimonials.items
-            .map(
-              (t) => `<li class="geez-home-quote" lang="en">
+            .map((t) => {
+              const photo = t.photo
+                ? `<img class="geez-home-quote__photo" src="${e(t.photo.src)}" alt="${e(
+                    t.photo.alt || '',
+                  )}" width="${e(String(t.photo.width || 96))}" height="${e(
+                    String(t.photo.height || 96),
+                  )}" loading="lazy" decoding="async">`
+                : '';
+              const logo = t.logo
+                ? `<img class="geez-home-quote__logo" src="${e(t.logo.src)}" alt="${e(
+                    t.logo.alt || '',
+                  )}" width="${e(String(t.logo.width || 120))}" height="${e(
+                    String(t.logo.height || 48),
+                  )}" loading="lazy" decoding="async">`
+                : '';
+              return `<li class="geez-home-quote" lang="en">
+            <div class="geez-home-quote__media">${photo}${logo}</div>
             <blockquote>
               <p>${e(t.quote)}</p>
               <footer>
@@ -292,8 +322,8 @@ export function renderHomepageHtml(m) {
                 </cite>
               </footer>
             </blockquote>
-          </li>`,
-            )
+          </li>`;
+            })
             .join('\n')}
         </ul>
       </div>

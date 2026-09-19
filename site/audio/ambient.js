@@ -7,9 +7,9 @@
 (function () {
   var MUTED_KEY = 'geez-ambient-muted';
   var LEGACY_UNMUTED_KEY = 'geez-ambient-unmuted';
-  var CUE_KEY = 'geez-audio-cue-dismissed';
+  var CUE_KEY = 'geez-audio-cue-v2';
   var VOLUME = 0.28;
-  var CUE_MS = 6500;
+  var CUE_MS = 45000;
 
   function basePath() {
     var meta = document.querySelector('meta[name="geez-base-path"]');

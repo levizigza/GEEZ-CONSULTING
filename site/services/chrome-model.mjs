@@ -35,6 +35,12 @@ export function buildChromeModel(locale, ui, navigation, currentPath) {
     brand: safe.brand,
     skip: safe.skip,
     menuLabel: safe.menuLabel || 'Menu',
+    logo: safe.logo
+      ? {
+          ...safe.logo,
+          src: withBase(safe.logo.src),
+        }
+      : null,
     langAria: publicText(labels['a11y.languageSelector'], safe.langAria),
     primaryNavAria: safe.primaryNavAria,
     homeHref: localizeHref('/'),

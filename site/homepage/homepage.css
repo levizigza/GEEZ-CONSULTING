@@ -1013,11 +1013,37 @@
   margin: 0;
   padding: 0;
   border-top: 1px solid var(--geez-color-gold-accent);
+  display: grid;
+  gap: var(--geez-space-3);
+}
+
+.geez-home-quote__media {
+  display: flex;
+  align-items: center;
+  gap: var(--geez-space-3);
+  padding-top: var(--geez-space-4);
+}
+
+.geez-home-quote__photo {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid color-mix(in srgb, var(--geez-color-gold-accent) 45%, transparent);
+}
+
+.geez-home-quote__logo {
+  max-width: 6.5rem;
+  max-height: 2.25rem;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 .geez-home-quote blockquote {
   margin: 0;
-  padding-top: var(--geez-space-4);
+  padding-top: 0;
 }
 
 .geez-home-quote p {

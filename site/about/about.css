@@ -1,0 +1,143 @@
+/* About Saba */
+
+.geez-about {
+  padding-block: var(--geez-space-5) var(--geez-space-8);
+  overflow-x: clip;
+}
+
+.geez-about .geez-page-band {
+  margin-inline: calc(50% - 50vw);
+  width: 100vw;
+  max-width: 100%;
+}
+
+.geez-about__layout {
+  display: grid;
+  gap: var(--geez-space-6);
+  align-items: start;
+  margin-block: var(--geez-space-6) var(--geez-space-8);
+}
+
+@media (min-width: 48rem) {
+  .geez-about__layout {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: var(--geez-space-7);
+  }
+}
+
+.geez-about__figure {
+  margin: 0;
+}
+
+.geez-about__portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 35%, transparent);
+}
+
+.geez-about__name {
+  margin: var(--geez-space-4) 0 var(--geez-space-1);
+  font-family: var(--geez-font-display);
+  font-size: var(--geez-text-xl);
+  color: var(--geez-color-burgundy);
+}
+
+.geez-about__role {
+  margin: 0;
+  color: var(--geez-color-gold-ink, var(--geez-color-burgundy));
+  font-size: var(--geez-text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.geez-about__body p {
+  max-width: 42rem;
+  color: var(--geez-color-ink-muted);
+}
+
+.geez-about__cta {
+  margin-top: var(--geez-space-6);
+}
+
+.geez-about-reflections {
+  padding-top: var(--geez-space-7);
+  border-top: 1px solid var(--geez-color-border);
+}
+
+.geez-about-reflections__list {
+  list-style: none;
+  margin: var(--geez-space-6) 0 0;
+  padding: 0;
+  display: grid;
+  gap: var(--geez-space-7);
+}
+
+@media (min-width: 64rem) {
+  .geez-about-reflections__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.geez-about-quote {
+  display: grid;
+  gap: var(--geez-space-4);
+  margin: 0;
+  min-width: 0;
+}
+
+.geez-about-quote__media {
+  display: flex;
+  align-items: center;
+  gap: var(--geez-space-3);
+}
+
+.geez-about-quote__photo {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid color-mix(in srgb, var(--geez-color-gold-accent) 50%, transparent);
+}
+
+.geez-about-quote__logo {
+  max-width: 7.5rem;
+  max-height: 2.75rem;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.geez-about-quote blockquote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.geez-about-quote blockquote p {
+  margin: 0 0 var(--geez-space-4);
+  font-family: var(--geez-font-display);
+  font-size: var(--geez-text-md);
+  line-height: 1.55;
+  color: var(--geez-color-charcoal);
+}
+
+.geez-about-quote cite {
+  display: grid;
+  gap: 0.15rem;
+  font-style: normal;
+}
+
+.geez-about-quote__name {
+  font-weight: var(--geez-font-weight-bold);
+  color: var(--geez-color-burgundy);
+}
+
+.geez-about-quote__org {
+  font-size: var(--geez-text-sm);
+  color: var(--geez-color-ink-muted);
+}

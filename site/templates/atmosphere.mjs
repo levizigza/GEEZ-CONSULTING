@@ -80,6 +80,11 @@ export const ATMOSPHERE = {
     alt: 'Calgary city skyline at dusk',
     pattern: 'tibeb',
   },
+  about: {
+    file: 'multicultural-team.jpg',
+    alt: 'Professionals collaborating in a bright workspace',
+    pattern: 'geometry',
+  },
 };
 
 /**

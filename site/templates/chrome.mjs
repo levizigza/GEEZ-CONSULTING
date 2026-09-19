@@ -177,6 +177,13 @@ export function renderHeader(m) {
     href === m.currentPath ? ' aria-current="page"' : '';
 
   const menuLabel = m.menuLabel || 'Menu';
+  const brandInner = m.logo
+    ? `<img class="geez-header__logo" src="${e(m.logo.src)}" alt="${e(
+        m.logo.alt || m.brand,
+      )}" width="${e(String(m.logo.width || 180))}" height="${e(
+        String(m.logo.height || 66),
+      )}" decoding="async">`
+    : e(m.brand);
   const primaryLinks = `<ul>
           <li><a href="${e(m.homeHref)}"${currentAttr(m.homeHref)}>${e(m.nav.home)}</a></li>
           <li><a href="${e(m.servicesHref)}"${currentAttr(m.servicesHref)}>${e(m.nav.services)}</a></li>
@@ -193,7 +200,7 @@ export function renderHeader(m) {
   <header class="geez-header geez-vine-host" data-geez-motion>
     ${renderVinePair('header')}
     <div class="geez-header__inner geez-container">
-      <a class="geez-header__brand" href="${e(m.homeHref)}">${e(m.brand)}</a>
+      <a class="geez-header__brand" href="${e(m.homeHref)}" aria-label="${e(m.brand)}">${brandInner}</a>
       <details class="geez-nav-drawer">
         <summary class="geez-nav-drawer__summary">${e(menuLabel)}</summary>
         <div class="geez-nav-drawer__panel">

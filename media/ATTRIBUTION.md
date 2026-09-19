@@ -8,6 +8,16 @@
 
 ## Founder portrait
 - media/founder/saba-teklu.jpg — Provided by client (Saba Teklu) for Ge'ez Consulting website use, 2026-09-18.
+- media/founder/saba-teklu-live.jpg — Live WP upload `Saba-Profile.jpg` (2024/06) from geezconsulting.com/#about.
+
+## Client review photography (from live geezconsulting.com testimonials)
+Published client reflections on the live site; used on About Saba and homepage quotes.
+- media/reviews/yonas-profile.png — Live `Yonas-Profile.png` (2024/05).
+- media/reviews/jonas-driving-school.png — Live `Jonas-Driving-School.png` (2024/04).
+- media/reviews/yordanos-profile.jpg — Live `Yordanos-Profile-e1716934950293.jpg` (2024/05).
+- media/reviews/us1-logo.png — Live `US-1.png` (2024/04).
+- media/reviews/ashenafi-profile.png — Live `GM-e1716556213339.png` (2024/05).
+- media/reviews/ashu-africa-logo.png — Live `ASHU-AFRICA-Logo-Mark-Full-Color.png` (2024/05).
 
 ## Atmosphere photography (Unsplash License — https://unsplash.com/license)
 Free to use commercially; attribution appreciated. Decorative only — do not invent client outcomes from captions.

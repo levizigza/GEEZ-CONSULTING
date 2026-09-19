@@ -171,14 +171,13 @@ export const homepageSafeCopy = {
     ],
     whyHeading: 'Why Ge’ez',
     whyText:
-      'We focus on practical support for entrepreneurs in Calgary and Alberta, including newcomers and Black business owners. Credentials, years of experience, and client counts appear only after verification.',
+      'We focus on practical support for entrepreneurs in Calgary and Alberta, including newcomers and Black business owners.',
     founder: {
       render: true,
       heading: 'Meet the founder',
       name: 'Saba Teklu',
       role: 'Founder and Director',
-      bio:
-        'Saba Teklu is Founder and Director of Ge’ez Consulting. The practice focuses on newcomers, startups, and Black-owned businesses in Calgary and Alberta. Portrait provided by Saba for this website. Full credentials publish only after verification.',
+      bio: 'Saba Teklu is Founder and Director of Ge’ez Consulting. She supports newcomers, startups, and Black-owned businesses in Calgary and Alberta with clear, practical guidance.',
       href: '/about-saba/',
       linkLabel: 'About Saba',
       image: {
@@ -192,25 +191,61 @@ export const homepageSafeCopy = {
       render: true,
       heading: 'What clients share',
       intro:
-        'Reflections from geezconsulting.com. Quotes are client voices—not verified metrics or promised results.',
+        'Reflections from geezconsulting.com. Quotes are client voices—individual experiences vary.',
       items: [
         {
           quote:
             'Working with Saba has been a game-changer for our business. Her expertise provided valuable insights and guidance that helped us navigate complex challenges and capitalize on opportunities. We\'ve seen significant improvements in our operations, profitability, and overall business performance.',
           name: 'Yonas Hila',
           org: 'Jonas Driving School',
+          photo: {
+            src: '/media/reviews/yonas-profile.png',
+            width: 488,
+            height: 488,
+            alt: 'Portrait of Yonas Hila',
+          },
+          logo: {
+            src: '/media/reviews/jonas-driving-school.png',
+            width: 200,
+            height: 80,
+            alt: 'Jonas Driving School logo',
+          },
         },
         {
           quote:
             'Saba has been pivotal in helping us understand how the bank (BDC) system works and has taken us every step of the loan process to make sure it succeeds. She had good knowledge of the business environment in Canada and we received valuable advice.',
           name: 'Yordanos Tewoldebrahan',
           org: 'US1 General Import Export and Wholesale INC',
+          photo: {
+            src: '/media/reviews/yordanos-profile.jpg',
+            width: 998,
+            height: 998,
+            alt: 'Portrait of Yordanos Tewoldebrahan',
+          },
+          logo: {
+            src: '/media/reviews/us1-logo.png',
+            width: 200,
+            height: 80,
+            alt: 'US1 General Import Export and Wholesale logo',
+          },
         },
         {
           quote:
             'We are extremely pleased with the services Ge\'ez Consulting provided for us. Saba\'s professional expertise and assistance in setting up Ashu Africa Import Export LTD was invaluable. Saba helped our company\'s goal reach to a higher result and exceeded our expectatons.',
           name: 'Ashenafi Kassi',
           org: 'Ashu Africa Import Export LTD',
+          photo: {
+            src: '/media/reviews/ashenafi-profile.png',
+            width: 400,
+            height: 400,
+            alt: 'Portrait of Ashenafi Kassi',
+          },
+          logo: {
+            src: '/media/reviews/ashu-africa-logo.png',
+            width: 200,
+            height: 80,
+            alt: 'Ashu Africa Import Export LTD logo',
+          },
         },
       ],
     },
@@ -401,13 +436,13 @@ export const homepageSafeCopy = {
     ],
     whyHeading: 'ግዕዝ ለምን',
     whyText:
-      'በካልጋሪ እና አልበርታ ላይ ላሉ ንግድ ባለቤቶች ተግባራዊ ድጋፍ። ማረጋገጫ ከሌለ ብቃቶች ወይም ቁጥሮች አንታይም።',
+      'በካልጋሪ እና አልበርታ ላይ ላሉ ንግድ ባለቤቶች ተግባራዊ ድጋፍ።',
     founder: {
       render: true,
       heading: 'ስለ መስራቹ',
       name: 'ሳባ ተክሉ',
       role: 'መስራች እና ዳይሬክተር',
-      bio: 'የመስራች ፎቶ በሳባ ለዚህ ድረ-ገጽ ተሰጥቷል። ሙሉ የሙያ ዝርዝር ከማረጋገጫ በኋላ ይታተማል።',
+      bio: 'ሳባ ተክሉ የግዕዝ ኮንሰልቲንግ መስራች እና ዳይሬክተር ናቸው። አዲስ ስደተኞችን፣ አዳዲስ ንግዶችን እና የጥቁር ማህበረሰብ ንግዶችን በካልጋሪ እና አልበርታ ይደግፋሉ።',
       href: '/am/about-saba/',
       linkLabel: 'ስለኛ',
       image: {
@@ -623,14 +658,13 @@ export const homepageSafeCopy = {
       },
     ],
     whyHeading: 'ግዕዝ ስለምንታይ',
-    whyText:
-      'ኣብ ካልጋሪን ኣልበርታን ንንግዲ ዋናታት ተግባራዊ ድጋፍ። ብዘይ ምርግጋጽ ብቕዓት ወይ ቁጽሪ ኣይንርኢን።',
+    whyText: 'ኣብ ካልጋሪን ኣልበርታን ንንግዲ ዋናታት ተግባራዊ ድጋፍ።',
     founder: {
       render: true,
       heading: 'ብዛዕባ መስራቲት',
       name: 'ሳባ ተክሉ',
       role: 'መስራቲትን ዳይረክተርን',
-      bio: 'ናይ መስራቲት ስእሊ ብሳባ ንዚ ወብሳይት ተዋሂቡ። ሙሉእ ሞያዊ ዝርዝር ድሕሪ ምርግጋጽ ይሕተም።',
+      bio: 'ሳባ ተክሉ መስራቲትን ዳይረክተርን ግዕዝ ኮንሰልቲንግ እያ። ንሓደስቲ ስደተኛታት፣ ሓደስቲ ንግድታትን ናይ ጸሊም ማሕበረሰብ ንግድታትን ኣብ ካልጋሪን ኣልበርታን ትድግፍ።',
       href: '/ti/about-saba/',
       linkLabel: 'ብዛዕባና',
       image: {

@@ -31,6 +31,7 @@ import {
   renderTermsPage,
   renderUnsubscribePage,
 } from './privacy/render.mjs';
+import { renderAboutSabaPage } from './about/render.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
@@ -77,6 +78,7 @@ async function copyDesignAssets() {
     ['site/intake/fit-form.js', 'fit-form.js'],
     ['site/intake/service-finder.js', 'service-finder.js'],
     ['site/intake/service-finder-model.mjs', 'service-finder-model.mjs'],
+    ['site/about/about.css', 'about.css'],
     ['site/locale/locale-preference.js', 'locale-preference.js'],
     ['site/perf/web-vitals-rum.js', 'web-vitals-rum.js'],
   ];
@@ -272,6 +274,15 @@ async function main() {
     const thanksHtml = renderThankYouPage(locale, bundle.ui, navigation);
     await writeLocalePage(locale, path.join('thank-you', 'index.html'), thanksHtml);
     pages.push(locale === 'en' ? '/thank-you/' : `/${locale}/thank-you/`);
+
+    const aboutHtml = renderAboutSabaPage(
+      locale,
+      bundle.ui,
+      navigation,
+      bundle.founder,
+    );
+    await writeLocalePage(locale, path.join('about-saba', 'index.html'), aboutHtml);
+    pages.push(locale === 'en' ? '/about-saba/' : `/${locale}/about-saba/`);
 
     // Use pre-gate article records so outline/draft titles remain for noindex
     // Resources pages (gate nulls non-approved ClaimField values).
