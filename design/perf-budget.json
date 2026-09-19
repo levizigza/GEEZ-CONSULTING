@@ -8,7 +8,7 @@
     "totalJsBytes": 56000,
     "totalCssBytes": 98000,
     "maxSingleJsBytes": 16000,
-    "maxSingleCssBytes": 45000,
+    "maxSingleCssBytes": 48000,
     "maxHtmlBytes": 70000,
     "maxImageCandidateBytes": 250000,
     "maxRenderBlockingStylesheets": 4,

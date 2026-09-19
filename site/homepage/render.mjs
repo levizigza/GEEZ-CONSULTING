@@ -599,7 +599,7 @@ export function renderHomepageHtml(m) {
 <html lang="${e(htmlLang)}" dir="${e(m.dir)}">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
   <title>${e(pageTitle)}</title>
   <meta name="robots" content="noindex, nofollow">
   <meta name="description" content="${e(m.hero.lead)}">

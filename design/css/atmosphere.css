@@ -183,6 +183,8 @@ body.geez-home {
   width: min(100% - 2rem, var(--geez-container-wide));
   margin-inline: auto;
   padding-block: var(--geez-space-6) var(--geez-space-7);
+  padding-inline: max(0px, env(safe-area-inset-left, 0px))
+    max(0px, env(safe-area-inset-right, 0px));
 }
 
 .geez-page-band__kicker {

@@ -32,6 +32,12 @@
   z-index: 100;
   display: grid;
   place-items: center;
+  padding: max(var(--geez-space-4), env(safe-area-inset-top, 0px))
+    max(var(--geez-space-4), env(safe-area-inset-right, 0px))
+    max(var(--geez-space-4), env(safe-area-inset-bottom, 0px))
+    max(var(--geez-space-4), env(safe-area-inset-left, 0px));
+  min-height: 100vh;
+  min-height: 100dvh;
   background:
     radial-gradient(ellipse at 50% 40%, rgba(201, 162, 39, 0.12), transparent 55%),
     linear-gradient(160deg, #2a0a12 0%, var(--geez-color-burgundy-strong) 45%, #1a070c 100%);
@@ -351,39 +357,9 @@
   border-color: var(--geez-color-gold-accent);
 }
 
-/* Mobile drawer */
-.geez-nav-drawer {
-  margin-inline-start: auto;
-}
-
-.geez-nav-drawer__summary {
-  list-style: none;
-  cursor: pointer;
-  min-height: var(--geez-touch);
-  display: inline-flex;
-  align-items: center;
-  padding-inline: var(--geez-space-3);
-  border: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 45%, transparent);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  font-size: var(--geez-text-xs);
-  color: var(--geez-color-on-brand);
-}
-
-.geez-nav-drawer__summary::-webkit-details-marker {
-  display: none;
-}
-
-.geez-nav-drawer__panel {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100%;
-  background: var(--geez-color-burgundy-strong);
-  border-bottom: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 40%, transparent);
-  padding: var(--geez-space-4) var(--geez-space-5) var(--geez-space-5);
-  display: grid;
-  gap: var(--geez-space-4);
+/* Mobile drawer — base lives in site-core; home gold accents */
+.geez-home-header .geez-nav-drawer__summary {
+  border-color: color-mix(in srgb, var(--geez-color-gold-accent) 45%, transparent);
 }
 
 .geez-header__nav--desktop,
@@ -407,6 +383,21 @@
     display: flex;
     align-items: center;
     gap: var(--geez-space-4);
+  }
+}
+
+@media (max-height: 28rem) and (orientation: landscape) {
+  .geez-intro__brand {
+    font-size: clamp(1.35rem, 4vw, 1.85rem);
+  }
+
+  .geez-intro__slogan {
+    font-size: var(--geez-text-sm);
+  }
+
+  .geez-intro__mark {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }
 

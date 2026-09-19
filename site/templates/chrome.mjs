@@ -128,7 +128,7 @@ export function renderDocument({
 <html lang="${e(htmlLang)}" dir="${e(dir)}">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
   <title>${e(title)}</title>
   <meta name="robots" content="${e(robots)}">
   <meta name="description" content="${e(description)}">
@@ -176,24 +176,37 @@ export function renderHeader(m) {
   const currentAttr = (href) =>
     href === m.currentPath ? ' aria-current="page"' : '';
 
+  const menuLabel = m.menuLabel || 'Menu';
+  const primaryLinks = `<ul>
+          <li><a href="${e(m.homeHref)}"${currentAttr(m.homeHref)}>${e(m.nav.home)}</a></li>
+          <li><a href="${e(m.servicesHref)}"${currentAttr(m.servicesHref)}>${e(m.nav.services)}</a></li>
+          <li><a href="${e(m.resourcesHref)}"${currentAttr(m.resourcesHref)}>${e(m.nav.resources)}</a></li>
+          <li><a href="${e(m.aboutHref)}"${currentAttr(m.aboutHref)}>${e(m.nav.about)}</a></li>
+        </ul>`;
+  const langNav = `<nav class="geez-lang" aria-label="${e(m.langAria)}">
+        <ul>
+          ${langItems}
+        </ul>
+      </nav>`;
+
   return `<a class="geez-skip" href="#main">${e(m.skip)}</a>
   <header class="geez-header geez-vine-host" data-geez-motion>
     ${renderVinePair('header')}
     <div class="geez-header__inner geez-container">
       <a class="geez-header__brand" href="${e(m.homeHref)}">${e(m.brand)}</a>
-      <nav class="geez-header__nav" aria-label="${e(m.primaryNavAria)}">
-        <ul>
-          <li><a href="${e(m.homeHref)}"${currentAttr(m.homeHref)}>${e(m.nav.home)}</a></li>
-          <li><a href="${e(m.servicesHref)}"${currentAttr(m.servicesHref)}>${e(m.nav.services)}</a></li>
-          <li><a href="${e(m.resourcesHref)}"${currentAttr(m.resourcesHref)}>${e(m.nav.resources)}</a></li>
-          <li><a href="${e(m.aboutHref)}"${currentAttr(m.aboutHref)}>${e(m.nav.about)}</a></li>
-        </ul>
+      <details class="geez-nav-drawer">
+        <summary class="geez-nav-drawer__summary">${e(menuLabel)}</summary>
+        <div class="geez-nav-drawer__panel">
+          <nav class="geez-header__nav" aria-label="${e(m.primaryNavAria)}">
+            ${primaryLinks}
+          </nav>
+          ${langNav}
+        </div>
+      </details>
+      <nav class="geez-header__nav geez-header__nav--desktop" aria-label="${e(m.primaryNavAria)}">
+        ${primaryLinks}
       </nav>
-      <nav class="geez-lang" aria-label="${e(m.langAria)}">
-        <ul>
-          ${langItems}
-        </ul>
-      </nav>
+      <div class="geez-lang--desktop">${langNav}</div>
       <div class="geez-header__cta">
         <a class="geez-btn-link" href="${e(m.bookHref)}" data-geez-cta="header">${e(m.ctaPrimary)}</a>
       </div>

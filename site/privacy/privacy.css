@@ -41,7 +41,7 @@
 .geez-legal .geez-page-band {
   margin-inline: calc(50% - 50vw);
   width: 100vw;
-  max-width: 100vw;
+  max-width: 100%;
 }
 
 .geez-legal section {
