@@ -6,6 +6,7 @@ import {
   escapeHtml,
   withExplicitEnglish,
 } from '../templates/chrome.mjs';
+import { renderPageBand } from '../templates/atmosphere.mjs';
 import { buildChromeModel } from '../services/chrome-model.mjs';
 import { withBase } from '../../content/lib/base-path.mjs';
 import { intakeCopy, optionLabel } from './i18n.mjs';
@@ -100,9 +101,13 @@ export function renderServiceFinderPage(locale, ui, navigation, opts = {}) {
     <div class="geez-container geez-container--content">
       ${withExplicitEnglish(
         `${crumbs}
-      <header class="geez-svc__header">
-        <h1>${e(copy.finder.h1)}</h1>
-        <p>${e(copy.finder.intro)}</p>
+      ${renderPageBand({
+        key: 'finder',
+        title: copy.finder.h1,
+        lead: copy.finder.intro,
+        kicker: 'Pathway',
+      })}
+      <header class="geez-svc__header geez-svc__header--after-band">
         ${
           copy.translationNote
             ? `<p class="geez-svc__note">${e(copy.translationNote)}</p>`
@@ -266,9 +271,13 @@ export function renderFitFormPage(locale, ui, navigation, state = {}) {
     <div class="geez-container geez-container--content">
       ${withExplicitEnglish(
         `${crumbs}
-      <header class="geez-svc__header">
-        <h1>${e(copy.form.h1)}</h1>
-        <p>${e(copy.form.intro)}</p>
+      ${renderPageBand({
+        key: 'fit-call',
+        title: copy.form.h1,
+        lead: copy.form.intro,
+        kicker: 'Fit Call',
+      })}
+      <header class="geez-svc__header geez-svc__header--after-band">
         ${
           copy.translationNote
             ? `<p class="geez-svc__note">${e(copy.translationNote)}</p>`

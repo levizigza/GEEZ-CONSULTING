@@ -562,7 +562,9 @@ export function renderHomepageHtml(m) {
   <a class="geez-skip" href="#main">${e(m.skip)}</a>
   <header class="geez-header geez-home-header">
     <div class="geez-header__inner geez-container">
-      <a class="geez-header__brand" href="${e(m.homeHref)}">${brandInner}</a>
+      <a class="geez-header__brand" href="${e(m.homeHref)}" aria-label="${e(
+        m.brand,
+      )}">${brandInner}</a>
       <details class="geez-nav-drawer">
         <summary class="geez-nav-drawer__summary">${e(m.menuLabel)}</summary>
         <div class="geez-nav-drawer__panel">

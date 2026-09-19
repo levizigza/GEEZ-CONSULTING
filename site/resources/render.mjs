@@ -5,6 +5,7 @@ import {
   renderBreadcrumbs,
   escapeHtml,
 } from '../templates/chrome.mjs';
+import { renderPageBand } from '../templates/atmosphere.mjs';
 import { buildChromeModel } from '../services/chrome-model.mjs';
 import {
   resourcesChrome,
@@ -90,10 +91,12 @@ export function renderResourcesIndex(locale, ui, navigation, articles) {
   <main id="main" class="geez-svc geez-res">
     <div class="geez-container">
       ${renderBreadcrumbs(crumbItems)}
-      <header class="geez-svc__header">
-        <h1>${e(labels.indexH1)}</h1>
-        <p>${e(labels.indexIntro)}</p>
-      </header>
+      ${renderPageBand({
+        key: 'resources',
+        title: labels.indexH1,
+        lead: labels.indexIntro,
+        kicker: labels.breadcrumbResources || 'Resources',
+      })}
       ${cards}
       <p class="geez-svc__cta">
         <a class="geez-btn-link" href="${e(chrome.bookHref)}" data-geez-cta="inline">${e(chrome.ctaPrimary)}</a>

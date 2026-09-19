@@ -85,6 +85,11 @@
       rgba(76, 20, 32, 0.05) 11px,
       rgba(76, 20, 32, 0.05) 12px
     );
+
+  /* SVG pattern layers (paths relative to /assets/*.css) */
+  --geez-pattern-geometry: url("../media/patterns/sacred-geometry.svg");
+  --geez-pattern-tibeb: url("../media/patterns/tibeb-lattice.svg");
+  --geez-pattern-star: url("../media/patterns/meskel-star.svg");
 }
 
 @media (prefers-reduced-motion: reduce) {

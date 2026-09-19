@@ -9,10 +9,41 @@
 ## Founder portrait
 - media/founder/saba-teklu.jpg — Provided by client (Saba Teklu) for Ge'ez Consulting website use, 2026-09-18.
 
-## Atmosphere (Unsplash License — https://unsplash.com/license)
-- media/atmosphere/calgary-skyline.jpg — Unsplash photo id photo-1517935706615-2717063c2225 (Calgary urban skyline). Used for local context atmosphere.
-- media/atmosphere/collaboration.jpg — Unsplash photo-1522202176988-66273c2fd55f (team collaboration). Decorative pathway atmosphere.
-- media/atmosphere/planning-desk.jpg — Unsplash photo-1454165804606-c3d57bc86b40 (business planning). Decorative pathway atmosphere.
-- media/atmosphere/woven-texture.jpg — Unsplash photo-1558618666-fcd25c85cd64 (woven textile texture). Subtle cultural warmth motif; not a sacred or political symbol.
+## Atmosphere photography (Unsplash License — https://unsplash.com/license)
+Free to use commercially; attribution appreciated. Decorative only — do not invent client outcomes from captions.
 
-Do not invent client outcomes from stock photography captions.
+| File | Unsplash photo id / note | Page use |
+| --- | --- | --- |
+| media/atmosphere/calgary-skyline.jpg | photo-1517935706615-2717063c2225 | Home hero / Calgary context |
+| media/atmosphere/calgary-street.jpg | same Calgary skyline crop alternate | Local multicultural blend |
+| media/atmosphere/collaboration.jpg | photo-1522202176988-66273c2fd55f | Home pathways |
+| media/atmosphere/planning-desk.jpg | photo-1454165804606-c3d57bc86b40 | Home pathways |
+| media/atmosphere/woven-texture.jpg | photo-1558618666-fcd25c85cd64 | Home pathways (textile warmth; not a sacred/political symbol) |
+| media/atmosphere/services-overview.jpg | photo-1600880292203-757bb62b4baf | Services overview band |
+| media/atmosphere/start-business.jpg | photo-1450101499163-c8848c66ca85 | Start a Business |
+| media/atmosphere/funding-readiness.jpg | photo-1554224155-6726b3ff858f | Business Plans & Funding Readiness |
+| media/atmosphere/bookkeeping.jpg | photo-1554224154-26032ffc0d07 | Bookkeeping & Payroll |
+| media/atmosphere/growth-ops.jpg | photo-1542744173-8e7e53415bb0 | Growth & Operations |
+| media/atmosphere/technology.jpg | photo-1518770660439-4636190af475 | Technology Support |
+| media/atmosphere/client-results.jpg | photo-1441986300917-64674bd600d8 | Client Results |
+| media/atmosphere/resources.jpg | photo-1497633762265-9d179a990aa6 | Resources |
+| media/atmosphere/fit-call.jpg | photo-1573497019940-1c28c88b4f3e | Book a Fit Call |
+| media/atmosphere/service-finder.jpg | photo-1476514525535-07fb3b4ae5f1 | Find your service |
+| media/atmosphere/legal-quiet.jpg | photo-1589829545856-d10d557cf95f | Privacy / Terms / Disclaimers (restrained) |
+| media/atmosphere/multicultural-team.jpg | photo-1521737711867-e3b97375f902 | Founder / multicultural Calgary blend |
+
+## Pattern motifs (original site artwork)
+Decorative CSS/SVG atmosphere only — geometric abstraction inspired by historic Ethiopian ornament and textile lattice vocabulary. **Not** liturgical emblems, flags, or political symbols.
+- media/patterns/sacred-geometry.svg — Overlapping-circle lattice (abstract geometry).
+- media/patterns/tibeb-lattice.svg — Textile-inspired diamond lattice (tibeb-adjacent).
+- media/patterns/meskel-star.svg — Abstract multipoint star lattice (ornamental geometry).
+
+## Ambient audio (CC0 — web use clear)
+- **File:** `media/audio/ethiopian-azmari-krar-ambient.mp3`
+- **Source recording:** “ethipian azmari songs around fire.wav” by **bruno.auzet** on FreeSound  
+  https://freesound.org/people/bruno.auzet/sounds/527689/
+- **License:** [CC0 1.0 Universal (Public Domain Dedication)](https://creativecommons.org/publicdomain/zero/1.0/) — no attribution required; we credit the artist in good faith.
+- **Content note:** Ethiopian azmari field recording tagged with **krar** (lyre). Includes ambient performance elements from the source; trimmed (~75s), faded, and volume-normalized for optional site ambience.
+- **Site behaviour:** Default **off**. Visitor must unmute via accessible control (`aria-pressed`). Preference stored in `localStorage` key `geez-ambient-unmuted` (UX only, not analytics). Pauses when the tab is hidden. Modest volume (~0.28).
+
+Do not invent client outcomes from stock photography captions or audio descriptions.

@@ -256,6 +256,14 @@ function accessibleName(el) {
   if (text) return text;
   if (el.getAttribute('title')?.trim()) return el.getAttribute('title').trim();
   if (el.getAttribute('alt')?.trim()) return el.getAttribute('alt').trim();
+  const img = el.querySelector?.('img[alt]');
+  if (img?.getAttribute('alt')?.trim()) return img.getAttribute('alt').trim();
+  const labelledChild = el.querySelector?.(
+    '[aria-label], [aria-labelledby], title',
+  );
+  if (labelledChild?.getAttribute('aria-label')?.trim()) {
+    return labelledChild.getAttribute('aria-label').trim();
+  }
   return '';
 }
 

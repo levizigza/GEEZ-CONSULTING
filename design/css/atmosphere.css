@@ -1,0 +1,343 @@
+/* Shared atmosphere craft: sacred geometry + textile motifs, page bands, audio control.
+   Pattern layers stay low-opacity for WCAG text contrast. Motion respects prefers-reduced-motion. */
+
+:root {
+  --geez-pattern-geometry: url("../media/patterns/sacred-geometry.svg");
+  --geez-pattern-tibeb: url("../media/patterns/tibeb-lattice.svg");
+  --geez-pattern-star: url("../media/patterns/meskel-star.svg");
+  --geez-atmosphere-opacity: 0.045;
+}
+
+/* Body canvas — multicultural Calgary: warm surface + quiet geometry + textile weave */
+body {
+  background-color: var(--geez-color-surface);
+  background-image:
+    var(--geez-motif),
+    var(--geez-pattern-geometry);
+  background-size:
+    auto,
+    22rem 22rem;
+  background-position:
+    0 0,
+    110% -4rem;
+  background-repeat: repeat, no-repeat;
+  background-attachment: scroll;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: var(--geez-atmosphere-opacity);
+  background-image: var(--geez-pattern-tibeb);
+  background-size: 11rem 11rem;
+  background-repeat: repeat;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Page-specific atmosphere accents (data-geez-page-type from measurement.mjs) */
+body[data-geez-page-type="services_overview"],
+body[data-geez-page-type="service"],
+body[data-geez-page-type="technology"] {
+  --geez-atmosphere-opacity: 0.055;
+  background-image:
+    radial-gradient(ellipse 70% 45% at 85% 8%, rgba(201, 162, 39, 0.07), transparent 60%),
+    var(--geez-motif),
+    var(--geez-pattern-star);
+  background-size: auto, auto, 16rem 16rem;
+  background-position: 0 0, 0 0, -2rem 12rem;
+  background-repeat: no-repeat, repeat, no-repeat;
+}
+
+body[data-geez-page-type="client_results_index"],
+body[data-geez-page-type="case_study"] {
+  background-image:
+    radial-gradient(ellipse 60% 40% at 10% 0%, rgba(76, 20, 32, 0.06), transparent 55%),
+    var(--geez-motif),
+    var(--geez-pattern-tibeb);
+  background-size: auto, auto, 14rem 14rem;
+  background-position: 0 0, 0 0, 100% 8rem;
+  background-repeat: no-repeat, repeat, no-repeat;
+}
+
+body[data-geez-page-type="resources_index"],
+body[data-geez-page-type="article"] {
+  background-image:
+    linear-gradient(180deg, rgba(232, 220, 203, 0.35), transparent 28%),
+    var(--geez-motif),
+    var(--geez-pattern-geometry);
+  background-size: auto, auto, 18rem 18rem;
+  background-position: 0 0, 0 0, -3rem 18rem;
+  background-repeat: no-repeat, repeat, no-repeat;
+}
+
+body[data-geez-page-type="fit_form"],
+body[data-geez-page-type="service_finder"],
+body[data-geez-page-type="thank_you"] {
+  background-image:
+    radial-gradient(circle at 90% 20%, rgba(201, 162, 39, 0.08), transparent 42%),
+    var(--geez-motif),
+    var(--geez-pattern-star);
+  background-size: auto, auto, 12rem 12rem;
+  background-position: 0 0, 0 0, 92% 60%;
+  background-repeat: no-repeat, repeat, no-repeat;
+}
+
+body[data-geez-page-type="privacy"],
+body[data-geez-page-type="legal"] {
+  --geez-atmosphere-opacity: 0.03;
+  background-image:
+    var(--geez-motif),
+    var(--geez-pattern-geometry);
+  background-size: auto, 28rem 28rem;
+  background-position: 0 0, 100% 100%;
+  background-repeat: repeat, no-repeat;
+}
+
+body.geez-home {
+  background-image:
+    radial-gradient(ellipse 80% 40% at 10% 0%, rgba(201, 162, 39, 0.06), transparent 55%),
+    var(--geez-motif),
+    var(--geez-pattern-geometry);
+  background-size: auto, auto, 26rem 26rem;
+  background-position: 0 0, 0 0, 105% 70%;
+  background-repeat: no-repeat, repeat, no-repeat;
+}
+
+/* ---- Page atmosphere band (inner-page hero strip) ---- */
+.geez-page-band {
+  position: relative;
+  isolation: isolate;
+  min-height: clamp(11rem, 28vw, 18rem);
+  display: grid;
+  align-items: end;
+  color: var(--geez-color-on-brand);
+  overflow: clip;
+  margin-bottom: var(--geez-space-6);
+  border-bottom: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 40%, transparent);
+}
+
+.geez-page-band__media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.88) contrast(1.05);
+}
+
+.geez-page-band__veil {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(
+      105deg,
+      rgba(26, 7, 12, 0.92) 0%,
+      rgba(58, 15, 24, 0.78) 48%,
+      rgba(76, 20, 32, 0.45) 100%
+    ),
+    var(--geez-pattern-tibeb);
+  background-size: auto, 9rem 9rem;
+  opacity: 1;
+}
+
+.geez-page-band__veil--geometry {
+  background-image:
+    linear-gradient(
+      105deg,
+      rgba(26, 7, 12, 0.92) 0%,
+      rgba(58, 15, 24, 0.78) 48%,
+      rgba(76, 20, 32, 0.45) 100%
+    ),
+    var(--geez-pattern-geometry);
+  background-size: auto, 14rem 14rem;
+}
+
+.geez-page-band__veil--star {
+  background-image:
+    linear-gradient(
+      105deg,
+      rgba(26, 7, 12, 0.92) 0%,
+      rgba(58, 15, 24, 0.78) 48%,
+      rgba(76, 20, 32, 0.45) 100%
+    ),
+    var(--geez-pattern-star);
+  background-size: auto, 11rem 11rem;
+}
+
+.geez-page-band__inner {
+  width: min(100% - 2rem, var(--geez-container-wide));
+  margin-inline: auto;
+  padding-block: var(--geez-space-6) var(--geez-space-7);
+}
+
+.geez-page-band__kicker {
+  margin: 0 0 var(--geez-space-2);
+  font-family: var(--geez-font-display);
+  font-size: var(--geez-text-sm);
+  font-style: italic;
+  letter-spacing: 0.04em;
+  color: var(--geez-color-gold-accent);
+}
+
+.geez-page-band h1 {
+  margin: 0;
+  max-width: 18ch;
+  color: var(--geez-color-on-brand);
+  font-weight: 500;
+  text-wrap: balance;
+}
+
+.geez-page-band__lead {
+  margin: var(--geez-space-3) 0 0;
+  max-width: 42ch;
+  color: color-mix(in srgb, var(--geez-color-on-brand) 88%, white);
+  font-size: var(--geez-text-md);
+}
+
+/* Quiet legal band — restrained imagery */
+.geez-page-band--quiet {
+  min-height: 8.5rem;
+}
+
+.geez-page-band--quiet .geez-page-band__veil {
+  background:
+    linear-gradient(
+      100deg,
+      rgba(26, 7, 12, 0.94) 0%,
+      rgba(58, 15, 24, 0.88) 70%,
+      rgba(58, 15, 24, 0.72) 100%
+    ),
+    var(--geez-pattern-geometry);
+  background-size: auto, 20rem 20rem;
+}
+
+.geez-page-band--quiet .geez-page-band__media {
+  filter: grayscale(0.35) saturate(0.5) contrast(1.02);
+  opacity: 0.55;
+}
+
+/* ---- Ambient audio control (footer-adjacent floating, clears CTAs) ---- */
+.geez-audio-dock {
+  position: fixed;
+  right: max(0.75rem, env(safe-area-inset-right));
+  bottom: max(0.75rem, env(safe-area-inset-bottom));
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.geez-audio-toggle {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: var(--geez-touch);
+  min-width: var(--geez-touch);
+  padding: 0.45rem 0.85rem;
+  border: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 55%, transparent);
+  background: color-mix(in srgb, var(--geez-color-burgundy-strong) 92%, #000);
+  color: var(--geez-color-on-brand);
+  font: inherit;
+  font-size: var(--geez-text-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(26, 7, 12, 0.35);
+}
+
+.geez-audio-toggle:hover,
+.geez-audio-toggle:focus-visible {
+  border-color: var(--geez-color-gold-accent);
+  color: var(--geez-color-gold-accent);
+}
+
+.geez-audio-toggle[aria-pressed="true"] {
+  border-color: var(--geez-color-gold-accent);
+  color: var(--geez-color-gold-accent);
+}
+
+.geez-audio-toggle__icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.geez-audio-toggle__label {
+  display: none;
+}
+
+@media (min-width: 32rem) {
+  .geez-audio-toggle__label {
+    display: inline;
+  }
+}
+
+/* Soft pulse when unmuted — decorative only */
+.geez-audio-toggle[aria-pressed="true"] .geez-audio-toggle__icon {
+  animation: geez-audio-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes geez-audio-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .geez-audio-toggle[aria-pressed="true"] .geez-audio-toggle__icon {
+    animation: none;
+  }
+}
+
+/* ---- Shared reveal / micro-motion helpers ---- */
+.geez-reveal {
+  animation: geez-atmosphere-reveal 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes geez-atmosphere-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(0.65rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.geez-pattern-drift {
+  animation: geez-pattern-drift 48s linear infinite;
+}
+
+@keyframes geez-pattern-drift {
+  from {
+    background-position: 0 0, 0 0;
+  }
+  to {
+    background-position: 0 0, 120px 80px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .geez-reveal,
+  .geez-pattern-drift,
+  .geez-page-band__media {
+    animation: none !important;
+  }
+}

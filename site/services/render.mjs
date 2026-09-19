@@ -6,6 +6,7 @@ import {
   escapeHtml,
   withExplicitEnglish,
 } from '../templates/chrome.mjs';
+import { renderPageBand } from '../templates/atmosphere.mjs';
 import { servicesCatalogEn, servicesLocaleChrome } from './safe-copy.mjs';
 import { buildChromeModel } from './chrome-model.mjs';
 import { htmlLangFor } from '../../content/lib/locale.mjs';
@@ -74,18 +75,22 @@ export function renderServicesOverview(locale, ui, navigation) {
 
   const mainInner = `
       ${crumbs}
-      <header class="geez-svc__header">
-        <h1>${e(overview.h1)}</h1>
-        <p>${e(overview.intro)}</p>
+      ${renderPageBand({
+        key: 'services',
+        title: overview.h1,
+        lead: overview.intro,
+        kicker: labels.breadcrumbServices || 'Services',
+      })}
+      <header class="geez-svc__header geez-svc__header--after-band">
         ${
           labels.translationNote
             ? `<p class="geez-svc__note">${e(labels.translationNote)}</p>`
             : ''
         }
       </header>
-      <ul class="geez-svc-grid">
+      <ul class="geez-svc-grid geez-svc-grid--animate">
         ${cards}
-        <li class="geez-card geez-svc-card">
+        <li class="geez-card geez-svc-card geez-svc-card--tech">
           <h2><a href="${e(techHref)}">${e(overview.techCard.title)}</a></h2>
           <p>${e(overview.techCard.text)}</p>
         </li>
@@ -98,7 +103,7 @@ export function renderServicesOverview(locale, ui, navigation) {
       </p>`;
 
   const body = `${renderHeader(chrome)}
-  <main id="main" class="geez-svc">
+  <main id="main" class="geez-svc geez-svc--overview">
     <div class="geez-container">
       ${withExplicitEnglish(mainInner, locale)}
     </div>
@@ -215,8 +220,12 @@ export function renderServiceDetail(serviceKey, locale, ui, navigation) {
 
   const articleInner = `
       ${crumbs}
-      <header class="geez-svc__header">
-        <h1>${e(service.h1)}</h1>
+      ${renderPageBand({
+        key: serviceKey,
+        title: service.h1,
+        kicker: labels.breadcrumbServices || 'Services',
+      })}
+      <header class="geez-svc__header geez-svc__header--after-band">
         ${
           labels.translationNote
             ? `<p class="geez-svc__note">${e(labels.translationNote)}</p>`
@@ -224,54 +233,54 @@ export function renderServiceDetail(serviceKey, locale, ui, navigation) {
         }
       </header>
 
-      <section aria-labelledby="audience-heading">
+      <section class="geez-svc-section geez-svc-section--rise" aria-labelledby="audience-heading">
         <h2 id="audience-heading">${e(labels.sectionAudience)}</h2>
         <p>${e(service.audience)}</p>
       </section>
 
-      <section aria-labelledby="problem-heading">
+      <section class="geez-svc-section geez-svc-section--rise" aria-labelledby="problem-heading" style="--geez-rise-delay: 60ms">
         <h2 id="problem-heading">${e(labels.sectionProblem)}</h2>
         <p>${e(service.problem)}</p>
       </section>
 
-      <section aria-labelledby="outcome-heading">
+      <section class="geez-svc-section geez-svc-section--rise" aria-labelledby="outcome-heading" style="--geez-rise-delay: 120ms">
         <h2 id="outcome-heading">${e(labels.sectionOutcome)}</h2>
         <p>${e(service.outcome)}</p>
       </section>
 
-      <section aria-labelledby="deliverables-heading">
+      <section class="geez-svc-section geez-svc-section--check" aria-labelledby="deliverables-heading">
         <h2 id="deliverables-heading">${e(labels.sectionDeliverables)}</h2>
-        <ul>${deliverables}</ul>
+        <ul class="geez-svc-check">${deliverables}</ul>
       </section>
 
-      <section aria-labelledby="process-heading">
+      <section class="geez-svc-section geez-svc-section--process" aria-labelledby="process-heading">
         <h2 id="process-heading">${e(labels.sectionProcess)}</h2>
-        <ol class="geez-home-process__list">${process}</ol>
+        <ol class="geez-home-process__list geez-svc-process">${process}</ol>
       </section>
 
-      <section aria-labelledby="client-heading">
+      <section class="geez-svc-section" aria-labelledby="client-heading">
         <h2 id="client-heading">${e(labels.sectionClientProvides)}</h2>
         <ul>${clientProvides}</ul>
       </section>
 
-      <section aria-labelledby="timeline-heading">
+      <section class="geez-svc-section" aria-labelledby="timeline-heading">
         <h2 id="timeline-heading">${e(labels.sectionTimeline)}</h2>
         <p>${e(service.timelinePricing)}</p>
       </section>
 
-      <section aria-labelledby="exclusions-heading">
+      <section class="geez-svc-section" aria-labelledby="exclusions-heading">
         <h2 id="exclusions-heading">${e(labels.sectionExclusions)}</h2>
         <ul>${exclusions}</ul>
       </section>
 
       ${proofHtml}
 
-      <section aria-labelledby="faq-heading">
+      <section class="geez-svc-section" aria-labelledby="faq-heading">
         <h2 id="faq-heading">${e(labels.sectionFaq)}</h2>
         ${faqs}
       </section>
 
-      <section aria-labelledby="related-heading">
+      <section class="geez-svc-section" aria-labelledby="related-heading">
         <h2 id="related-heading">${e(labels.sectionRelated)}</h2>
         <ul>${related}</ul>
         <h3>${e(labels.otherServices || 'Other services')}</h3>
@@ -285,7 +294,7 @@ export function renderServiceDetail(serviceKey, locale, ui, navigation) {
       </p>`;
 
   const body = `${renderHeader({ ...chrome, assetPrefix })}
-  <main id="main" class="geez-svc">
+  <main id="main" class="geez-svc geez-svc--detail geez-svc--${e(serviceKey)}">
     <article class="geez-container geez-container--content">
       ${withExplicitEnglish(articleInner, locale)}
     </article>

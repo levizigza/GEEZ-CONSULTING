@@ -5,6 +5,7 @@ import {
   renderBreadcrumbs,
   escapeHtml,
 } from '../templates/chrome.mjs';
+import { renderPageBand } from '../templates/atmosphere.mjs';
 import { buildChromeModel } from '../services/chrome-model.mjs';
 import { clientResultsChrome } from './safe-copy.mjs';
 import {
@@ -253,9 +254,13 @@ export function renderClientResultsIndex(
   <main id="main" class="geez-svc geez-cr">
     <div class="geez-container">
       ${crumbs}
-      <header class="geez-svc__header">
-        <h1>${e(labels.indexH1)}</h1>
-        <p>${e(labels.indexIntro)}</p>
+      ${renderPageBand({
+        key: 'client-results',
+        title: labels.indexH1,
+        lead: labels.indexIntro,
+        kicker: labels.breadcrumbResults || 'Client Results',
+      })}
+      <header class="geez-svc__header geez-svc__header--after-band">
         <p class="geez-svc__draft">${e(labels.draftBanner)}</p>
         ${
           labels.translationNote

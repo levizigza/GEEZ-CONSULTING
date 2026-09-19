@@ -65,6 +65,7 @@ async function copyDesignAssets() {
     ['design/css/fonts-ethiopic.css', 'fonts-ethiopic.css'],
     ['site/homepage/homepage.css', 'homepage.css'],
     ['site/homepage/intro.js', 'intro.js'],
+    ['site/audio/ambient.js', 'ambient.js'],
     ['site/services/services.css', 'services.css'],
     ['site/client-results/client-results.css', 'client-results.css'],
     ['site/resources/resources.css', 'resources.css'],
@@ -82,15 +83,15 @@ async function copyDesignAssets() {
     await cp(path.join(root, from), path.join(dest, to));
   }
 
-  // One render-blocking core stylesheet (tokens + base + primitives)
+  // One render-blocking core stylesheet (tokens + base + primitives + atmosphere)
   const coreParts = await Promise.all(
-    ['tokens.css', 'base.css', 'primitives.css'].map((f) =>
+    ['tokens.css', 'base.css', 'primitives.css', 'atmosphere.css'].map((f) =>
       readFile(path.join(root, 'design/css', f), 'utf8'),
     ),
   );
   await writeFile(
     path.join(dest, 'site-core.css'),
-    `/* site-core: tokens + base + primitives */\n${coreParts.join('\n')}`,
+    `/* site-core: tokens + base + primitives + atmosphere */\n${coreParts.join('\n')}`,
     'utf8',
   );
 

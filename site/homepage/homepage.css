@@ -15,9 +15,14 @@
 
 .geez-home {
   overflow-x: clip;
-  background:
+  background-color: var(--geez-color-surface);
+  background-image:
     radial-gradient(ellipse 80% 40% at 10% 0%, rgba(201, 162, 39, 0.06), transparent 55%),
-    var(--geez-color-surface);
+    var(--geez-motif),
+    var(--geez-pattern-geometry, url("../media/patterns/sacred-geometry.svg"));
+  background-size: auto, auto, 26rem 26rem;
+  background-position: 0 0, 0 0, 105% 70%;
+  background-repeat: no-repeat, repeat, no-repeat;
 }
 
 /* ---- Opening flash ---- */
@@ -302,8 +307,11 @@
       rgba(76, 20, 32, 0.42) 68%,
       rgba(76, 20, 32, 0.18) 100%
     ),
+    var(--geez-pattern-tibeb, url("../media/patterns/tibeb-lattice.svg")),
     var(--geez-motif),
     url("../media/atmosphere/calgary-skyline.jpg") center / cover no-repeat;
+  background-size: auto, 10rem 10rem, auto, cover;
+  background-blend-mode: normal, soft-light, normal, normal;
   padding: 0;
   border-bottom: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 35%, transparent);
 }
@@ -865,8 +873,13 @@
 }
 
 .geez-home-founder {
+  position: relative;
+  isolation: isolate;
   background:
-    linear-gradient(135deg, var(--geez-color-burgundy-strong), #2f0c16 55%, #4a1520);
+    linear-gradient(135deg, rgba(47, 12, 22, 0.92), rgba(74, 21, 32, 0.88) 55%, rgba(58, 15, 24, 0.9)),
+    var(--geez-pattern-tibeb),
+    url("../media/atmosphere/multicultural-team.jpg") center / cover no-repeat;
+  background-blend-mode: normal, soft-light, normal;
   color: var(--geez-color-on-brand);
   border-block: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 35%, transparent);
 }

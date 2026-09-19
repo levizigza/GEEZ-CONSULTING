@@ -52,12 +52,13 @@ test('services overview has one H1, breadcrumbs, and links to four services + te
   const html = renderServicesOverview('en', bundle.ui, navigation);
   assert.equal(countH1(html), 1);
   assert.match(html, /aria-label="Breadcrumb"/);
-  assert.match(html, /href="\/services\/start-a-business\/"/);
-  assert.match(html, /href="\/services\/business-plans-funding-readiness\/"/);
-  assert.match(html, /href="\/services\/bookkeeping-payroll\/"/);
-  assert.match(html, /href="\/services\/growth-operations\/"/);
-  assert.match(html, /href="\/technology-support\/"/);
-  assert.match(html, /href="\/book-a-fit-call\/"/);
+  assert.match(html, /geez-page-band/);
+  assert.match(html, /href="(?:\/GEEZ-CONSULTING)?\/services\/start-a-business\/"/);
+  assert.match(html, /href="(?:\/GEEZ-CONSULTING)?\/services\/business-plans-funding-readiness\/"/);
+  assert.match(html, /href="(?:\/GEEZ-CONSULTING)?\/services\/bookkeeping-payroll\/"/);
+  assert.match(html, /href="(?:\/GEEZ-CONSULTING)?\/services\/growth-operations\/"/);
+  assert.match(html, /href="(?:\/GEEZ-CONSULTING)?\/technology-support\/"/);
+  assert.match(html, /href="(?:\/GEEZ-CONSULTING)?\/book-a-fit-call\/"/);
   assert.doesNotMatch(html, /TODO_VERIFICATION/);
   assert.doesNotMatch(html, /Navigate Technology Solutions/i);
 });
@@ -133,7 +134,10 @@ test('AM/TI service pages prefix locale paths and keep one H1', async () => {
     );
     assert.equal(countH1(html), 1);
     assert.match(html, new RegExp(`lang="${locale}"`));
-    assert.match(html, new RegExp(`href="/${locale}/book-a-fit-call/"`));
+    assert.match(
+      html,
+      new RegExp(`href="(?:/GEEZ-CONSULTING)?/${locale}/book-a-fit-call/"`),
+    );
     assert.match(html, /application\/ld\+json/);
     assert.doesNotMatch(html, /TODO_VERIFICATION/);
   }

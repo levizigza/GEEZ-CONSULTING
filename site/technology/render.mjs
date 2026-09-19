@@ -5,6 +5,7 @@ import {
   renderBreadcrumbs,
   escapeHtml,
 } from '../templates/chrome.mjs';
+import { renderPageBand } from '../templates/atmosphere.mjs';
 import { technologySupportCopy } from './safe-copy.mjs';
 import { buildChromeModel } from '../services/chrome-model.mjs';
 import { servicesLocaleChrome } from '../services/safe-copy.mjs';
@@ -53,13 +54,17 @@ export function renderTechnologySupport(locale, ui, navigation) {
   ]);
 
   const body = `${renderHeader(chrome)}
-  <main id="main" class="geez-svc">
+  <main id="main" class="geez-svc geez-svc--technology">
     <article class="geez-container geez-container--content">
       ${crumbs}
-      <header class="geez-svc__header">
-        <h1>${e(copy.h1)}</h1>
+      ${renderPageBand({
+        key: 'technology',
+        title: copy.h1,
+        lead: copy.intro,
+        kicker: labels.breadcrumbServices || 'Services',
+      })}
+      <header class="geez-svc__header geez-svc__header--after-band">
         <p class="geez-svc__draft" role="status">${e(copy.statusNote)}</p>
-        <p>${e(copy.intro)}</p>
       </header>
       ${sections}
       <section aria-labelledby="tech-exclusions-heading">

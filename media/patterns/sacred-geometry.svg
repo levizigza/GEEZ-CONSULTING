@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" role="img" aria-hidden="true">
+  <!-- Abstract overlapping-circle lattice (geometric atmosphere only; not a religious emblem). -->
+  <g fill="none" stroke="#4c1420" stroke-width="0.7" opacity="0.55">
+    <circle cx="120" cy="120" r="36"/>
+    <circle cx="120" cy="84" r="36"/>
+    <circle cx="151.18" cy="102" r="36"/>
+    <circle cx="151.18" cy="138" r="36"/>
+    <circle cx="120" cy="156" r="36"/>
+    <circle cx="88.82" cy="138" r="36"/>
+    <circle cx="88.82" cy="102" r="36"/>
+    <circle cx="120" cy="120" r="72"/>
+    <circle cx="120" cy="120" r="18"/>
+  </g>
+</svg>

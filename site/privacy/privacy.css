@@ -38,6 +38,25 @@
   max-width: 40rem;
 }
 
+.geez-legal .geez-page-band {
+  margin-inline: calc(50% - 50vw);
+  width: 100vw;
+  max-width: 100vw;
+}
+
+.geez-legal section {
+  animation: geez-legal-fade 500ms ease both;
+}
+
+@keyframes geez-legal-fade {
+  from {
+    opacity: 0.55;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .geez-field--marketing {
   margin-block-start: var(--geez-space-4, 1rem);
   padding: var(--geez-space-3, 0.75rem);
@@ -54,5 +73,9 @@
 @media (prefers-reduced-motion: reduce) {
   .geez-consent {
     box-shadow: none;
+  }
+
+  .geez-legal section {
+    animation: none;
   }
 }

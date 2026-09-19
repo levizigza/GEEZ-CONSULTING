@@ -1,4 +1,4 @@
-/* Service overview + detail + technology pages */
+/* Service overview + detail + technology pages — imagery bands + relevant micro-motion */
 
 .geez-svc {
   padding-block: var(--geez-space-5) var(--geez-space-7);
@@ -9,8 +9,23 @@
   width: min(100% - var(--geez-space-6), var(--geez-container-content));
 }
 
+.geez-svc .geez-page-band {
+  margin-inline: calc(50% - 50vw);
+  width: 100vw;
+  max-width: 100vw;
+}
+
 .geez-svc__header {
   margin-bottom: var(--geez-space-6);
+}
+
+.geez-svc__header--after-band {
+  margin-top: 0;
+  margin-bottom: var(--geez-space-5);
+}
+
+.geez-svc__header--after-band:empty {
+  display: none;
 }
 
 .geez-svc__header h1 {
@@ -35,11 +50,13 @@
   border-radius: var(--geez-radius-md);
 }
 
-.geez-svc section {
+.geez-svc section,
+.geez-svc-section {
   margin-bottom: var(--geez-space-6);
 }
 
-.geez-svc section h2 {
+.geez-svc section h2,
+.geez-svc-section h2 {
   margin-top: 0;
 }
 
@@ -61,6 +78,29 @@
 .geez-svc-card {
   margin: 0;
   min-width: 0;
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--geez-motion), transform var(--geez-motion);
+}
+
+.geez-svc-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    var(--geez-color-gold-accent),
+    transparent 85%
+  );
+  transform: scaleY(0.35);
+  transform-origin: top;
+  transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.geez-svc-card:hover::before,
+.geez-svc-card:focus-within::before {
+  transform: scaleY(1);
 }
 
 .geez-svc-card h2 {
@@ -74,6 +114,148 @@
   font-size: var(--geez-text-sm);
 }
 
+.geez-svc-card--tech {
+  border-color: color-mix(in srgb, var(--geez-color-gold-accent) 45%, var(--geez-color-border));
+}
+
+/* Overview: staggered card entrance */
+.geez-svc-grid--animate .geez-svc-card {
+  animation: geez-svc-card-in 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.geez-svc-grid--animate .geez-svc-card:nth-child(1) {
+  animation-delay: 40ms;
+}
+.geez-svc-grid--animate .geez-svc-card:nth-child(2) {
+  animation-delay: 100ms;
+}
+.geez-svc-grid--animate .geez-svc-card:nth-child(3) {
+  animation-delay: 160ms;
+}
+.geez-svc-grid--animate .geez-svc-card:nth-child(4) {
+  animation-delay: 220ms;
+}
+.geez-svc-grid--animate .geez-svc-card:nth-child(5) {
+  animation-delay: 280ms;
+}
+
+@keyframes geez-svc-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Detail: section rise */
+.geez-svc-section--rise {
+  animation: geez-svc-card-in 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--geez-rise-delay, 0ms);
+}
+
+/* Deliverables: checkmark draw */
+.geez-svc-check {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.geez-svc-check li {
+  position: relative;
+  padding-inline-start: 1.75rem;
+  margin-bottom: var(--geez-space-3);
+}
+
+.geez-svc-check li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 0.7rem;
+  height: 0.35rem;
+  border-left: 2px solid var(--geez-color-burgundy);
+  border-bottom: 2px solid var(--geez-color-burgundy);
+  transform: rotate(-45deg) scale(0);
+  animation: geez-svc-check 450ms cubic-bezier(0.22, 1, 0.36, 1) 200ms forwards;
+}
+
+@keyframes geez-svc-check {
+  to {
+    transform: rotate(-45deg) scale(1);
+  }
+}
+
+/* Process: step number pulse once */
+.geez-svc-process .geez-home-step__num {
+  animation: geez-svc-num 900ms ease both;
+}
+
+.geez-svc-process .geez-home-step:nth-child(2) .geez-home-step__num {
+  animation-delay: 120ms;
+}
+.geez-svc-process .geez-home-step:nth-child(3) .geez-home-step__num {
+  animation-delay: 220ms;
+}
+.geez-svc-process .geez-home-step:nth-child(4) .geez-home-step__num {
+  animation-delay: 320ms;
+}
+
+@keyframes geez-svc-num {
+  from {
+    opacity: 0.25;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Service-specific accents */
+.geez-svc--start-a-business .geez-page-band__veil {
+  background-image:
+    linear-gradient(
+      105deg,
+      rgba(26, 7, 12, 0.92) 0%,
+      rgba(58, 15, 24, 0.78) 48%,
+      rgba(76, 20, 32, 0.4) 100%
+    ),
+    var(--geez-pattern-geometry);
+  background-size: auto, 14rem 14rem;
+}
+
+.geez-svc--business-plans-funding-readiness .geez-svc-section--check li::before {
+  border-color: var(--geez-color-ochre-deep);
+}
+
+.geez-svc--bookkeeping-payroll .geez-svc-process .geez-home-step__num {
+  color: var(--geez-color-burgundy);
+}
+
+.geez-svc--growth-operations .geez-svc-section--rise {
+  animation-duration: 900ms;
+}
+
 .geez-svc__cta {
   margin-top: var(--geez-space-6);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .geez-svc-grid--animate .geez-svc-card,
+  .geez-svc-section--rise,
+  .geez-svc-check li::before,
+  .geez-svc-process .geez-home-step__num {
+    animation: none !important;
+  }
+
+  .geez-svc-check li::before {
+    transform: rotate(-45deg) scale(1);
+  }
+
+  .geez-svc-card:hover {
+    transform: none;
+  }
 }

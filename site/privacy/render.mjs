@@ -11,6 +11,7 @@ import {
   escapeHtml,
   withExplicitEnglish,
 } from '../templates/chrome.mjs';
+import { renderPageBand } from '../templates/atmosphere.mjs';
 import { buildChromeModel } from '../services/chrome-model.mjs';
 import { buildDocumentTitle } from '../../content/lib/seo.mjs';
 import {
@@ -86,9 +87,14 @@ export function renderPrivacyPage(locale, ui, navigation, privacyPolicy) {
     <div class="geez-container geez-container--content">
       ${withExplicitEnglish(
         `${renderBreadcrumbs(crumbItems)}
-      <header class="geez-svc__header">
-        <h1>${e(labels.privacyH1)}</h1>
-        <p>${e(labels.privacyIntro)}</p>
+      ${renderPageBand({
+        key: 'legal',
+        title: labels.privacyH1,
+        lead: labels.privacyIntro,
+        kicker: 'Legal',
+        quiet: true,
+      })}
+      <header class="geez-svc__header geez-svc__header--after-band">
         <p class="geez-svc__note">${e(labels.draftBanner)}</p>
       </header>
       ${sections}
@@ -188,9 +194,14 @@ export function renderDisclaimersPage(locale, ui, navigation, disclaimers) {
     <div class="geez-container geez-container--content">
       ${withExplicitEnglish(
         `${renderBreadcrumbs(crumbItems)}
-      <header class="geez-svc__header">
-        <h1>${e(labels.disclaimersH1)}</h1>
-        <p>${e(labels.disclaimersIntro)}</p>
+      ${renderPageBand({
+        key: 'legal',
+        title: labels.disclaimersH1,
+        lead: labels.disclaimersIntro,
+        kicker: 'Legal',
+        quiet: true,
+      })}
+      <header class="geez-svc__header geez-svc__header--after-band">
         <p class="geez-svc__note">${e(labels.draftBanner)}</p>
       </header>
       ${sections}`,
@@ -250,9 +261,14 @@ export function renderTermsPage(locale, ui, navigation) {
     <div class="geez-container geez-container--content">
       ${withExplicitEnglish(
         `${renderBreadcrumbs(crumbItems)}
-      <header class="geez-svc__header">
-        <h1>${e(labels.termsH1)}</h1>
-        <p>${e(labels.termsIntro)}</p>
+      ${renderPageBand({
+        key: 'legal',
+        title: labels.termsH1,
+        lead: labels.termsIntro,
+        kicker: 'Legal',
+        quiet: true,
+      })}
+      <header class="geez-svc__header geez-svc__header--after-band">
         <p class="geez-svc__note">${e(labels.draftBanner)}</p>
       </header>
       <section aria-labelledby="terms-use">
