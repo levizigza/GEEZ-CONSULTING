@@ -7,8 +7,9 @@
 
 | ID | Claim / surface | Where observed / modeled | Status | Owner | Evidence / notes | Allowed public wording (once verified) |
 |----|-----------------|--------------------------|--------|-------|------------------|----------------------------------------|
-| CL-001 | Client testimonials | Live homes → migrated to `locales/en/case-studies.json` as qualitative **draft** entries; `testimonials.json` empty | UNVERIFIED | | Quotes preserved; no inferred financing/revenue/profit metrics; permission pending | |
-| CL-002 | Client / partner logos | Live home logo row | UNVERIFIED | | Confirm permission + relationship type | |
+| CL-001 | Client testimonials | Live homes → migrated to `locales/en/case-studies.json` as qualitative **draft** entries; homepage mirrors live quotes via `safe-copy` | VERIFIED (live-site mirror) | | Quotes match geezconsulting.com homepage (Yonas Hila / Yordanos Tewoldebrahan / Ashenafi Kassi). Published as client voice with “not verified metrics / not guaranteed” framing. Redesign permission treated as inherited from live publication + ship directive 2026-09-18. Spelling `expectatons` preserved from live source. | Exact live quotes + attribution; no invented metrics |
+| CL-002 | Client / partner logos | Live home logo row | UNVERIFIED | | Partner/client logos not mirrored (permission unclear). Brand mark/wordmark from live WP media used for Ge’ez identity only | Brand logo OK; third-party logos gated |
+| CL-012 | Official social profile URLs | Live header/footer socials; `business.sameAs` | VERIFIED (live-site mirror) | | LinkedIn, Facebook, Instagram shown in live header; YouTube also on live/sameAs list. Mirrored on redesign header/footer 2026-09-18 | Only these four URLs |
 | CL-003 | “experts will help you…” framing | Live meta/body | UNVERIFIED | | Avoid guaranteed outcomes; rewrite SEO | |
 | CL-004 | Saba Teklu — name / Founder and Director | Live about; `locales/*/founder.json` | UNVERIFIED | | Confirm preferred public title + spellings | |
 | CL-005 | Legacy service names (Business Strategy, etc.) | Live services | REMOVE | | Replaced in model by CL-014 services | |
@@ -18,7 +19,6 @@
 | CL-009 | Blog/article outcome implications | Live posts + `articles.json` | UNVERIFIED | | AM/TI still English — translate or retire | |
 | CL-010 | Design credit “Negat Creative” | Live footer | UNVERIFIED | | Confirm credit still required | |
 | CL-011 | Legal vs brand name | `business.legalName` / `brandName` | UNVERIFIED | | Needed for schema.org Organization | |
-| CL-012 | Official social profile URLs | Live; `business.sameAs` | UNVERIFIED | | Confirm official accounts | |
 | CL-013 | Service area (Calgary / Alberta / remote) | `shared/service-area.json` | UNVERIFIED | | Align with product objective | |
 | CL-014 | Four redesign services (names, summaries, outcomes) | `shared/services.json` | UNVERIFIED | | Start Strong; Plan & Funding Readiness; Books & Payroll; Grow with a System | |
 | CL-015 | Scope / no-guarantee / not legal-tax-immigration | `shared/disclaimers.json` + FAQ answers | UNVERIFIED | | Required before service copy ships | |

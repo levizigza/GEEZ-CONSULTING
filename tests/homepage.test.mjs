@@ -42,7 +42,7 @@ test('EN homepage has exactly one H1 and required landmarks', async () => {
   // First-party deferred scripts + JSON-LD only — no third-party trackers.
   assert.doesNotMatch(
     html,
-    /<script(?![^>]*(?:application\/ld\+json|consent\.js|locale-preference\.js|web-vitals-rum\.js|analytics\.js|geez-measure-config))/i,
+    /<script(?![^>]*(?:application\/ld\+json|consent\.js|locale-preference\.js|web-vitals-rum\.js|analytics\.js|intro\.js|geez-measure-config))/i,
   );
   assert.match(html, /defer/);
   assert.doesNotMatch(html, /googletagmanager|google-analytics|gtag\(|facebook\.net|hotjar|plausible/i);
@@ -54,14 +54,14 @@ test('primary links point at Book a Fit Call and pathways', async () => {
   const navigation = await readDataJson('shared/navigation.json');
   const bundle = await loadLocaleBundle('en');
   const html = renderHomepageHtml(buildHomepageModel('en', bundle.ui, navigation));
-  assert.match(html, /href="\/book-a-fit-call\/"/);
+  assert.match(html, /href="(?:\/GEEZ-CONSULTING)?\/book-a-fit-call\/"/);
   assert.match(html, /href="#pathways"/);
   assert.match(html, /Book a Fit Call/);
   assert.doesNotMatch(html, /20-minute|20 minute/i);
-  assert.match(html, /href="\/services\/start-a-business\/"/);
-  assert.match(html, /href="\/services\/business-plans-funding-readiness\/"/);
-  assert.match(html, /href="\/services\/bookkeeping-payroll\/"/);
-  assert.match(html, /href="\/services\/growth-operations\/"/);
+  assert.match(html, /href="(?:\/GEEZ-CONSULTING)?\/services\/start-a-business\/"/);
+  assert.match(html, /href="(?:\/GEEZ-CONSULTING)?\/services\/business-plans-funding-readiness\/"/);
+  assert.match(html, /href="(?:\/GEEZ-CONSULTING)?\/services\/bookkeeping-payroll\/"/);
+  assert.match(html, /href="(?:\/GEEZ-CONSULTING)?\/services\/growth-operations\/"/);
 });
 
 test('locale behavior prefixes AM/TI paths and switches language current', async () => {
@@ -72,32 +72,47 @@ test('locale behavior prefixes AM/TI paths and switches language current', async
     const html = renderHomepageHtml(model);
     assert.equal(countH1(html), 1);
     assert.match(html, new RegExp(`lang="${locale}"`));
-    assert.match(html, new RegExp(`href="/${locale}/book-a-fit-call/"`));
-    assert.match(html, new RegExp(`href="/${locale}/services/start-a-business/"`));
+    assert.match(
+      html,
+      new RegExp(`href="(?:/GEEZ-CONSULTING)?/${locale}/book-a-fit-call/"`),
+    );
+    assert.match(
+      html,
+      new RegExp(`href="(?:/GEEZ-CONSULTING)?/${locale}/services/start-a-business/"`),
+    );
     assert.match(html, new RegExp(`hreflang="${locale}"[^>]*aria-current="true"|aria-current="true"[^>]*hreflang="${locale}"`));
     assert.doesNotMatch(html, /TODO_VERIFICATION/);
   }
 });
 
-test('unverified social proof stays gated; client portrait ships', async () => {
+test('live-site reviews + portrait + logo + socials ship; case studies stay gated', async () => {
   const navigation = await readDataJson('shared/navigation.json');
   const bundle = await loadLocaleBundle('en');
   const model = buildHomepageModel('en', bundle.ui, navigation);
-  assert.equal(model.trust.render, false);
+  assert.equal(model.trust.render, true);
   assert.equal(model.caseStudy.render, false);
-  assert.equal(model.testimonials.render, false);
+  assert.equal(model.testimonials.render, true);
   assert.ok(model.hero.image);
   assert.match(model.hero.image.src, /\/media\/founder\/saba-teklu\.jpg$/);
   assert.ok(model.founder.image);
   assert.equal(model.founder.name, 'Saba Teklu');
+  assert.equal(model.slogan, 'More than paperwork');
+  assert.ok(model.logo);
+  assert.equal(model.socials.length, 4);
   const html = renderHomepageHtml(model);
-  assert.doesNotMatch(html, /geez-home-trust/);
-  assert.doesNotMatch(html, /What Our Clients say/i);
+  assert.match(html, /geez-home-trust/);
+  assert.match(html, /geez-home-quotes/);
+  assert.match(html, /Yonas Hila/);
   assert.match(html, /geez-home-hero__portrait/);
   assert.match(html, /\/media\/founder\/saba-teklu\.jpg/);
+  assert.match(html, /geez-header__logo/);
+  assert.match(html, /geez-intro/);
+  assert.match(html, /linkedin\.com\/company\/geez-consulting/);
+  assert.match(html, /instagram\.com\/geez\.consulting/);
   assert.match(html, /geez-home-audience/);
   assert.match(html, /geez-home-faq/);
   assert.match(html, /geez-home-card__media--start/);
+  assert.match(html, /intro\.js/);
 });
 
 test('homepage CSS is mobile-safe at 360px class constraints', async () => {

@@ -21,7 +21,11 @@ export function publicText(value, fallback) {
 export const homepageSafeCopy = {
   en: {
     brand: "Ge'ez Consulting",
+    slogan: 'More than paperwork',
+    sloganSupport: 'Clear counsel for the path ahead—without guaranteed outcomes.',
     skip: 'Skip to content',
+    skipIntro: 'Skip intro',
+    menuLabel: 'Menu',
     langAria: 'Language',
     primaryNavAria: 'Primary',
     seoTitle: 'Business launch and growth support in Calgary',
@@ -32,6 +36,18 @@ export const homepageSafeCopy = {
       'Clear next steps for newcomer and Black business owners—without guaranteed loan, grant, or legal outcomes.',
     heroReassure:
       'We do not guarantee funding, registration, immigration, tax, or legal results. You stay in control of every decision.',
+    logo: {
+      src: '/media/logo/geez-wordmark-light.png',
+      width: 220,
+      height: 80,
+      alt: "Ge'ez Consulting",
+    },
+    logoMark: {
+      src: '/media/logo/geez-mark-192.png',
+      width: 40,
+      height: 40,
+      alt: '',
+    },
     heroImageOmitted: false,
     heroImage: {
       src: '/media/founder/saba-teklu.jpg',
@@ -53,7 +69,42 @@ export const homepageSafeCopy = {
         text: 'Local knowledge for registration, planning, books, and growth conversations.',
       },
     ],
-    trust: { render: false, reason: 'No verified logos or ratings' },
+    trust: {
+      render: true,
+      heading: 'Client reflections',
+      note: 'Quotes published on geezconsulting.com. Individual experiences vary—results are not guaranteed.',
+      logos: [
+        {
+          src: '/media/logo/geez-mark-192.png',
+          alt: "Ge'ez Consulting mark",
+          width: 56,
+          height: 56,
+        },
+      ],
+    },
+    socialsAria: 'Ge’ez Consulting on social media',
+    socials: [
+      {
+        id: 'linkedin',
+        label: 'LinkedIn',
+        href: 'https://www.linkedin.com/company/geez-consulting/',
+      },
+      {
+        id: 'facebook',
+        label: 'Facebook',
+        href: 'https://www.facebook.com/geezconsulting',
+      },
+      {
+        id: 'instagram',
+        label: 'Instagram',
+        href: 'https://www.instagram.com/geez.consulting',
+      },
+      {
+        id: 'youtube',
+        label: 'YouTube',
+        href: 'https://www.youtube.com/@geez.consulting',
+      },
+    ],
     pathwaysHeading: 'Where are you now?',
     pathwaysIntro: 'Pick the path that matches your stage. Each page explains scope and limits.',
     pathways: [
@@ -137,7 +188,32 @@ export const homepageSafeCopy = {
         alt: 'Portrait of Saba Teklu, Founder and Director of Ge’ez Consulting',
       },
     },
-    testimonials: { render: false, reason: 'No approved testimonials' },
+    testimonials: {
+      render: true,
+      heading: 'What clients share',
+      intro:
+        'Reflections from geezconsulting.com. Quotes are client voices—not verified metrics or promised results.',
+      items: [
+        {
+          quote:
+            'Working with Saba has been a game-changer for our business. Her expertise provided valuable insights and guidance that helped us navigate complex challenges and capitalize on opportunities. We\'ve seen significant improvements in our operations, profitability, and overall business performance.',
+          name: 'Yonas Hila',
+          org: 'Jonas Driving School',
+        },
+        {
+          quote:
+            'Saba has been pivotal in helping us understand how the bank (BDC) system works and has taken us every step of the loan process to make sure it succeeds. She had good knowledge of the business environment in Canada and we received valuable advice.',
+          name: 'Yordanos Tewoldebrahan',
+          org: 'US1 General Import Export and Wholesale INC',
+        },
+        {
+          quote:
+            'We are extremely pleased with the services Ge\'ez Consulting provided for us. Saba\'s professional expertise and assistance in setting up Ashu Africa Import Export LTD was invaluable. Saba helped our company\'s goal reach to a higher result and exceeded our expectatons.',
+          name: 'Ashenafi Kassi',
+          org: 'Ashu Africa Import Export LTD',
+        },
+      ],
+    },
     faqHeading: 'Common questions',
     faqIntro: 'Straight answers—especially about what we do not promise.',
     faqs: [
@@ -184,7 +260,11 @@ export const homepageSafeCopy = {
   },
   am: {
     brand: "Ge'ez Consulting",
+    slogan: 'ከወረቀት በላይ',
+    sloganSupport: 'ለመንገዱ ግልጽ ምክር—ያለ የተረጋገጠ ውጤት ዋስትና።',
     skip: 'ወደ ይዘት ዝለል',
+    skipIntro: 'መግቢያን ዝለል',
+    menuLabel: 'ምናሌ',
     langAria: 'ቋንቋ',
     primaryNavAria: 'ዋና ምናሌ',
     seoTitle: 'በካልጋሪ የንግድ ማስጀመር እና እድገት ድጋፍ',
@@ -195,6 +275,18 @@ export const homepageSafeCopy = {
       'ለአዲስ መጤ እና ጥቁር ንግድ ባለቤቶች ግልጽ የሚቀጥሉ እርምጃዎች—ያለ የብድር፣ የእርዳታ ወይም የሕግ ውጤት ዋስትና።',
     heroReassure:
       'የፋይናንስ፣ ምዝገባ፣ ኢሚግሬሽን፣ ግብር ወይም የሕግ ውጤቶችን አንረጋገጥም። ውሳኔዎች የእርስዎ ናቸው።',
+    logo: {
+      src: '/media/logo/geez-wordmark-light.png',
+      width: 220,
+      height: 80,
+      alt: "Ge'ez Consulting",
+    },
+    logoMark: {
+      src: '/media/logo/geez-mark-192.png',
+      width: 40,
+      height: 40,
+      alt: '',
+    },
     heroImageOmitted: false,
     heroImage: {
       src: '/media/founder/saba-teklu.jpg',
@@ -207,7 +299,42 @@ export const homepageSafeCopy = {
       { label: 'ጥቁር ባለቤትነት ያላቸው ንግዶች', text: 'አውድዎን የሚያከብር ድጋፍ።' },
       { label: 'ካልጋሪ እና አልበርታ', text: 'ለምዝገባ፣ እቅድ እና እድገት የአካባቢ እውቀት።' },
     ],
-    trust: { render: false },
+    trust: {
+      render: true,
+      heading: 'የደንበኛ አስተያየቶች',
+      note: 'ከ geezconsulting.com የተገኙ ጥቅሶች። ውጤቶች አይረጋገጡም።',
+      logos: [
+        {
+          src: '/media/logo/geez-mark-192.png',
+          alt: "Ge'ez Consulting",
+          width: 56,
+          height: 56,
+        },
+      ],
+    },
+    socialsAria: 'Ge’ez Consulting ማህበራዊ ሚዲያ',
+    socials: [
+      {
+        id: 'linkedin',
+        label: 'LinkedIn',
+        href: 'https://www.linkedin.com/company/geez-consulting/',
+      },
+      {
+        id: 'facebook',
+        label: 'Facebook',
+        href: 'https://www.facebook.com/geezconsulting',
+      },
+      {
+        id: 'instagram',
+        label: 'Instagram',
+        href: 'https://www.instagram.com/geez.consulting',
+      },
+      {
+        id: 'youtube',
+        label: 'YouTube',
+        href: 'https://www.youtube.com/@geez.consulting',
+      },
+    ],
     pathwaysHeading: 'አሁን የት ነዎት?',
     pathwaysIntro: 'ከደረጃዎ ጋር የሚስማማውን መንገድ ይምረጡ።',
     pathways: [
@@ -290,7 +417,31 @@ export const homepageSafeCopy = {
         alt: 'ሳባ ተክሉ፣ የግዕዝ ኮንሰልቲንግ መስራች',
       },
     },
-    testimonials: { render: false },
+    testimonials: {
+      render: true,
+      heading: 'የደንበኛ ድምጾች',
+      intro: 'ከ geezconsulting.com — እንግሊዝኛ ጥቅሶች። ውጤት ዋስትና አይደለም።',
+      items: [
+        {
+          quote:
+            'Working with Saba has been a game-changer for our business. Her expertise provided valuable insights and guidance that helped us navigate complex challenges and capitalize on opportunities. We\'ve seen significant improvements in our operations, profitability, and overall business performance.',
+          name: 'Yonas Hila',
+          org: 'Jonas Driving School',
+        },
+        {
+          quote:
+            'Saba has been pivotal in helping us understand how the bank (BDC) system works and has taken us every step of the loan process to make sure it succeeds. She had good knowledge of the business environment in Canada and we received valuable advice.',
+          name: 'Yordanos Tewoldebrahan',
+          org: 'US1 General Import Export and Wholesale INC',
+        },
+        {
+          quote:
+            'We are extremely pleased with the services Ge\'ez Consulting provided for us. Saba\'s professional expertise and assistance in setting up Ashu Africa Import Export LTD was invaluable. Saba helped our company\'s goal reach to a higher result and exceeded our expectatons.',
+          name: 'Ashenafi Kassi',
+          org: 'Ashu Africa Import Export LTD',
+        },
+      ],
+    },
     faqHeading: 'ተደጋጋሚ ጥያቄዎች',
     faqIntro: 'ግልጽ መልሶች—በተለይ ምን እንደማንረጋገጥ።',
     faqs: [
@@ -332,7 +483,11 @@ export const homepageSafeCopy = {
   },
   ti: {
     brand: "Ge'ez Consulting",
+    slogan: 'ካብ ወረቐት ልዕሊ',
+    sloganSupport: 'ንመንገዲ ግልጺ ምኽሪ—ብዘይ ዋሕስ ውጽኢት።',
     skip: 'ናብ ትሕዝቶ ዝለል',
+    skipIntro: 'መእተዊ ዝለል',
+    menuLabel: 'ዝርዝር',
     langAria: 'ቋንቋ',
     primaryNavAria: 'ቀንዲ ዝርዝር',
     seoTitle: 'ኣብ ካልጋሪ ንግዲ ምጅማርን ዕብየትን ድጋፍ',
@@ -343,6 +498,18 @@ export const homepageSafeCopy = {
       'ንሓደስቲ መጻእቲን ጸሊም ንግዲ ዋናታትን ግልጺ ስጉምትታት—ብዛዕባ ብድር፣ ዕርዳታ ወይ ሕጊ ውጽኢት ዋሕስ የለን።',
     heroReassure:
       'ፋይናንስ፣ ምዝገባ፣ ኢሚግረሽን፣ ግብሪ ወይ ሕጋዊ ውጽኢታት ኣይንረጋገጽን። ውሳኔታት ናትኩም እዩ።',
+    logo: {
+      src: '/media/logo/geez-wordmark-light.png',
+      width: 220,
+      height: 80,
+      alt: "Ge'ez Consulting",
+    },
+    logoMark: {
+      src: '/media/logo/geez-mark-192.png',
+      width: 40,
+      height: 40,
+      alt: '',
+    },
     heroImageOmitted: false,
     heroImage: {
       src: '/media/founder/saba-teklu.jpg',
@@ -355,7 +522,42 @@ export const homepageSafeCopy = {
       { label: 'ጸሊም ባለቤትነት ዘለዎም ንግድታት', text: 'ኩነታትኩም ዝኽብር ድጋፍ።' },
       { label: 'ካልጋሪን ኣልበርታን', text: 'ንምዝገባ፣ ውጥንን ዕብየትን ናይ ከባቢ ፍልጠት።' },
     ],
-    trust: { render: false },
+    trust: {
+      render: true,
+      heading: 'ናይ ዓሚላት ርእይቶታት',
+      note: 'ካብ geezconsulting.com ዝመጹ ጥቕስታት። ውጽኢታት ኣይረጋገጹን።',
+      logos: [
+        {
+          src: '/media/logo/geez-mark-192.png',
+          alt: "Ge'ez Consulting",
+          width: 56,
+          height: 56,
+        },
+      ],
+    },
+    socialsAria: 'Ge’ez Consulting ማሕበራዊ ሚድያ',
+    socials: [
+      {
+        id: 'linkedin',
+        label: 'LinkedIn',
+        href: 'https://www.linkedin.com/company/geez-consulting/',
+      },
+      {
+        id: 'facebook',
+        label: 'Facebook',
+        href: 'https://www.facebook.com/geezconsulting',
+      },
+      {
+        id: 'instagram',
+        label: 'Instagram',
+        href: 'https://www.instagram.com/geez.consulting',
+      },
+      {
+        id: 'youtube',
+        label: 'YouTube',
+        href: 'https://www.youtube.com/@geez.consulting',
+      },
+    ],
     pathwaysHeading: 'ሕጂ ኣበየናይ ደረጃ ኣለኹም?',
     pathwaysIntro: 'ምስ ደረጃኹም ዝሰማማእ መንገዲ ምረጹ።',
     pathways: [
@@ -438,7 +640,31 @@ export const homepageSafeCopy = {
         alt: 'ሳባ ተክሉ፣ መስራቲት ግዕዝ ኮንሰልቲንግ',
       },
     },
-    testimonials: { render: false },
+    testimonials: {
+      render: true,
+      heading: 'ናይ ዓሚላት ድምጽታት',
+      intro: 'ካብ geezconsulting.com — እንግሊዝኛ ጥቕስታት። ውጽኢት ዋሕስ ኣይኮነን።',
+      items: [
+        {
+          quote:
+            'Working with Saba has been a game-changer for our business. Her expertise provided valuable insights and guidance that helped us navigate complex challenges and capitalize on opportunities. We\'ve seen significant improvements in our operations, profitability, and overall business performance.',
+          name: 'Yonas Hila',
+          org: 'Jonas Driving School',
+        },
+        {
+          quote:
+            'Saba has been pivotal in helping us understand how the bank (BDC) system works and has taken us every step of the loan process to make sure it succeeds. She had good knowledge of the business environment in Canada and we received valuable advice.',
+          name: 'Yordanos Tewoldebrahan',
+          org: 'US1 General Import Export and Wholesale INC',
+        },
+        {
+          quote:
+            'We are extremely pleased with the services Ge\'ez Consulting provided for us. Saba\'s professional expertise and assistance in setting up Ashu Africa Import Export LTD was invaluable. Saba helped our company\'s goal reach to a higher result and exceeded our expectatons.',
+          name: 'Ashenafi Kassi',
+          org: 'Ashu Africa Import Export LTD',
+        },
+      ],
+    },
     faqHeading: 'ተደጋጋሚ ሕቶታት',
     faqIntro: 'ቀጥታ መልስታት—ብፍላይ እንታይ ከምዘይንረጋገጽ።',
     faqs: [

@@ -55,9 +55,9 @@
 }
 
 .geez-header {
-  background: var(--geez-color-burgundy);
+  background: var(--geez-color-burgundy-strong);
   color: var(--geez-color-on-brand);
-  border-bottom: 4px solid var(--geez-color-gold-accent);
+  border-bottom: 1px solid color-mix(in srgb, var(--geez-color-gold-accent) 55%, transparent);
 }
 
 .geez-header a {

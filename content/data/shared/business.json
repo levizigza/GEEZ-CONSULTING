@@ -80,10 +80,10 @@
       "https://www.instagram.com/geez.consulting",
       "https://www.youtube.com/@geez.consulting"
     ],
-    "source": "TODO_VERIFICATION",
-    "approvalStatus": "todo_verification",
-    "lastReviewed": null,
+    "source": "live-site:geezconsulting.com/header-footer-socials",
+    "approvalStatus": "draft",
+    "lastReviewed": "2026-09-18",
     "ledgerId": "CL-012",
-    "notes": "URLs observed live; confirm official profiles"
+    "notes": "URLs mirrored from live site social icons; redesign ships icons for these four only"
   }
 }

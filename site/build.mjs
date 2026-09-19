@@ -64,6 +64,7 @@ async function copyDesignAssets() {
     ['design/css/fonts-latin.css', 'fonts-latin.css'],
     ['design/css/fonts-ethiopic.css', 'fonts-ethiopic.css'],
     ['site/homepage/homepage.css', 'homepage.css'],
+    ['site/homepage/intro.js', 'intro.js'],
     ['site/services/services.css', 'services.css'],
     ['site/client-results/client-results.css', 'client-results.css'],
     ['site/resources/resources.css', 'resources.css'],
