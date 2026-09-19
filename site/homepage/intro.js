@@ -1,7 +1,7 @@
 /**
  * Short, skippable brand opening — respects prefers-reduced-motion.
  * Does not trap focus; Esc / Skip dismisses immediately.
- * Gold vines draw in sync with the brand rise (full hold ~2.2s).
+ * Full-page gold vines grow across the splash, then settle (~3.1s).
  */
 (function () {
   var root = document.getElementById('geez-intro');
@@ -11,8 +11,8 @@
     window.matchMedia &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var done = false;
-  /** Match CSS vine draw + brand rise; do not extend past this. */
-  var HOLD_MS = 2200;
+  /** Match full-page vine draw + brand rise; stay under ~3.5s. */
+  var HOLD_MS = 3100;
   var REDUCE_HOLD_MS = 700;
 
   function finish() {

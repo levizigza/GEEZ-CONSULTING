@@ -523,32 +523,68 @@ export function renderHomepageHtml(m) {
   const headerSocials = renderSocialNav(m, e, 'geez-social geez-social--header');
   const footerSocials = renderSocialNav(m, e, 'geez-social geez-social--footer');
 
-  const introVine = (side) => `<svg class="geez-intro__vine geez-intro__vine--${side}" viewBox="0 0 360 200" aria-hidden="true" focusable="false">
-    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path class="geez-intro__vine-glow" pathLength="1" stroke-width="3.2" d="M18 182 C48 158, 62 128, 88 118 C118 106, 138 132, 168 124 C198 116, 208 84, 242 76 C274 68, 298 88, 328 52 C340 38, 348 28, 354 18"/>
-      <path class="geez-intro__vine-stem" pathLength="1" stroke-width="1.85" d="M18 182 C48 158, 62 128, 88 118 C118 106, 138 132, 168 124 C198 116, 208 84, 242 76 C274 68, 298 88, 328 52 C340 38, 348 28, 354 18"/>
-      <path class="geez-intro__vine-tendril" pathLength="1" stroke-width="1.35" d="M88 118 C78 98, 92 78, 108 86 C120 92, 118 108, 108 112"/>
-      <path class="geez-intro__vine-tendril" pathLength="1" stroke-width="1.35" d="M168 124 C162 104, 178 90, 190 98 C200 104, 196 118, 186 122"/>
-      <path class="geez-intro__vine-tendril" pathLength="1" stroke-width="1.35" d="M242 76 C236 58, 252 44, 264 52 C274 58, 270 70, 260 74"/>
-      <path class="geez-intro__vine-tendril" pathLength="1" stroke-width="1.35" d="M298 78 C312 70, 322 78, 318 90 C314 98, 304 96, 300 88"/>
-      <path class="geez-intro__vine-leaf" pathLength="1" stroke-width="1.2" d="M48 168 C58 160, 64 168, 58 176 C52 182, 46 176, 48 168Z"/>
-      <path class="geez-intro__vine-leaf" pathLength="1" stroke-width="1.2" d="M128 108 C138 100, 146 108, 140 116 C134 122, 126 116, 128 108Z"/>
-      <path class="geez-intro__vine-leaf" pathLength="1" stroke-width="1.2" d="M210 100 C220 92, 228 100, 222 108 C216 114, 208 108, 210 100Z"/>
-      <path class="geez-intro__vine-leaf" pathLength="1" stroke-width="1.2" d="M278 62 C288 54, 296 62, 290 70 C284 76, 276 70, 278 62Z"/>
+  /* Full-page intro canopy: vines emerge from edges and frame the brand (splash only). */
+  const introCanopy = `<svg class="geez-intro__vine geez-intro__canopy" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+    <g class="geez-intro__vine-arm geez-intro__vine-arm--sw" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path class="geez-intro__vine-glow" pathLength="1" stroke-width="4.2" d="M-20 820 C80 700, 40 580, 140 520 C240 460, 220 360, 340 320 C440 290, 480 220, 560 190"/>
+      <path class="geez-intro__vine-stem" pathLength="1" stroke-width="2.1" d="M-20 820 C80 700, 40 580, 140 520 C240 460, 220 360, 340 320 C440 290, 480 220, 560 190"/>
+      <path class="geez-intro__vine-tendril" pathLength="1" stroke-width="1.45" d="M140 520 C110 470, 150 430, 185 455 C210 472, 200 510, 175 520"/>
+      <path class="geez-intro__vine-tendril" pathLength="1" stroke-width="1.45" d="M340 320 C310 280, 350 245, 385 270 C408 288, 398 320, 372 330"/>
+      <path class="geez-intro__vine-tendril" pathLength="1" stroke-width="1.4" d="M480 240 C510 210, 545 235, 530 270 C520 292, 495 285, 485 260"/>
+      <path class="geez-intro__vine-leaf" pathLength="1" stroke-width="1.25" d="M60 740 C78 722, 98 738, 84 758 C72 772, 54 758, 60 740Z"/>
+      <path class="geez-intro__vine-leaf" pathLength="1" stroke-width="1.25" d="M220 430 C238 412, 258 428, 244 448 C232 462, 214 448, 220 430Z"/>
+      <path class="geez-intro__vine-leaf" pathLength="1" stroke-width="1.25" d="M400 280 C418 262, 438 278, 424 298 C412 312, 394 298, 400 280Z"/>
+      <g class="geez-intro__vine-nodes" fill="#c9a227"><circle cx="140" cy="520" r="2.4"/><circle cx="340" cy="320" r="2.2"/><circle cx="480" cy="240" r="2"/></g>
     </g>
-    <g class="geez-intro__vine-nodes" fill="#c9a227">
-      <circle cx="88" cy="118" r="2.1"/>
-      <circle cx="168" cy="124" r="1.9"/>
-      <circle cx="242" cy="76" r="1.9"/>
-      <circle cx="328" cy="52" r="1.7"/>
+    <g class="geez-intro__vine-arm geez-intro__vine-arm--se" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path class="geez-intro__vine-glow" pathLength="1" stroke-width="4.2" d="M1220 820 C1120 700, 1160 580, 1060 520 C960 460, 980 360, 860 320 C760 290, 720 220, 640 190"/>
+      <path class="geez-intro__vine-stem" pathLength="1" stroke-width="2.1" d="M1220 820 C1120 700, 1160 580, 1060 520 C960 460, 980 360, 860 320 C760 290, 720 220, 640 190"/>
+      <path class="geez-intro__vine-tendril" pathLength="1" stroke-width="1.45" d="M1060 520 C1090 470, 1050 430, 1015 455 C990 472, 1000 510, 1025 520"/>
+      <path class="geez-intro__vine-tendril" pathLength="1" stroke-width="1.45" d="M860 320 C890 280, 850 245, 815 270 C792 288, 802 320, 828 330"/>
+      <path class="geez-intro__vine-tendril" pathLength="1" stroke-width="1.4" d="M720 240 C690 210, 655 235, 670 270 C680 292, 705 285, 715 260"/>
+      <path class="geez-intro__vine-leaf" pathLength="1" stroke-width="1.25" d="M1140 740 C1122 722, 1102 738, 1116 758 C1128 772, 1146 758, 1140 740Z"/>
+      <path class="geez-intro__vine-leaf" pathLength="1" stroke-width="1.25" d="M980 430 C962 412, 942 428, 956 448 C968 462, 986 448, 980 430Z"/>
+      <path class="geez-intro__vine-leaf" pathLength="1" stroke-width="1.25" d="M800 280 C782 262, 762 278, 776 298 C788 312, 806 298, 800 280Z"/>
+      <g class="geez-intro__vine-nodes" fill="#c9a227"><circle cx="1060" cy="520" r="2.4"/><circle cx="860" cy="320" r="2.2"/><circle cx="720" cy="240" r="2"/></g>
+    </g>
+    <g class="geez-intro__vine-arm geez-intro__vine-arm--nw" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path class="geez-intro__vine-glow" pathLength="1" stroke-width="3.8" d="M-30 -20 C90 60, 50 150, 150 200 C250 250, 230 340, 330 380 C400 405, 430 460, 500 490"/>
+      <path class="geez-intro__vine-stem" pathLength="1" stroke-width="1.95" d="M-30 -20 C90 60, 50 150, 150 200 C250 250, 230 340, 330 380 C400 405, 430 460, 500 490"/>
+      <path class="geez-intro__vine-tendril" pathLength="1" stroke-width="1.35" d="M150 200 C120 160, 155 125, 190 150 C212 168, 200 205, 175 210"/>
+      <path class="geez-intro__vine-tendril" pathLength="1" stroke-width="1.35" d="M330 380 C300 345, 335 310, 370 335 C390 352, 382 385, 355 392"/>
+      <path class="geez-intro__vine-leaf" pathLength="1" stroke-width="1.2" d="M40 40 C56 24, 76 40, 62 58 C50 72, 34 58, 40 40Z"/>
+      <path class="geez-intro__vine-leaf" pathLength="1" stroke-width="1.2" d="M230 280 C246 264, 266 280, 252 298 C240 312, 224 298, 230 280Z"/>
+      <g class="geez-intro__vine-nodes" fill="#c9a227"><circle cx="150" cy="200" r="2.2"/><circle cx="330" cy="380" r="2"/><circle cx="430" cy="460" r="1.8"/></g>
+    </g>
+    <g class="geez-intro__vine-arm geez-intro__vine-arm--ne" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path class="geez-intro__vine-glow" pathLength="1" stroke-width="3.8" d="M1230 -20 C1110 60, 1150 150, 1050 200 C950 250, 970 340, 870 380 C800 405, 770 460, 700 490"/>
+      <path class="geez-intro__vine-stem" pathLength="1" stroke-width="1.95" d="M1230 -20 C1110 60, 1150 150, 1050 200 C950 250, 970 340, 870 380 C800 405, 770 460, 700 490"/>
+      <path class="geez-intro__vine-tendril" pathLength="1" stroke-width="1.35" d="M1050 200 C1080 160, 1045 125, 1010 150 C988 168, 1000 205, 1025 210"/>
+      <path class="geez-intro__vine-tendril" pathLength="1" stroke-width="1.35" d="M870 380 C900 345, 865 310, 830 335 C810 352, 818 385, 845 392"/>
+      <path class="geez-intro__vine-leaf" pathLength="1" stroke-width="1.2" d="M1160 40 C1144 24, 1124 40, 1138 58 C1150 72, 1166 58, 1160 40Z"/>
+      <path class="geez-intro__vine-leaf" pathLength="1" stroke-width="1.2" d="M970 280 C954 264, 934 280, 948 298 C960 312, 976 298, 970 280Z"/>
+      <g class="geez-intro__vine-nodes" fill="#c9a227"><circle cx="1050" cy="200" r="2.2"/><circle cx="870" cy="380" r="2"/><circle cx="770" cy="460" r="1.8"/></g>
+    </g>
+    <g class="geez-intro__vine-arm geez-intro__vine-arm--west" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path class="geez-intro__vine-glow" pathLength="1" stroke-width="3.2" d="M-10 400 C70 360, 90 300, 170 290 C250 280, 280 340, 360 350 C420 356, 450 310, 510 300"/>
+      <path class="geez-intro__vine-stem" pathLength="1" stroke-width="1.7" d="M-10 400 C70 360, 90 300, 170 290 C250 280, 280 340, 360 350 C420 356, 450 310, 510 300"/>
+      <path class="geez-intro__vine-tendril" pathLength="1" stroke-width="1.3" d="M170 290 C145 255, 185 230, 210 255 C226 270, 215 300, 190 305"/>
+      <path class="geez-intro__vine-leaf" pathLength="1" stroke-width="1.15" d="M90 340 C106 324, 126 340, 112 358 C100 372, 84 358, 90 340Z"/>
+      <g class="geez-intro__vine-nodes" fill="#c9a227"><circle cx="170" cy="290" r="2"/><circle cx="360" cy="350" r="1.8"/></g>
+    </g>
+    <g class="geez-intro__vine-arm geez-intro__vine-arm--east" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path class="geez-intro__vine-glow" pathLength="1" stroke-width="3.2" d="M1210 400 C1130 360, 1110 300, 1030 290 C950 280, 920 340, 840 350 C780 356, 750 310, 690 300"/>
+      <path class="geez-intro__vine-stem" pathLength="1" stroke-width="1.7" d="M1210 400 C1130 360, 1110 300, 1030 290 C950 280, 920 340, 840 350 C780 356, 750 310, 690 300"/>
+      <path class="geez-intro__vine-tendril" pathLength="1" stroke-width="1.3" d="M1030 290 C1055 255, 1015 230, 990 255 C974 270, 985 300, 1010 305"/>
+      <path class="geez-intro__vine-leaf" pathLength="1" stroke-width="1.15" d="M1110 340 C1094 324, 1074 340, 1088 358 C1100 372, 1116 358, 1110 340Z"/>
+      <g class="geez-intro__vine-nodes" fill="#c9a227"><circle cx="1030" cy="290" r="2"/><circle cx="840" cy="350" r="1.8"/></g>
     </g>
   </svg>`;
 
   const intro = `<div id="geez-intro" class="geez-intro" role="dialog" aria-modal="true" aria-label="${e(
     m.brand,
   )}">
-    ${introVine('left')}
-    ${introVine('right')}
+    ${introCanopy}
     <div class="geez-intro__panel">
       ${
         m.logoMark
