@@ -20,6 +20,8 @@ import {
   renderDeferredScripts,
 } from '../templates/perf-head.mjs';
 import { renderResponsiveImage } from '../../content/lib/images.mjs';
+import { renderVinePair } from '../templates/vines.mjs';
+import { renderServiceIcon } from '../templates/service-icons.mjs';
 
 /**
  * @param {string} s
@@ -65,13 +67,7 @@ function socialIconSvg(id) {
   return `<svg class="geez-social__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="${d}"/></svg>`;
 }
 
-/** Service line-art icons with optional draw animation class. */
-const SERVICE_ICONS = {
-  start: `<svg class="geez-svc-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle class="geez-svc-icon__draw" cx="32" cy="32" r="22" fill="none" stroke="currentColor" stroke-width="1.5"/><path class="geez-svc-icon__draw" d="M32 18v20M24 30l8 8 8-8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
-  funding: `<svg class="geez-svc-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect class="geez-svc-icon__draw" x="14" y="12" width="36" height="44" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path class="geez-svc-icon__draw" d="M22 24h20M22 34h16M22 44h12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>`,
-  books: `<svg class="geez-svc-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path class="geez-svc-icon__draw" d="M12 16h18c4 0 6 2 6 6v30c0-4-2-6-6-6H12V16zm40 0H34c-4 0-6 2-6 6v30c0-4 2-6 6-6h18V16z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>`,
-  grow: `<svg class="geez-svc-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path class="geez-svc-icon__draw" d="M14 46l12-14 8 8 16-20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle class="geez-svc-icon__draw" cx="50" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>`,
-};
+/** Service line-art icons — see templates/service-icons.mjs */
 
 /**
  * @param {import('../../content/lib/routes.mjs').LOCALES[number]} locale
@@ -324,13 +320,13 @@ export function renderHomepageHtml(m) {
 
   const pathways = m.pathways
     .map((p) => {
-      const icon = SERVICE_ICONS[p.id] || SERVICE_ICONS.start;
+      const icon = renderServiceIcon(p.id || 'start');
       const media = p.mediaClass
         ? `<div class="geez-home-card__media geez-home-card__media--${e(
             p.mediaClass,
           )}" aria-hidden="true"></div>`
         : '';
-      return `<li class="geez-home-card geez-reveal">
+      return `<li class="geez-home-card geez-reveal" data-geez-motion>
         ${media}
         <div class="geez-home-card__body">
           <div class="geez-home-card__icon">${icon}</div>
@@ -343,7 +339,7 @@ export function renderHomepageHtml(m) {
 
   const process = m.process
     .map(
-      (step, i) => `<li class="geez-home-step geez-reveal">
+      (step, i) => `<li class="geez-home-step geez-reveal" data-geez-motion>
         <p class="geez-home-step__num" aria-hidden="true">${String(i + 1).padStart(2, '0')}</p>
         <h3>${e(step.title)}</h3>
         <p>${e(step.text)}</p>
@@ -355,8 +351,8 @@ export function renderHomepageHtml(m) {
   const services = m.services
     .map((s, i) => {
       const id = serviceIds[i] || 'start';
-      const icon = SERVICE_ICONS[id];
-      return `<li class="geez-home-service geez-reveal">
+      const icon = renderServiceIcon(id);
+      return `<li class="geez-home-service geez-reveal" data-geez-motion>
         <div class="geez-home-service__icon">${icon}</div>
         <div class="geez-home-service__body">
           <h3><a href="${e(s.href)}">${e(s.title)}</a></h3>
@@ -368,7 +364,7 @@ export function renderHomepageHtml(m) {
 
   const faqs = m.faqs
     .map(
-      (f) => `<details class="geez-accordion">
+      (f) => `<details class="geez-accordion" data-geez-motion>
         <summary>${e(f.q)}</summary>
         <div class="geez-accordion__panel"><p>${e(f.a)}</p></div>
       </details>`,
@@ -619,7 +615,8 @@ export function renderHomepageHtml(m) {
 <body class="${bodyClass}" data-geez-page-type="home">
   ${intro}
   <a class="geez-skip" href="#main">${e(m.skip)}</a>
-  <header class="geez-header geez-home-header">
+  <header class="geez-header geez-home-header geez-vine-host" data-geez-motion>
+    ${renderVinePair('header')}
     <div class="geez-header__inner geez-container">
       <a class="geez-header__brand" href="${e(m.homeHref)}" aria-label="${e(
         m.brand,
@@ -668,7 +665,8 @@ export function renderHomepageHtml(m) {
   </header>
 
   <main id="main">
-    <section class="geez-home-hero" aria-labelledby="home-hero-heading">
+    <section class="geez-home-hero geez-vine-host" aria-labelledby="home-hero-heading" data-geez-motion>
+      ${renderVinePair('band')}
       <div class="geez-home-hero__grid">
         <div class="geez-home-hero__copy">
           <p class="geez-home-hero__brand">${e(m.brand)}</p>
@@ -739,7 +737,8 @@ export function renderHomepageHtml(m) {
       </div>
     </section>
 
-    <section class="geez-section geez-home-founder" aria-labelledby="founder-heading">
+    <section class="geez-section geez-home-founder geez-vine-host" aria-labelledby="founder-heading" data-geez-motion>
+      ${renderVinePair('band')}
       <div class="geez-container geez-home-founder__grid">
         ${founderImage}
         <div>
@@ -762,7 +761,8 @@ export function renderHomepageHtml(m) {
       </div>
     </section>
 
-    <section class="geez-section geez-home-final" aria-labelledby="final-heading">
+    <section class="geez-section geez-home-final geez-vine-host" aria-labelledby="final-heading" data-geez-motion>
+      ${renderVinePair('band')}
       <div class="geez-container geez-container--narrow">
         <p class="geez-home-final__slogan">${e(m.slogan)}</p>
         <h2 id="final-heading">${e(m.finalHeading)}</h2>
@@ -774,7 +774,8 @@ export function renderHomepageHtml(m) {
     </section>
   </main>
 
-  <footer class="geez-footer">
+  <footer class="geez-footer geez-vine-host" data-geez-motion>
+    ${renderVinePair('band')}
     <div class="geez-container geez-footer__grid">
       <nav aria-label="${e(m.nav.services)}">
         <h2>${e(m.nav.services)}</h2>

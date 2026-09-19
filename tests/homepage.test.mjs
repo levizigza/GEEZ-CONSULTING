@@ -28,7 +28,7 @@ test('EN homepage has exactly one H1 and required landmarks', async () => {
   assert.equal(countH1(html), 1);
   assert.match(html, /<header class="geez-header/);
   assert.match(html, /<main id="main">/);
-  assert.match(html, /<footer class="geez-footer">/);
+  assert.match(html, /<footer class="geez-footer/);
   assert.match(html, /aria-label="Language"/);
   assert.match(html, /id="pathways"/);
   assert.match(html, /id="services"/);
@@ -42,7 +42,7 @@ test('EN homepage has exactly one H1 and required landmarks', async () => {
   // First-party deferred scripts + JSON-LD only — no third-party trackers.
   assert.doesNotMatch(
     html,
-    /<script(?![^>]*(?:application\/ld\+json|consent\.js|locale-preference\.js|web-vitals-rum\.js|analytics\.js|intro\.js|ambient\.js|geez-measure-config))/i,
+    /<script(?![^>]*(?:application\/ld\+json|consent\.js|locale-preference\.js|web-vitals-rum\.js|analytics\.js|intro\.js|ambient\.js|motion\.js|geez-measure-config))/i,
   );
   assert.match(html, /defer/);
   assert.doesNotMatch(html, /googletagmanager|google-analytics|gtag\(|facebook\.net|hotjar|plausible/i);
@@ -108,6 +108,10 @@ test('live-site reviews + portrait + logo + socials ship; case studies stay gate
   assert.match(html, /geez-header__logo/);
   assert.match(html, /geez-intro/);
   assert.match(html, /geez-intro__vine/);
+  assert.match(html, /geez-vine-host/);
+  assert.match(html, /data-geez-motion/);
+  assert.match(html, /motion\.js/);
+  assert.match(html, /geez-svc-icon--start/);
   assert.match(html, /linkedin\.com\/company\/geez-consulting/);
   assert.match(html, /instagram\.com\/geez\.consulting/);
   assert.match(html, /geez-home-audience/);

@@ -232,11 +232,12 @@ body.geez-home {
 }
 
 /* ---- Gold vine ornaments on burgundy / brown bands ---- */
-.geez-page-band::before,
-.geez-page-band::after,
-.geez-footer::before,
-.geez-footer::after,
-.geez-header::after {
+/* Wallpaper fallback (no SVG host). Interactive hosts hide these. */
+.geez-page-band:not(.geez-vine-host)::before,
+.geez-page-band:not(.geez-vine-host)::after,
+.geez-footer:not(.geez-vine-host)::before,
+.geez-footer:not(.geez-vine-host)::after,
+.geez-header:not(.geez-vine-host)::after {
   content: "";
   position: absolute;
   pointer-events: none;
@@ -245,11 +246,10 @@ body.geez-home {
   background-repeat: no-repeat;
   background-size: contain;
   opacity: var(--geez-vine-opacity);
-  /* Soft gold edge gleam — keeps strokes metallic without covering copy */
   filter: drop-shadow(0 0 0.55px color-mix(in srgb, var(--geez-color-gold-accent) 70%, #e8c547));
 }
 
-.geez-page-band::before {
+.geez-page-band:not(.geez-vine-host)::before {
   left: -0.5rem;
   bottom: 0.35rem;
   width: min(42vw, 17rem);
@@ -257,7 +257,7 @@ body.geez-home {
   background-position: left bottom;
 }
 
-.geez-page-band::after {
+.geez-page-band:not(.geez-vine-host)::after {
   right: -0.35rem;
   top: 0.5rem;
   width: min(36vw, 14rem);
@@ -272,8 +272,8 @@ body.geez-home {
   z-index: 1;
 }
 
-.geez-page-band--quiet::before,
-.geez-page-band--quiet::after {
+.geez-page-band--quiet:not(.geez-vine-host)::before,
+.geez-page-band--quiet:not(.geez-vine-host)::after {
   opacity: calc(var(--geez-vine-opacity) * 0.72);
 }
 
@@ -282,7 +282,7 @@ body.geez-home {
   overflow: clip;
 }
 
-.geez-header::after {
+.geez-header:not(.geez-vine-host)::after {
   right: 0.15rem;
   top: 50%;
   width: min(30vw, 12rem);
@@ -303,17 +303,16 @@ body.geez-home {
   isolation: isolate;
 }
 
-.geez-footer::before {
+.geez-footer:not(.geez-vine-host)::before {
   left: -0.75rem;
   bottom: 0.25rem;
   width: min(48vw, 18rem);
   height: min(26vw, 10rem);
   background-position: left bottom;
-  /* Above footer fill, below link columns — edge motif only */
   z-index: 0;
 }
 
-.geez-footer::after {
+.geez-footer:not(.geez-vine-host)::after {
   right: -0.5rem;
   top: 0.75rem;
   width: min(38vw, 15rem);
@@ -327,6 +326,398 @@ body.geez-home {
 .geez-footer > .geez-container {
   position: relative;
   z-index: 1;
+}
+
+/* ---- Interactive SVG vines (stroke-draw on scroll into view) ---- */
+.geez-vine-host {
+  position: relative;
+}
+
+.geez-vine {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  width: min(42vw, 17rem);
+  height: auto;
+  aspect-ratio: 360 / 200;
+  overflow: visible;
+  filter: drop-shadow(0 0 0.65px color-mix(in srgb, var(--geez-color-gold-accent) 75%, #e8c547));
+  transition: filter 420ms ease, opacity 420ms ease;
+}
+
+.geez-vine--left {
+  left: -0.5rem;
+  bottom: 0.35rem;
+}
+
+.geez-vine--right {
+  right: -0.35rem;
+  top: 0.5rem;
+  transform: scaleX(-1) rotate(8deg);
+  opacity: 0.92;
+}
+
+.geez-vine--flip {
+  /* class marker for mirrored vines */
+}
+
+.geez-vine--header {
+  width: min(28vw, 11rem);
+  right: 0.2rem;
+  top: 50%;
+  bottom: auto;
+  left: auto;
+  transform: translateY(-50%) scaleX(-1);
+  opacity: 0.9;
+}
+
+.geez-vine--slim {
+  width: min(34vw, 13rem);
+}
+
+.geez-header.geez-vine-host .geez-vine--header {
+  z-index: 0;
+}
+
+.geez-footer.geez-vine-host .geez-vine--left {
+  left: -0.75rem;
+  bottom: 0.25rem;
+  width: min(48vw, 18rem);
+}
+
+.geez-footer.geez-vine-host .geez-vine--right {
+  right: -0.5rem;
+  top: 0.75rem;
+  width: min(38vw, 15rem);
+  transform: scaleX(-1) rotate(6deg);
+}
+
+.geez-page-band.geez-vine-host .geez-vine--left {
+  left: -0.5rem;
+  bottom: 0.35rem;
+}
+
+.geez-page-band.geez-vine-host .geez-vine--right {
+  right: -0.35rem;
+  top: 0.5rem;
+}
+
+.geez-vine__glow {
+  stroke: #e8c547;
+  opacity: 0.42;
+}
+
+.geez-vine__stem,
+.geez-vine__tendril,
+.geez-vine__leaf {
+  stroke: #c9a227;
+}
+
+.geez-vine__glow,
+.geez-vine__stem,
+.geez-vine__tendril,
+.geez-vine__leaf {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+.geez-vine__nodes {
+  opacity: 0;
+  transform-origin: center;
+}
+
+/* Drawn state — clearly noticeable sprout */
+.geez-vine-host.geez-motion--in .geez-vine__glow,
+.geez-vine-host.geez-motion--in .geez-vine__stem,
+.geez-vine-host.geez-motion--in .geez-vine__tendril,
+.geez-vine-host.geez-motion--in .geez-vine__leaf {
+  animation: geez-vine-stroke 1.35s cubic-bezier(0.33, 0.1, 0.2, 1) forwards;
+}
+
+.geez-vine-host.geez-motion--in .geez-vine__tendril {
+  animation-delay: 0.28s;
+  animation-duration: 0.95s;
+}
+
+.geez-vine-host.geez-motion--in .geez-vine__leaf {
+  animation-delay: 0.45s;
+  animation-duration: 0.75s;
+}
+
+.geez-vine-host.geez-motion--in .geez-vine--right .geez-vine__glow,
+.geez-vine-host.geez-motion--in .geez-vine--right .geez-vine__stem {
+  animation-delay: 0.12s;
+}
+
+.geez-vine-host.geez-motion--in .geez-vine__nodes {
+  animation: geez-vine-nodes 520ms cubic-bezier(0.22, 1, 0.36, 1) 0.85s forwards;
+}
+
+@keyframes geez-vine-stroke {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes geez-vine-nodes {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 0.95;
+    transform: scale(1);
+  }
+}
+
+/* Hover shimmer on drawn vines */
+.geez-vine-host.geez-motion--in:hover .geez-vine,
+.geez-vine-host.geez-motion--in:focus-within .geez-vine {
+  filter: drop-shadow(0 0 2.5px color-mix(in srgb, #e8c547 70%, #c9a227))
+    drop-shadow(0 0 0.5px #c9a227);
+}
+
+.geez-vine-host.geez-motion--in:hover .geez-vine__glow,
+.geez-vine-host.geez-motion--in:focus-within .geez-vine__glow {
+  opacity: 0.62;
+  transition: opacity 380ms ease;
+}
+
+/* Static for reduced motion / no-JS fallback class */
+.geez-vine-host.geez-vine--static .geez-vine__glow,
+.geez-vine-host.geez-vine--static .geez-vine__stem,
+.geez-vine-host.geez-vine--static .geez-vine__tendril,
+.geez-vine-host.geez-vine--static .geez-vine__leaf {
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  animation: none;
+}
+
+.geez-vine-host.geez-vine--static .geez-vine__nodes {
+  opacity: 0.95;
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .geez-vine-host .geez-vine__glow,
+  .geez-vine-host .geez-vine__stem,
+  .geez-vine-host .geez-vine__tendril,
+  .geez-vine-host .geez-vine__leaf {
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+    animation: none !important;
+  }
+
+  .geez-vine-host .geez-vine__nodes {
+    opacity: 0.95;
+    animation: none !important;
+  }
+
+  .geez-vine-host:hover .geez-vine,
+  .geez-vine-host:focus-within .geez-vine {
+    filter: drop-shadow(0 0 0.65px color-mix(in srgb, var(--geez-color-gold-accent) 75%, #e8c547));
+  }
+}
+
+/* ---- Service icon showcases (viewport-triggered) ---- */
+.geez-svc-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: block;
+  color: inherit;
+}
+
+.geez-svc-icon__draw,
+.geez-svc-icon__line,
+.geez-svc-icon__motif,
+.geez-svc-icon__pulse {
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+}
+
+.geez-motion--in .geez-svc-icon__draw {
+  animation: geez-svc-draw 1.05s cubic-bezier(0.33, 0.1, 0.2, 1) 0.08s forwards;
+}
+
+.geez-motion--in .geez-svc-icon__line--1 {
+  animation: geez-svc-draw 0.7s ease 0.35s forwards;
+}
+.geez-motion--in .geez-svc-icon__line--2 {
+  animation: geez-svc-draw 0.7s ease 0.5s forwards;
+}
+.geez-motion--in .geez-svc-icon__line--3 {
+  animation: geez-svc-draw 0.7s ease 0.65s forwards;
+}
+
+.geez-motion--in .geez-svc-icon__motif {
+  animation: geez-svc-draw 0.85s ease 0.4s forwards;
+}
+
+.geez-motion--in .geez-svc-icon--start .geez-svc-icon__motif {
+  animation:
+    geez-svc-draw 0.85s ease 0.4s forwards,
+    geez-svc-nudge 1.8s ease 1.2s 1;
+}
+
+.geez-motion--in .geez-svc-icon--books .geez-svc-icon__book-l {
+  transform-origin: 30px 32px;
+  animation:
+    geez-svc-draw 1s ease 0.08s forwards,
+    geez-svc-book-l 1.1s ease 0.9s 1;
+}
+
+.geez-motion--in .geez-svc-icon--books .geez-svc-icon__book-r {
+  transform-origin: 34px 32px;
+  animation:
+    geez-svc-draw 1s ease 0.18s forwards,
+    geez-svc-book-r 1.1s ease 0.9s 1;
+}
+
+.geez-motion--in .geez-svc-icon--grow .geez-svc-icon__motif {
+  animation:
+    geez-svc-draw 0.7s ease 0.55s forwards,
+    geez-svc-pulse 1.6s ease 1.15s 1;
+}
+
+.geez-motion--in .geez-svc-icon--tech .geez-svc-icon__pulse {
+  animation:
+    geez-svc-draw 0.7s ease 0.45s forwards,
+    geez-svc-pulse 1.5s ease 1.1s 1;
+}
+
+@keyframes geez-svc-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes geez-svc-nudge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(2px);
+  }
+  70% {
+    transform: translateY(-1px);
+  }
+}
+
+@keyframes geez-svc-book-l {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+}
+
+@keyframes geez-svc-book-r {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+}
+
+@keyframes geez-svc-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.35);
+  }
+}
+
+/* Process / FAQ micro accents */
+.geez-home-step[data-geez-motion] .geez-home-step__num,
+.geez-showcase-accent[data-geez-motion] {
+  position: relative;
+}
+
+.geez-home-step[data-geez-motion] .geez-home-step__num::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--geez-color-gold-accent),
+    transparent
+  );
+}
+
+.geez-home-step.geez-motion--in .geez-home-step__num::after {
+  animation: geez-accent-rule 700ms cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+}
+
+.geez-home-faq .geez-accordion[data-geez-motion] > summary::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0.55rem;
+  margin-right: 0.45rem;
+  border-left: 2px solid var(--geez-color-gold-accent);
+  opacity: 0;
+  vertical-align: middle;
+  transform: scaleY(0.4);
+  transform-origin: center;
+}
+
+.geez-home-faq .geez-accordion.geez-motion--in > summary::before {
+  opacity: 1;
+  animation: geez-faq-tick 550ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes geez-accent-rule {
+  to {
+    width: 1.75rem;
+  }
+}
+
+@keyframes geez-faq-tick {
+  from {
+    transform: scaleY(0.4);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .geez-svc-icon__draw,
+  .geez-svc-icon__line,
+  .geez-svc-icon__motif,
+  .geez-svc-icon__pulse {
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+    animation: none !important;
+  }
+
+  .geez-home-step[data-geez-motion] .geez-home-step__num::after {
+    width: 1.75rem;
+    animation: none !important;
+  }
+
+  .geez-home-faq .geez-accordion[data-geez-motion] > summary::before {
+    opacity: 1;
+    transform: none;
+    animation: none !important;
+  }
 }
 
 /* ---- Ambient audio control (footer-adjacent floating, clears CTAs) ---- */

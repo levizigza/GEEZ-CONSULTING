@@ -66,6 +66,7 @@ async function copyDesignAssets() {
     ['site/homepage/homepage.css', 'homepage.css'],
     ['site/homepage/intro.js', 'intro.js'],
     ['site/audio/ambient.js', 'ambient.js'],
+    ['site/motion/motion.js', 'motion.js'],
     ['site/services/services.css', 'services.css'],
     ['site/client-results/client-results.css', 'client-results.css'],
     ['site/resources/resources.css', 'resources.css'],

@@ -13,6 +13,7 @@ import {
   renderDeferredScripts,
 } from './perf-head.mjs';
 import { inferPageContext } from '../../content/lib/measurement.mjs';
+import { renderVinePair } from './vines.mjs';
 
 /**
  * @param {string} s
@@ -176,7 +177,8 @@ export function renderHeader(m) {
     href === m.currentPath ? ' aria-current="page"' : '';
 
   return `<a class="geez-skip" href="#main">${e(m.skip)}</a>
-  <header class="geez-header">
+  <header class="geez-header geez-vine-host" data-geez-motion>
+    ${renderVinePair('header')}
     <div class="geez-header__inner geez-container">
       <a class="geez-header__brand" href="${e(m.homeHref)}">${e(m.brand)}</a>
       <nav class="geez-header__nav" aria-label="${e(m.primaryNavAria)}">
@@ -226,7 +228,8 @@ export function renderBreadcrumbs(crumbs, ariaLabel = 'Breadcrumb') {
  */
 export function renderFooter(m) {
   const e = escapeHtml;
-  return `<footer class="geez-footer">
+  return `<footer class="geez-footer geez-vine-host" data-geez-motion>
+  ${renderVinePair('band')}
   <div class="geez-container geez-footer__grid">
     <nav aria-label="${e(m.nav.services)}">
       <h2>${e(m.nav.services)}</h2>

@@ -1,6 +1,7 @@
 /** Page atmosphere helpers — imagery bands + shared media map (base-path aware). */
 
 import { withBase } from '../../content/lib/base-path.mjs';
+import { renderVinePair } from './vines.mjs';
 
 /**
  * @param {string} s
@@ -115,7 +116,8 @@ export function renderPageBand({ key, title, lead = '', kicker = '', quiet = fal
     ? `alt="${alt}"`
     : `alt="" role="presentation"`;
 
-  return `<div class="geez-page-band${isQuiet ? ' geez-page-band--quiet' : ''} geez-reveal" data-geez-atmosphere="${e(key)}">
+  return `<div class="geez-page-band${isQuiet ? ' geez-page-band--quiet' : ''} geez-reveal geez-vine-host" data-geez-atmosphere="${e(key)}" data-geez-motion>
+  ${renderVinePair('band')}
   <img class="geez-page-band__media" src="${e(src)}" ${imgAttrs} width="1600" height="900" loading="eager" decoding="async" />
   <div class="${veilClass}" aria-hidden="true"></div>
   <div class="geez-page-band__inner">

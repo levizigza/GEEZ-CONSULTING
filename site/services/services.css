@@ -83,6 +83,21 @@
   transition: border-color var(--geez-motion), transform var(--geez-motion);
 }
 
+.geez-svc-card__icon {
+  color: var(--geez-color-burgundy);
+  margin-bottom: var(--geez-space-3);
+}
+
+.geez-svc__showcase {
+  color: var(--geez-color-burgundy);
+  margin-bottom: var(--geez-space-4);
+}
+
+.geez-svc__showcase .geez-svc-icon {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
 .geez-svc-card::before {
   content: "";
   position: absolute;

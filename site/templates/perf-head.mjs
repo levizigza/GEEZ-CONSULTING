@@ -117,5 +117,6 @@ export function renderDeferredScripts({
   return `<script src="${base}/consent.js" defer></script>
   <script src="${base}/locale-preference.js" defer></script>
   <script src="${base}/ambient.js" defer></script>
+  <script src="${base}/motion.js" defer></script>
   ${measure}${rum}`;
 }
